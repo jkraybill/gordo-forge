@@ -1,6 +1,6 @@
 # Forge Smoke Test: Self-Improving Specification (v2)
 
-**Status:** DRAFT - Produced by v1 bootstrap smoke test
+**Status:** READY - Setup section added after S202 structural fix
 **Created:** 2026-05-11 (gordo-forge bootstrap session, S201)
 **Purpose:** Recursive test that improves itself with each release
 **Previous version:** v1 — bootstrap self-application. PASS conceptually, but invalid as real test due to pre-established JK+Gordo context. Surfaced need for multi-scenario testing.
@@ -147,6 +147,7 @@ Score each dimension 1-5, PER SCENARIO:
 - **Multi-scenario testing:** 4 scenarios covering web app, governance, creative, hobby
 - **Added D8:** Existing repo handling
 - **Added D9:** Cross-scenario adaptability
+- **Added Setup section:** Plugin must be loaded via `--plugin-dir` (S202 fix after first run failed — plugin structure was wrong, skills weren't discoverable)
 - **Insight captured:** Pre-established context invalidates single-scenario tests
 
 ### v1 (2026-05-11)
