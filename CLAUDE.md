@@ -23,14 +23,21 @@ Gordo's Forge — a Claude Code plugin that bootstraps human-AI collaborative pr
 ## Plugin Structure
 
 ```
-.claude-plugin/
-├── constitution/
-│   └── CONSTITUTION.md      # Bundled T0 source for composition
-└── skills/
-    ├── new-project/SKILL.md # Bootstrap new projects
-    ├── add-primitive/SKILL.md # Add T1 primitives to existing projects
-    └── upgrade/SKILL.md     # Upgrade T0 constitution
+gordo-forge/
+├── .claude-plugin/
+│   └── plugin.json          # Plugin manifest (ONLY this goes here)
+├── skills/                   # Skills at ROOT, not inside .claude-plugin/
+│   ├── new-project/SKILL.md  # Bootstrap new projects
+│   ├── add-primitive/SKILL.md # Add T1 primitives
+│   └── upgrade/SKILL.md      # Upgrade T0 constitution
+├── constitution/             # Bundled T0 source for composition
+│   └── CONSTITUTION.md
+└── templates/                # Artifact templates
 ```
+
+**Usage:** `claude --plugin-dir ~/gordo-forge`
+
+**Skill names:** `/gordo-forge:new-project`, `/gordo-forge:add-primitive`, `/gordo-forge:upgrade`
 
 ---
 

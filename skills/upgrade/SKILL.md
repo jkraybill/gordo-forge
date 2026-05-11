@@ -1,7 +1,5 @@
 ---
-description: Upgrade T0 constitution to a newer version in an existing Project Gordo umbrella project
-user_invocable: false
-trigger: User wants to upgrade constitutional content, update to newer T0, or refresh framework artifacts. Examples - "upgrade the constitution", "update to latest T0", "refresh the framework"
+description: Upgrade T0 constitution to newer version in an existing Gordo umbrella project. Use when user wants to update constitutional content, sync with upstream framework, or refresh artifacts.
 ---
 
 # Gordo's Forge — Upgrade

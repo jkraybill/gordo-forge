@@ -1,7 +1,5 @@
 ---
-description: Bootstrap a new human-AI collaborative project under the Project Gordo umbrella
-user_invocable: false
-trigger: User wants to start a new project, create a collaborative project, bootstrap with Gordo framework, or onboard a new repo. Examples - "let's make a new project", "I want to start something new", "can you help me set up a project", "let's forge a new project"
+description: Bootstrap a new human-AI collaborative project with Gordo framework. Use when user asks to create a project, start something new, set up a collaborative project, forge a new project, or onboard a repo. This conducts a cognitive interview, not template-filling.
 ---
 
 # Gordo's Forge — New Project
