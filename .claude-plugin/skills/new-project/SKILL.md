@@ -106,6 +106,23 @@ If the user tries to skip ("just pick one for me"), gently push back:
 
 ---
 
+### Phase 1.5: Repository State
+
+Before proceeding, assess the current state:
+
+**Fresh start (empty directory or new repo):**
+- Proceed normally — you'll create all artifacts from scratch
+
+**Existing repository (has files already):**
+- Acknowledge what's there: "I see this repo already has [files]. I'll work around them."
+- Don't overwrite existing README.md without asking
+- Determine what's missing vs. what exists
+- May need to integrate rather than generate fresh
+
+**Judgment call:** If they're retrofitting Gordo framework onto an existing project, the interview still matters — but artifact generation should complement, not replace.
+
+---
+
 ### Phase 2: Project Type & Quality Gates
 
 Based on Phase 1, propose a project type and explore quality gates:
@@ -185,7 +202,9 @@ Summarize all decisions. Confirm with the human. Then generate artifacts.
 
 ## Artifact Generation
 
-Based on interview decisions, generate these artifacts in the target directory:
+Based on interview decisions, generate these artifacts in the target directory.
+
+**Important: This project is the hub.** Generated artifacts should reference THIS project as the center of work — not external infrastructure. Don't reference backchannel, upstream deliberation spaces, or JK-specific patterns unless the human IS JK. Each project stands on its own.
 
 ### Always Generated
 - `CLAUDE.md` — AI's operational guide
