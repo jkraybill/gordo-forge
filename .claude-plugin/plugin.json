@@ -1,0 +1,12 @@
+{
+  "name": "gordo-forge",
+  "version": "0.1.0",
+  "description": "Gordo's Forge — bootstrap human-AI collaborative projects under the Project Gordo umbrella",
+  "author": "Project Gordo",
+  "repository": "https://github.com/jkraybill/gordo-forge",
+  "skills": [
+    "new-project",
+    "add-primitive",
+    "upgrade"
+  ]
+}
