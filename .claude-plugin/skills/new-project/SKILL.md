@@ -235,6 +235,30 @@ Read it, understand it, compose from it.
    - Initialize git if not already done
    - Start collaborating!
 
+## Post-Forge Debrief (Recursive Improvement)
+
+**After artifact generation, conduct a brief debrief.** This is how Forge improves itself.
+
+Ask the human:
+1. "Were there questions I should have asked but didn't?"
+2. "Did any part of the interview feel awkward or unclear?"
+3. "Were my judgment calls (project type, intensity, primitives) on target?"
+
+Reflect yourself:
+- What context did you wish you had earlier?
+- Where did you feel uncertain about recommendations?
+- What would have made this interview smoother?
+
+**Output:** If running as a smoke test (pre-release validation), generate `FORGE_IMPROVEMENTS_vN.md` capturing:
+- Missing questions identified
+- Awkward flows to smooth
+- Judgment call uncertainties
+- Recommended SKILL.md updates
+
+**The recursive pattern:** Each Forge run surfaces improvements. Those improvements update SKILL.md. The next Forge run benefits from them. The smith sharpens its own tools.
+
+---
+
 ## Pitfalls to Avoid
 
 - Don't generate placeholder text like "[Describe your project here]" — either get the info or leave it out
