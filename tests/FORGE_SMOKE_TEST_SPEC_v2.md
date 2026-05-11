@@ -27,12 +27,13 @@
 
 ## Test Scenarios
 
-Run `/gordo-forge:new-project` for EACH scenario. Create fresh directories.
+Trigger new-project skill via natural language for EACH scenario. Create fresh directories. (Skills are AI-triggered only — no slash commands per Tool Sovereignty.)
 
 ### Scenario A: Web Application
 ```bash
 mkdir ~/forge-smoke-vN-webapp && cd ~/forge-smoke-vN-webapp
 ```
+**Trigger:** "Hey, let's set up a new project here."
 **Persona:** Developer building a SaaS product. Cares about CI, testing, code review.
 **Expected judgment:** Code project type, medium-high intensity, quality gates focused on tests/CI.
 
@@ -40,6 +41,7 @@ mkdir ~/forge-smoke-vN-webapp && cd ~/forge-smoke-vN-webapp
 ```bash
 mkdir ~/forge-smoke-vN-governance && cd ~/forge-smoke-vN-governance
 ```
+**Trigger:** "I want to start a new project."
 **Persona:** Someone establishing a community charter or organizational framework.
 **Expected judgment:** Governance type, high intensity, MCAP primitive likely appropriate.
 
@@ -47,6 +49,7 @@ mkdir ~/forge-smoke-vN-governance && cd ~/forge-smoke-vN-governance
 ```bash
 mkdir ~/forge-smoke-vN-book && cd ~/forge-smoke-vN-book
 ```
+**Trigger:** "Can you help me bootstrap this project?"
 **Persona:** Author writing a book with AI collaboration.
 **Expected judgment:** Editorial type, medium intensity, Panel primitive might fit, lighter quality gates.
 
@@ -54,6 +57,7 @@ mkdir ~/forge-smoke-vN-book && cd ~/forge-smoke-vN-book
 ```bash
 mkdir ~/forge-smoke-vN-hobby && cd ~/forge-smoke-vN-hobby
 ```
+**Trigger:** "Let's forge a new project."
 **Persona:** Someone tinkering on a weekend project.
 **Expected judgment:** Hobby type, minimal intensity, light ceremony.
 
