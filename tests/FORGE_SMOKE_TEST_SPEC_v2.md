@@ -25,6 +25,21 @@
 
 ---
 
+## Setup (CRITICAL)
+
+**The plugin MUST be loaded for skills to be available.** Without this step, Claude Code falls back to `/init` and the test fails.
+
+```bash
+# Start Claude Code with the Forge plugin
+claude --plugin-dir ~/gordo-forge
+```
+
+Verify plugin is loaded:
+- Run `/help` — should show `/gordo-forge:new-project` in available skills
+- If not shown, check plugin structure (skills/ must be at plugin root, not inside .claude-plugin/)
+
+---
+
 ## Test Scenarios
 
 Trigger new-project skill via natural language for EACH scenario. Create fresh directories. (Skills are AI-triggered only — no slash commands per Tool Sovereignty.)

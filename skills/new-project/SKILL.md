@@ -240,7 +240,9 @@ When generating CONSTITUTION.md, you are composing from the T0 source — not co
 - Inviolable rules appropriate to privacy model
 - Remove sections that don't apply
 
-The T0 source is at: `${SKILL_DIR}/../constitution/CONSTITUTION.md`
+The T0 source is at: `${SKILL_DIR}/../../constitution/CONSTITUTION.md`
+
+Read the templates at: `${SKILL_DIR}/../../templates/`
 
 Read it, understand it, compose from it.
 
