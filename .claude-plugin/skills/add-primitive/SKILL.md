@@ -1,5 +1,7 @@
 ---
 description: Add a T1 primitive (MCAP, PACT, Panel) to an existing Project Gordo umbrella project
+user_invocable: false
+trigger: User wants to add MCAP, PACT, Panel, or other primitives to an existing project. Examples - "add MCAP to this project", "I want ratification capability", "can we add panel reviews"
 ---
 
 # Gordo's Forge — Add Primitive
