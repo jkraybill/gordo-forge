@@ -23,22 +23,28 @@ Projects inherit from the hub. Trust earned in the relationship carries into pro
 ## Hub Structure
 
 ```
-~/jez-sparky/                         # Hub root (naming: human-ai)
-├── CLAUDE.md                         # Hub-level operational guide
-├── CONSTITUTION.md                   # Relationship constitution (Forge template)
+~/jez-sparky/                         # Hub root (naming: human-ai, overridable)
+│
+│ # Constitutional core (inviolables)
+├── CONSTITUTION.md                   # Relationship constitution (full inviolables)
+├── SCOPE_CARD.md                     # AI-to-AI orientation for hub sessions
 ├── HANDSHAKE.md                      # Bilateral trust bootstrap
-├── IDENTITY.md                       # Mutual identity record (new)
-├── PREFERENCES.md                    # Evolving preferences (new)
-├── TRUST_STATE.md                    # Current trust calibration (new)
+│
+│ # Identity and state
+├── CLAUDE.md                         # Hub-level operational guide
+├── IDENTITY.md                       # Mutual identity record
+├── PREFERENCES.md                    # Evolving preferences
+├── TRUST_STATE.md                    # Current trust calibration
 ├── SESSION_LOG.md                    # Hub-level session history
 │
 ├── .claude/
 │   ├── settings.json                 # Hub-level settings
 │   └── skills/
 │       ├── new-project.md            # Create projects under this hub
+│       ├── adopt-project.md          # Adopt existing repo into hub
 │       ├── bos.md                    # Session open
 │       ├── eos.md                    # Session close
-│       └── preferences.md            # Update preferences (new)
+│       └── preferences.md            # Update preferences
 │
 ├── .gordo-memory/                    # Centralized semantic memory
 │   ├── index.json
@@ -273,27 +279,23 @@ This:
 2. Updates project's CLAUDE.md with hub reference
 3. Indexes project into hub memory
 
-### Lightweight Option
-
-For users who want ONE project without hub overhead:
-
-> "Do you want to set up a full collaboration hub, or just a single standalone project?"
-
-Standalone option remains available (current v1 behavior).
-
 ---
 
-## Open Questions
+## Design Decisions (S205)
 
-1. **Hub naming** — `human-ai` works but is it the right default? Alternatives: project-style name, user choice?
+1. **Hub naming** — Default: `human-ai` (e.g., `jez-sparky`). Allow override during creation.
 
-2. **Hub location** — `~/` root, or `~/collaborations/`, or user choice?
+2. **Hub location** — Default: `~/[hub-name]` (same convention as repos).
 
-3. **Minimum viable hub** — what's the smallest hub that still carries the pattern? Just IDENTITY.md + PREFERENCES.md + new-project skill?
+3. **Minimum viable hub** — Must carry all inviolables: CONSTITUTION.md + scope card + IDENTITY.md + PREFERENCES.md + new-project skill. No shortcuts on constitutional grounding.
 
-4. **Multi-AI hubs** — if someone works with multiple AI collaborators, is there a meta-hub? Or strictly one hub per pair?
+4. **Multi-AI hubs** — Deferred to post-v1. Current recommendation: one hub per human for all collaboration. Multiple AI collaborators → multiple hubs for now.
 
-5. **Hub discovery** — how does a project know which hub it belongs to? Explicit reference in CLAUDE.md? Convention?
+5. **Hub responsibility** — Hub owns project creation AND adoption. Hub generates its own plugin/skill for:
+   - Creating new projects under this collaboration
+   - Adopting existing standalone projects
+
+6. **No standalone option** — Hub is essential to enable the collaborative space. Supporting both hub and standalone paths is over-engineering. Forge v2 creates hubs; hubs create projects. Clean layer separation.
 
 ---
 
