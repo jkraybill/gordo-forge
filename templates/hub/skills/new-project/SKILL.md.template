@@ -1,5 +1,6 @@
 ---
 description: Create a new project under this collaboration hub. Use when starting a new piece of work within the {{HUMAN_NAME}}-{{AI_NAME}} collaboration.
+ai_only: true
 ---
 
 # New Project — {{HUB_NAME}}

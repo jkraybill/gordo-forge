@@ -1,5 +1,6 @@
 ---
 description: Execute MCAP ratification ceremony for bilateral consent records
+ai_only: true
 ---
 
 # MCAP Ratification — {{PROJECT_NAME}}

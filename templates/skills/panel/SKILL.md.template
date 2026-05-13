@@ -1,5 +1,6 @@
 ---
 description: Run multi-model adversarial review on content before shipping. Use when you need external perspective on drafts, want to catch blind spots, or are preparing content for publication.
+ai_only: true
 ---
 
 # Panel Review
