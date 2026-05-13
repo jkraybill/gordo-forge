@@ -1,5 +1,6 @@
 ---
 description: End of Session — close cleanly with audit trail
+ai_only: true
 ---
 
 # End of Session — {{PROJECT_NAME}}
