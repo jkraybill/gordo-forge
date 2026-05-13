@@ -13,6 +13,16 @@ These carry forward from the hub:
 - **Trust level:** inherited from hub (see `../PREFERENCES.md`)
 - **Constitutional grounding:** inherited from hub's `CONSTITUTION.md`
 - **Privacy default:** {{PRIVACY_MODEL}} (can be overridden per-project)
+- **Working model:** {{WORKING_MODEL}}
+
+### Working Model: {{WORKING_MODEL}}
+
+{{#if WORKING_MODEL_HUB_CENTRIC}}
+**Hub-centric:** This hub is the starting point for all work. Projects are created here AND worked on from here. Memory, skills, and planning stay centralized. Projects get lighter scaffolding — constitutional content inline, but no copied skills (run /bos from hub).
+{{/if}}
+{{#if WORKING_MODEL_PROJECT_CENTRIC}}
+**Project-centric:** This hub is for project creation, then work happens directly in each project's directory. Projects get full scaffolding — constitutional content + copied skills + own `.claude/settings.json`.
+{{/if}}
 
 ## What to Determine
 
@@ -46,16 +56,28 @@ The hub may already have MCAP, Panel, etc. Ask about project-specific needs:
 
 ## Artifact Generation
 
-Generate in the project directory:
+**Always generate (both working models):**
 - `CLAUDE.md` — project-specific guide with inline constitutional core
 - `README.md` — project overview
 - `COMPLIANCE_KERNEL.md` — operational constraints (always generate, not optional)
 
-If intensity warrants:
-- `.claude/settings.json` — minimal hook configuration
-- Quality gate configuration as appropriate
-
 **Key pattern:** Projects carry inline constitutional core while referencing the hub for full detail. Claude Code doesn't follow upstream pointers — if you open the project standalone, the Values must be present.
+
+### If Working Model = Hub-Centric
+
+Lighter scaffolding — user works from hub, not project:
+- No `.claude/` directory needed (hub has skills)
+- No copied skills
+- CLAUDE.md should include: "For session protocols, navigate to hub and run /bos"
+
+### If Working Model = Project-Centric
+
+Full scaffolding — user works directly in project:
+- `.claude/settings.json` — SessionStart hook
+- `.claude/skills/bos/SKILL.md` — copied from hub (with ai_only: true)
+- `.claude/skills/eos/SKILL.md` — copied from hub (with ai_only: true)
+- If hub has MCAP: `.claude/skills/mcap-ratification/SKILL.md`
+- If hub has Panel: `.claude/skills/panel/SKILL.md` + `panel.yaml`
 
 ### Required in CLAUDE.md
 
@@ -83,6 +105,13 @@ These are non-negotiable. They apply in every session, regardless of autonomy gr
 Each party can build, use, and retire their own tools. Neither party commands the other's tools. Tool Break is a declaration, not a request.
 
 For full constitutional detail including Foundations and Process Standards: see hub's `CONSTITUTION.md`
+
+### Lineage
+
+- **Parent:** {{HUB_NAME}} hub
+- **Root:** project-gordo (T0)
+- **Created:** [date] via {{HUB_NAME}} hub
+- **Searchable tag:** project-gordo-umbrella
 ```
 
 ### Required in COMPLIANCE_KERNEL.md

@@ -313,7 +313,25 @@ For minimal-intensity projects: may skip if the human explicitly prefers lighter
 - `bos.md` skill — session open: context recovery, continuity check
 - `eos.md` skill — session close: summary, commit, push
 
-### Phase 7: Trust Calibration
+### Phase 7: Working Model
+
+Ask how they plan to work with projects:
+
+> "Project Gordo supports two ways to run your hub:
+>
+> **Hub-centric (recommended):** The hub is your starting point for all work. You create projects from here AND work on them from here. Memory, skills, and planning stay centralized. Good for deep collaboration where projects share context.
+>
+> **Project-centric:** The hub is where you create projects, but then you work directly in each project's directory. More decentralized. Good for diverse, independent projects that don't share knowledge or technologies.
+>
+> Which fits how you want to work?"
+
+**Store the choice in PREFERENCES.md** under "Working Model".
+
+**Impact on project generation:**
+- **Hub-centric:** Projects get lighter scaffolding (constitutional content inline, but no copied skills — you run /bos from hub)
+- **Project-centric:** Projects get full scaffolding (constitutional content + copied skills + own .claude/settings.json)
+
+### Phase 8: Trust Calibration
 
 Explore:
 - **Initial trust level** — how much autonomy from the start?
@@ -321,7 +339,7 @@ Explore:
 
 Explain the WWGD scale if relevant (WWGD, WWGD+, WWGD++, etc.)
 
-### Phase 8: Confirmation & Generation
+### Phase 9: Confirmation & Generation
 
 Summarize all decisions explicitly. Include:
 - Hub name
@@ -329,6 +347,7 @@ Summarize all decisions explicitly. Include:
 - Anticipated work types (what kind of projects will flow from this collaboration)
 - Framework intensity level
 - Privacy model
+- **Working model** (hub-centric or project-centric)
 - Trust model
 - **Which skills will be generated** (new-project always; bos, eos, mcap-ratification, panel as selected)
 - Which artifacts will be created
