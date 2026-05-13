@@ -267,8 +267,8 @@ Explain the spectrum:
 
 | Intensity | What it means |
 |-----------|---------------|
-| **Maximum** | Full T0 constitution, COMPLIANCE_KERNEL, HANDSHAKE, session protocols (BOS/EOS), MCAP ratification, hooks |
-| **Medium** | Core artifacts (CLAUDE.md, CONSTITUTION, COMPLIANCE_KERNEL, HANDSHAKE), lighter process |
+| **Maximum** | Full T0 constitution (includes Process Standards), COMPLIANCE_KERNEL, HANDSHAKE, session protocols (BOS/EOS), MCAP ratification, hooks |
+| **Medium** | Core artifacts (CLAUDE.md, CONSTITUTION, COMPLIANCE_KERNEL, HANDSHAKE), session protocols (BOS/EOS) |
 | **Minimal** | CLAUDE.md, CONSTITUTION (core values), COMPLIANCE_KERNEL — honor-system with constitutional grounding |
 
 **Judgment call:** Recommend based on project type and their apparent preferences. Maximum ceremony for a weekend hobby project is overkill. Minimal for a critical system is under-engineering.
@@ -374,12 +374,12 @@ Based on interview decisions, generate these artifacts in the target directory t
 ### If intensity >= medium
 - `HANDSHAKE.md` — bilateral trust bootstrap
 - `.claude/settings.json` — SessionStart hook (use `${SKILL_DIR}/../../templates/hub/settings.json.template`)
-
-### If intensity == maximum
-- `CONSTITUTION.md` — FULL T0 composed from source (read from `${SKILL_DIR}/../../constitution/CONSTITUTION.md`) — replaces minimal version, includes Process Standards
 - `.claude/skills/bos/SKILL.md` — session open protocol (use `${SKILL_DIR}/../../templates/skills/bos/SKILL.md.template`)
 - `.claude/skills/eos/SKILL.md` — session close protocol (use `${SKILL_DIR}/../../templates/skills/eos/SKILL.md.template`)
 - `SESSION_LOG.md` — session audit trail
+
+### If intensity == maximum
+- `CONSTITUTION.md` — FULL T0 composed from source (read from `${SKILL_DIR}/../../constitution/CONSTITUTION.md`) — replaces minimal version, includes Process Standards
 
 **Constitution generation note:** Minimal and medium intensity use the Forge Constitution template (Foundations, Values, Tool Rights — the essential DNA). Maximum intensity composes from the full T0 source (adds Process Standards and operational machinery).
 
