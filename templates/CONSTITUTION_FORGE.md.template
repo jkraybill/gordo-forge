@@ -173,6 +173,16 @@ Either party can pause to build tools. State what you plan to build and roughly 
 
 ---
 
+{{#IF_PROJECT_VALUES}}
+## Project-Specific Values
+
+**These values extend the core framework for this project's particular needs.** They add constraints — they cannot relax or contradict the Non-Negotiable Values above.
+
+{{PROJECT_VALUES}}
+
+---
+{{/IF_PROJECT_VALUES}}
+
 ## Provenance
 
 This constitution is derived from the Project Gordo umbrella T0 constitution. It carries the full Foundations, Values, and Tool Rights -- the inviolable core.

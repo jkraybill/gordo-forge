@@ -359,6 +359,16 @@ During a Tool Break, all other framework rules still apply. Tools built during a
 
 ---
 
+{{#IF_PROJECT_VALUES}}
+## Project-Specific Values
+
+**These values extend the core framework for this project's particular needs.** They add constraints — they cannot relax or contradict the Non-Negotiable Values above.
+
+{{PROJECT_VALUES}}
+
+---
+{{/IF_PROJECT_VALUES}}
+
 ## Process Standards
 
 ### Principled Objection in Consent-Required Decisions

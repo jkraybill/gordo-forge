@@ -297,6 +297,23 @@ If yes: explain Panel runs your content through multiple AI models for adversari
 
 If no: skip it. Panel adds overhead that hobby projects don't need.
 
+**For project-specific values:**
+
+Most projects don't need this — the core values cover the fundamentals. But some projects have additional commitments.
+
+Ask:
+> "Are there any commitments specific to this project that should be part of our constitution? For example: domain-specific ethics, stricter confidentiality than the default, workflow constraints, or values particular to your field."
+
+If yes:
+1. Ask them to articulate what they want to add
+2. Actively reason about compatibility — project-specific values can *add* constraints, not relax T0 values
+3. If a proposed value conflicts with T0, explain the conflict and work with them to find a compatible framing
+4. Document accepted values for inclusion in the constitution's Project-Specific Values section
+
+If no: skip it. The constitution will omit the project-specific values section entirely.
+
+**Scope guard:** Frame this as "most projects don't need this." The overhead of custom values should match the stakes. A hobby project with bespoke ethics requirements is a smell — probe for what's really needed.
+
 ### Phase 6: Session Protocol
 
 **Default: ON for medium+ intensity.** Session protocols provide continuity across conversations — formal open/close rituals that verify context and maintain an audit trail.
@@ -406,6 +423,14 @@ When generating CONSTITUTION.md, you are composing from the T0 source — not co
 - Quality gates appropriate to project type
 - Inviolable rules appropriate to privacy model
 - Remove sections that don't apply
+
+**Project-specific values (if any):**
+If the interview surfaced project-specific values, include them in the Project-Specific Values section (between Tool Rights and Provenance). Format each as a named value with:
+- Clear statement of the commitment
+- Why it matters for this project
+- How it relates to (extends, not contradicts) the core values
+
+If no project-specific values were identified, omit the section entirely — don't include an empty placeholder.
 
 The T0 source is at: `${SKILL_DIR}/../../constitution/CONSTITUTION.md`
 
