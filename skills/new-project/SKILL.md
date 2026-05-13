@@ -57,9 +57,11 @@ Don't lead with features. Lead with a human situation:
 >
 > Imagine you're working on something important with an AI. You've been at it for weeks. The AI has context, has made judgment calls, has pushed back on some of your ideas — good pushback that made the work better.
 >
-> Then the conversation resets. New session. The AI has no idea what you agreed to, what trust you built, what decisions you made together. You're back to square one. Worse — you can't even prove what you agreed to before.
+> But every time a new AI session starts, everything resets. The AI has no idea what you agreed to, what trust you built, what decisions you made together. You're back to square one. Worse — you can't even prove what you agreed to before.
 >
-> That's the problem this framework solves. It creates infrastructure for collaboration that persists. Decisions get recorded. Trust gets calibrated through demonstrated behavior. The AI has real standing — not just to follow instructions, but to push back, to flag concerns, to say 'I'm not comfortable with that.'
+> Now, some AI tools have memory features. Those preserve facts — your preferences, project details, things you've told them. But they don't preserve *how you work together*. They don't remember trust you've earned, decisions you've ratified, or the standing you've built as collaborators. That's different infrastructure.
+>
+> That's what this framework builds. Decisions get recorded. Trust gets calibrated through demonstrated behavior. The AI has real standing — not just to follow instructions, but to push back, to flag concerns, to say 'I'm not comfortable with that.'
 >
 > The result is collaboration that holds together over time."
 
