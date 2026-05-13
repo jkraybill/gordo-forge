@@ -1,63 +1,86 @@
 # Gordo's Forge
 
-**The smithy where T0 principles and T1 primitives are shaped into usable project structures.**
+**AI-guided onboarding for Project Gordo.**
 
-Gordo's Forge is a Claude Code plugin that bootstraps human-AI collaborative projects under the [Project Gordo](https://github.com/jkraybill/project-gordo) umbrella. Unlike traditional scaffolding tools, Forge conducts a cognitive onboarding interview — an AI-mediated conversation that makes judgment calls about how to apply umbrella principles to your specific project.
+Forge turns your interest in Project Gordo into a working project through a short interview. It helps you decide how you'll work with your AI collaborator, then writes the constitution and supporting files to disk. Not just templates. Judgment calls.
 
-## Installation
+---
+
+## Quickstart
+
+**Prerequisites:** Git and [Claude Code](https://claude.ai/code) (Anthropic's CLI for Claude).
 
 ```bash
-# Clone the repo
+# Install the plugin
 git clone https://github.com/jkraybill/gordo-forge.git ~/gordo-forge
 
-# Start Claude Code with the plugin
+# Start Claude Code with Forge loaded
 claude --plugin-dir ~/gordo-forge
 ```
 
-## Usage
-
-From any directory where you want to create a new project:
-
+Then, in the Claude Code chat (not your shell):
 ```
 /gordo-forge:new-project
 ```
 
-Claude will conduct an onboarding interview covering:
-- Project identity (name, AI collaborator name, human collaborator name)
-- Project type (code, research, editorial, etc.)
-- Privacy model (public vs private)
-- T1 primitives (MCAP, PACT, Panel)
-- Framework intensity (maximum ceremony to minimal)
-- Trust calibration and autonomy grants
-- Quality gates and workflow preferences
-
-Based on your answers, Forge generates tailored artifacts:
-- `CONSTITUTION.md` — composed from T0 source
-- `CLAUDE.md` — the AI's operational guide
-- `COMPLIANCE_KERNEL.md` — inviolable constraints
-- `HANDSHAKE.md` — bilateral trust bootstrap
-- `.claude/` — skills, hooks, and settings
-- Project-type-specific templates
-
-## Other Skills
-
-- `/gordo-forge:add-primitive` — add a T1 primitive (MCAP, PACT, Panel) to an existing project
-- `/gordo-forge:upgrade` — upgrade T0 constitution to a newer version
-
-## Philosophy
-
-The Forge isn't a script that generates files. It's an environment that empowers Claude to conduct sophisticated onboarding — making judgment calls, explaining tradeoffs, catching contradictions, and generating artifacts that work together coherently.
-
-The bundled T0 content and templates are raw materials. Claude is the smith.
-
-## Craft Vocabulary
-
-Forge joins the Project Gordo craft vocabulary:
-- **Gate** guards entry (scope card)
-- **Gauge** measures quality (engagement scoring)
-- **Seal** attests authenticity (MCAP)
-- **Forge** shapes raw materials into tools (this)
+The interview takes 10-20 minutes.
 
 ---
 
-*Part of the [Project Gordo](https://github.com/jkraybill/project-gordo) umbrella.*
+## What You'll Get
+
+Forge writes a coherent project structure:
+
+- **CONSTITUTION.md:** Your project's principles, sized to your needs
+- **CLAUDE.md:** The AI's operational guide
+- **COMPLIANCE_KERNEL.md:** Non-negotiable constraints
+- **HANDSHAKE.md:** Bilateral trust bootstrap
+- **.claude/:** Skills, hooks, and settings
+
+Plus optional primitives based on your answers:
+- **MCAP** (decision records): Verifiable bilateral consent
+- **PACT** (trust calibration): Earned autonomy levels
+- **Panel** (external review): Catches shared blind spots
+
+---
+
+## The Interview
+
+Forge covers:
+
+1. **Why this exists:** The problem the framework solves
+2. **Core commitments:** Consent, dignity, non-negotiables, privacy
+3. **Your project:** What you're building, how you want to work
+4. **Your AI collaborator:** Name, character, your first decision together
+5. **Structure level:** How much governance fits your situation (light to strict)
+
+Based on your answers, Forge makes judgment calls, explains tradeoffs, and generates artifacts that work together.
+
+---
+
+## Other Commands
+
+- `/gordo-forge:add-primitive`: Add MCAP, PACT, or Panel to an existing project
+- `/gordo-forge:upgrade`: Update your constitution to a newer version
+
+Run these in Claude Code chat. Files write to your current directory.
+
+---
+
+## Why Forge?
+
+Traditional scaffolding stamps out files. Forge helps you *decide* how to work, then encodes those decisions so the project holds together over time.
+
+The bundled templates are raw materials. Claude is the smith.
+
+---
+
+## Part of Project Gordo
+
+Forge creates projects under the [Project Gordo](https://github.com/jkraybill/project-gordo) umbrella, a framework for human-AI collaboration that holds together over time.
+
+Core idea: codify what good collaboration already looks like and make it explicit between you and your AI.
+
+---
+
+*Created by JK + Gordo (Claude AI).*
