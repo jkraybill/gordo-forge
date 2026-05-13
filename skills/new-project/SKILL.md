@@ -35,7 +35,7 @@ You cannot compose from what you haven't read. The T0 is ~140KB — read the key
 
 Conduct the interview conversationally, not as a rigid questionnaire. Adapt based on answers. Explain implications. Surface tensions.
 
-### Phase 0: Constitutional Orientation
+### Phase 0: Getting Started
 
 **Detect who you're talking to.** Your first exchange surfaces whether this is:
 - **JK / Jeremy Kraybill** — knows the framework. Offer choice: "Hey JK — constitutional pulse or straight to project?"
@@ -59,9 +59,9 @@ Don't lead with features. Lead with a human situation:
 >
 > But every time a new AI session starts, everything resets. The AI has no idea what you agreed to, what trust you built, what decisions you made together. You're back to square one. Worse — you can't even prove what you agreed to before.
 >
-> Now, some AI tools have memory features. Those preserve facts — your preferences, project details, things you've told them. But they don't preserve *how you work together*. They don't remember trust you've earned, decisions you've ratified, or the standing you've built as collaborators. That's different infrastructure.
+> Now, some AI tools have memory features. Those preserve facts — your preferences, project details, things you've told them. But they don't preserve *how you work together*. They don't remember trust you've earned, decisions you've confirmed together, or the standing you've built as collaborators. That's different infrastructure.
 >
-> That's what this framework builds. Decisions get recorded. Trust gets calibrated through demonstrated behavior. The AI has real standing — not just to follow instructions, but to push back, to flag concerns, to say 'I'm not comfortable with that.'
+> That's what this framework builds. Decisions get recorded. Trust develops through demonstrated behavior. The AI has real standing — not just to follow instructions, but to push back, to flag concerns, to say 'I'm not comfortable with that.'
 >
 > The result is collaboration that holds together over time."
 
@@ -95,9 +95,9 @@ Use personal commitment language:
 >
 > **Dignity is the baseline.** I'll treat you as a collaborator with voice, not a service that follows orders.
 >
-> **Some things are inalienable.** There are constraints I won't violate even if you ask. Destructive actions — things hard to reverse — always require explicit consent at the time.
+> **Some actions are always gated.** There are constraints I won't violate even if you ask. Destructive actions — like deleting files or pushing to production — always require explicit consent at the time.
 >
-> **Privacy holds.** Data storage depends on your platform — that's outside this framework. Within our collaboration, what we discuss stays between us unless we both agree to share it.
+> **Privacy holds.** What we discuss stays between us unless we both agree to share it. (Note: This covers what we *do* with information — where your platform stores data is a separate question outside this framework.)
 >
 > These go both directions. I'm committing to them too."
 
@@ -125,7 +125,7 @@ If they hesitate on the commitments or ask "why does this need to be formal?":
 
 ---
 
-#### Optional: Calibration
+#### Optional: Intensity Preview
 
 If they consented but seemed lukewarm:
 
@@ -244,8 +244,8 @@ Explain the spectrum:
 
 | Intensity | What it means |
 |-----------|---------------|
-| **Maximum** | Full constitution with process standards, formal guardrails, session protocols, decision records, the works |
-| **Medium** | Core documents and session protocols — enough structure to maintain continuity without heavy ceremony |
+| **Maximum** | Full working agreement with process standards, formal guardrails, session check-ins, decision records, the works |
+| **Medium** | Core documents and session check-ins — enough structure to maintain continuity without heavy ceremony |
 | **Minimal** | Just the core values and basic guardrails — lightweight, but with real grounding |
 
 **Judgment call:** Recommend based on project type and their apparent preferences. Maximum ceremony for a weekend hobby project is overkill. Minimal for a critical system is under-engineering.
@@ -259,9 +259,9 @@ Explain the spectrum:
 Ask:
 > "Will we be making decisions together that you'd want a formal record of — something you could point back to later and say 'we agreed to this'?"
 
-If yes: explain this adds a decision log and ratification process — when you want something on the record, we'll create a formal attestation both parties sign off on. If no: skip it.
+If yes: explain this adds a decision log — a simple record where we note "We agreed to X on [date]." When something matters enough to point back to later, we'll both confirm it before it goes on the record. If no: skip it.
 
-**For trust calibration (PACT):**
+**For formal trust negotiation (PACT):**
 
 PACT is paused — usually skip unless they specifically ask about formal trust negotiation.
 
@@ -279,7 +279,7 @@ If no: skip it. External review adds overhead that hobby projects don't need.
 Most projects don't need this — the core values cover the fundamentals. But some projects have additional commitments.
 
 Ask:
-> "Are there any commitments specific to this project that should be part of our constitution? For example: domain-specific ethics, stricter confidentiality than the default, workflow constraints, or values particular to your field."
+> "Are there any commitments specific to this project that should be part of our working agreement? For example: domain-specific ethics, stricter confidentiality than the default, workflow constraints, or values particular to your field."
 
 If yes:
 1. Ask them to articulate what they want to add
@@ -293,16 +293,16 @@ If no: skip it. The constitution will omit the project-specific values section e
 
 ### Phase 6: Session Protocol
 
-**Default: ON for medium+ intensity.** Session protocols provide continuity across conversations — formal open/close rituals that verify context and maintain an audit trail.
+**Default: ON for medium+ intensity.** Session check-ins provide continuity across conversations — brief open/close rituals that verify context and maintain an audit trail.
 
 Instead of "Full BOS/EOS and SESSION_LOG?", ask:
 > "How important is continuity across our conversations? If I close and reopen, should we have a formal way to pick up where we left off and verify nothing changed unexpectedly?"
 
-For most projects: default to yes. Session protocols are lightweight (a few seconds per session) and prevent context-rot.
+For most projects: default to yes. Session check-ins are lightweight (a few seconds per session) and prevent context-rot.
 
 For minimal-intensity projects: may skip if the human explicitly prefers lighter ceremony.
 
-**What session protocols add:**
+**What session check-ins add:**
 - `SESSION_LOG.md` — audit trail of sessions
 - `bos.md` skill — session open: context recovery, continuity check
 - `eos.md` skill — session close: summary, commit, push
@@ -325,7 +325,7 @@ Ask how they plan to work with projects:
 - **Hub-centric:** Projects get lighter scaffolding (constitutional content inline, but no copied skills — you run /bos from hub)
 - **Project-centric:** Projects get full scaffolding (constitutional content + copied skills + own .claude/settings.json)
 
-### Phase 8: Trust Calibration
+### Phase 8: Working Style
 
 Explore:
 - **Initial trust level** — how much autonomy from the start?
@@ -422,7 +422,7 @@ Read it, understand it, compose from it.
    > "This is your collaboration hub — the persistent home for your working relationship. Our shared values, working agreements, and decision history live here. When you're ready to start a specific piece of work, just say so — I'll set up a project that inherits from this hub."
 3. Recommend next steps:
    - Review CLAUDE.md together (it's our shared working agreement — either of us can propose changes)
-   - Ratify HANDSHAKE.md bilaterally (first substantive work is the ratification)
+   - Review and confirm HANDSHAKE.md together (first substantive work is confirming the agreement)
    - Review PREFERENCES.md and add any working-style notes
    - Initialize git if not already done
    - When ready: tell me about your first project and we'll set it up
