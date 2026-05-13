@@ -346,7 +346,7 @@ Based on interview decisions, generate these artifacts in the target directory t
 - `README.md` — hub overview explaining what this collaboration space is
 - `PREFERENCES.md` — evolving preferences (use `${SKILL_DIR}/../../templates/hub/PREFERENCES.md.template`)
 - `projects/` — directory for downstream projects (or links to external repos)
-- `.claude/skills/new-project.md` — skill for creating projects under this hub (use `${SKILL_DIR}/../../templates/hub/skills/new-project.md.template`)
+- `.claude/skills/new-project/SKILL.md` — skill for creating projects under this hub (use `${SKILL_DIR}/../../templates/hub/skills/new-project/SKILL.md.template`)
 
 ### If intensity >= minimal
 - `COMPLIANCE_KERNEL.md` — inviolable constraints, common errors
@@ -358,24 +358,24 @@ Based on interview decisions, generate these artifacts in the target directory t
 
 ### If intensity == maximum
 - `CONSTITUTION.md` — FULL T0 composed from source (read from `${SKILL_DIR}/../../constitution/CONSTITUTION.md`) — includes Process Standards
-- `.claude/skills/bos.md` — session open protocol
-- `.claude/skills/eos.md` — session close protocol
+- `.claude/skills/bos/SKILL.md` — session open protocol (use `${SKILL_DIR}/../../templates/skills/bos/SKILL.md.template`)
+- `.claude/skills/eos/SKILL.md` — session close protocol (use `${SKILL_DIR}/../../templates/skills/eos/SKILL.md.template`)
 - `SESSION_LOG.md` — session audit trail
 
 **Constitution generation note:** Medium intensity uses the Forge Constitution template (inviolables only — Foundations, Values, Tool Rights). Maximum intensity composes from the full T0 source (includes Process Standards and detailed machinery). Both carry the essential DNA; maximum adds operational infrastructure.
 
 ### If MCAP selected
 - `ratification/` directory
-- `.claude/skills/mcap-ratification.md`
+- `.claude/skills/mcap-ratification/SKILL.md` (use `${SKILL_DIR}/../../templates/skills/mcap-ratification/SKILL.md.template`)
 - MCAP discipline section in COMPLIANCE_KERNEL
 
 ### If Panel selected
-- `.claude/skills/panel.md` (from `${SKILL_DIR}/../../templates/skills/panel.md.template`)
+- `.claude/skills/panel/SKILL.md` (use `${SKILL_DIR}/../../templates/skills/panel/SKILL.md.template`)
 - `panel.yaml` configuration file with project-appropriate providers and brief
 
 ### Hub-Specific: The Embedded new-project Skill
 
-The generated `.claude/skills/new-project.md` is crucial — it's how the collaboration creates downstream projects. When generating it:
+The generated `.claude/skills/new-project/SKILL.md` is crucial — it's how the collaboration creates downstream projects. When generating it:
 - Fill in the hub name, human name, AI name, and privacy model
 - The skill inherits the project-specific interview logic but skips identity establishment (already done at hub level)
 - Projects reference the hub for identity, trust, and constitution
