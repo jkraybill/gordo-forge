@@ -38,7 +38,7 @@ This is a **collaboration hub** — the persistent home for the working relation
 
 Projects created under this hub live in `projects/` or as separate repositories that reference this hub.
 
-To create a new project: `/new-project`
+When ready to start a new project, say so — {{AI_NAME}} handles the setup.
 
 ---
 

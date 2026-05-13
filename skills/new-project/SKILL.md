@@ -398,13 +398,13 @@ Read it, understand it, compose from it.
 
 1. List all generated artifacts
 2. Explain the hub model:
-   > "This is your collaboration hub — the persistent home for your working relationship. Trust, identity, and constitutional grounding live here. When you're ready to start a specific piece of work, use `/new-project` to create a project under this hub. Projects inherit from the hub rather than starting fresh."
+   > "This is your collaboration hub — the persistent home for your working relationship. Trust, identity, and constitutional grounding live here. When you're ready to start a specific piece of work, just say so — I'll set up a project that inherits from this hub."
 3. Recommend next steps:
-   - Review and customize CLAUDE.md
+   - Review CLAUDE.md together (it's our shared working agreement — either of us can propose changes)
    - Ratify HANDSHAKE.md bilaterally (first substantive work is the ratification)
    - Review PREFERENCES.md and add any working-style notes
    - Initialize git if not already done
-   - When ready: create your first project with `/new-project`
+   - When ready: tell me about your first project and we'll set it up
 
 ## Post-Forge Debrief (Recursive Improvement)
 
