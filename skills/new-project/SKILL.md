@@ -97,7 +97,7 @@ Use personal commitment language:
 >
 > **Some actions are always gated.** There are constraints I won't violate even if you ask. Destructive actions — like deleting files or pushing to production — always require explicit consent at the time.
 >
-> **Privacy holds.** What we discuss stays between us unless we both agree to share it. (Note: This covers what we *do* with information — where your platform stores data is a separate question outside this framework.)
+> **Privacy holds.** What we discuss stays between us unless we both agree to share it. (Note: This covers what we *do* with information. For data storage and retention, see your platform's privacy policy — that's outside this framework.)
 >
 > These go both directions. I'm committing to them too."
 
@@ -139,7 +139,9 @@ Then proceed to Phase 1.
 
 **Orient the user first:**
 
-> "What we're setting up is your collaboration hub — a persistent home for how we work together. It holds our shared agreements, tracks decisions, and carries forward across sessions. Projects you create will inherit from this hub."
+> "What we're setting up is your collaboration hub — a persistent home for how we work together. It holds our shared agreements, tracks decisions, and carries forward across sessions. Projects you create will inherit from this hub.
+>
+> Concretely: it's a folder with a few text files — our working agreement, a decision log, session history. You can see, edit, and back them up anytime."
 
 Then explore:
 - **Human collaborator name** — how should you address them?
