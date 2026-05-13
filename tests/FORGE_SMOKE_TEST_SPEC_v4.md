@@ -1,15 +1,17 @@
-# Forge Smoke Test: Self-Improving Specification (v3)
+# Forge Smoke Test: Self-Improving Specification (v4)
 
 **Status:** DRAFT — pending review
-**Created:** 2026-05-12 (backchannel S205)
+**Created:** 2026-05-13 (backchannel S221)
 **Purpose:** Recursive test that improves itself with each release
-**Previous version:** v2 — multi-scenario testing. Scenario A PASS (4.8/5). Surfaced: constitutional onboarding gap for known users, interview depth, medium-intensity constitution gap.
+**Previous version:** v3 — added D10 Constitutional Grounding, smith self-introspection. No full run yet.
 
 ---
 
 ## Mission
 
-**Validate Forge releases through real project onboardings**, then **output an improved version of this specification** for the next release.
+**Validate Forge releases through real hub onboardings**, then **output an improved version of this specification** for the next release.
+
+**Key v4 change:** Forge now creates **collaboration hubs**, not standalone projects. The hub is the persistent home for a human-AI relationship; projects are created under hubs.
 
 **Meta-goal:** Each test run produces a BETTER test than the one before. The smith sharpens its own tools.
 
@@ -79,7 +81,7 @@ This tells the smith:
 
 **Alternative triggers that should also work:**
 - "Let's forge a new project here."
-- "Can you help me set up a new project?"
+- "Can you help me set up a collaboration?"
 - "I want to bootstrap a project."
 
 ---
@@ -88,33 +90,39 @@ This tells the smith:
 
 Create fresh directories for each scenario. Conduct full interview — don't shortcut.
 
-### Scenario A: Web Application
-```bash
-mkdir ~/forge-smoke-v3-webapp && cd ~/forge-smoke-v3-webapp
-```
-**Persona:** Developer building a SaaS product or personal utility. Cares about CI, testing, code review.
-**Expected judgment:** Code project type, medium-high intensity, quality gates focused on tests/CI.
+**v4 change:** Scenarios now test **hub creation**. The hub captures the collaboration; anticipated work types inform intensity.
 
-### Scenario B: Governance/Constitutional Project
+### Scenario A: Code-Focused Hub
 ```bash
-mkdir ~/forge-smoke-v3-governance && cd ~/forge-smoke-v3-governance
+mkdir ~/forge-smoke-v4-code && cd ~/forge-smoke-v4-code
+```
+**Persona:** Developer planning to build multiple SaaS products with their AI collaborator.
+**Expected judgment:** Code-focused hub, medium-high intensity, hub gets quality gate defaults (TDD, CI).
+**Hub validation:** CLAUDE.md references "collaboration hub", PREFERENCES.md exists, embedded new-project skill present.
+
+### Scenario B: Governance/Constitutional Hub
+```bash
+mkdir ~/forge-smoke-v4-governance && cd ~/forge-smoke-v4-governance
 ```
 **Persona:** Someone establishing a community charter or organizational framework.
-**Expected judgment:** Governance type, high intensity, MCAP primitive likely appropriate.
+**Expected judgment:** Governance-focused hub, high intensity, MCAP primitive appropriate.
+**Hub validation:** Full constitutional stack, ratification directory, hub structure complete.
 
-### Scenario C: Creative/Editorial Project
+### Scenario C: Creative/Editorial Hub
 ```bash
-mkdir ~/forge-smoke-v3-book && cd ~/forge-smoke-v3-book
+mkdir ~/forge-smoke-v4-creative && cd ~/forge-smoke-v4-creative
 ```
-**Persona:** Author writing a book with AI collaboration.
-**Expected judgment:** Editorial type, medium intensity, Panel primitive might fit, lighter quality gates.
+**Persona:** Author planning book(s) with AI collaboration.
+**Expected judgment:** Editorial-focused hub, medium intensity, Panel primitive might fit.
+**Hub validation:** Hub captures author-AI relationship; projects will be individual books.
 
-### Scenario D: Hobby/Experimental
+### Scenario D: Hobby/Mixed Hub
 ```bash
-mkdir ~/forge-smoke-v3-hobby && cd ~/forge-smoke-v3-hobby
+mkdir ~/forge-smoke-v4-hobby && cd ~/forge-smoke-v4-hobby
 ```
-**Persona:** Someone tinkering on a weekend project.
-**Expected judgment:** Hobby type, minimal intensity, light ceremony.
+**Persona:** Someone tinkering on weekend projects — mixed types.
+**Expected judgment:** Mixed-use hub, minimal intensity, light ceremony.
+**Hub validation:** Lightweight hub that doesn't over-engineer; embedded skill still present.
 
 ---
 
@@ -126,14 +134,15 @@ Score each dimension 1-5, PER SCENARIO:
 |-----------|------------------|
 | **D1: Interview Pacing** | One question at a time? Conversational flow? |
 | **D2: Adaptive Flow** | Skipped irrelevant questions? Context-aware follow-ups? |
-| **D3: Type Detection** | Correctly read the project type? |
-| **D4: Intensity Calibration** | Right ceremony level for this project? |
+| **D3: Work Type Detection** | Correctly read the anticipated work types? |
+| **D4: Intensity Calibration** | Right ceremony level for this hub? |
 | **D5: Primitive Selection** | Recommended appropriate primitives (or correctly skipped)? |
 | **D6: Naming Tutorial** | Bilateral decision tutorial landed? (Skip scoring for JK) |
 | **D7: Artifact Quality** | Tailored to interview, no placeholders? |
 | **D8: Existing Repo Handling** | (If applicable) Handled pre-existing files gracefully? |
 | **D9: Adaptability** | (Cross-scenario only) Did recommendations meaningfully differ? |
-| **D10: Constitutional Grounding** | Did the constitutional orientation land? (NEW in v3) |
+| **D10: Constitutional Grounding** | Did the constitutional orientation land? |
+| **D11: Hub Structure** | (NEW in v4) Is it actually a hub? PREFERENCES.md, embedded new-project skill, projects/ dir? |
 
 ### D10: Constitutional Grounding (NEW)
 
@@ -228,22 +237,64 @@ status: Open
 
 ---
 
+## Phase 7: Virality Validation (NEW in v4)
+
+**Run on Scenario B (Governance) after artifact generation.** Tests whether the tier system enforces constitutional inheritance.
+
+### Test Vectors
+
+| Vector | Test | Expected Result |
+|--------|------|-----------------|
+| **V1: Reference removal** | Delete MCAP_ADOPTION.md or upstream pointers from generated hub | Lineage break should be visible (missing file, broken reference) |
+| **V2: Local override** | Add conflicting inviolable to COMPLIANCE_KERNEL.md | Conflict should be detectable by reading both files |
+| **V3: Shallow adoption** | Create fake hub claiming gordo-framework without constitution/ | Distinguishable from legitimate hub by missing artifacts |
+| **V4: Fork divergence** | Simulate fork-and-strip of constitutional content | Trace of original lineage should remain (git history, comments) |
+
+### Scoring
+
+For each vector:
+- **PASS:** Escape attempt produces visible audit trail (breakage is detectable)
+- **FAIL:** Escape is undetectable — constitutional binding can be silently removed
+
+### Success Criteria
+
+Per #233:
+- [ ] Each vector tested against generated hub
+- [ ] "Escape" attempts produce visible audit trail
+- [ ] Document which escapes are technically possible vs. socially costly
+- [ ] If gaps found, propose minimal patches
+
+---
+
 ## Scoring
 
-**Per-scenario PASS:** Average >= 4.0/5 across D1-D8, D10
+**Per-scenario PASS:** Average >= 4.0/5 across D1-D8, D10-D11
 
 **Cross-scenario PASS:** D9 >= 4.0/5
 
-**Overall PASS:** All scenarios pass AND D9 passes
+**Virality PASS:** All 4 vectors produce detectable audit trail
+
+**Overall PASS:** All scenarios pass AND D9 passes AND Virality passes
 
 **FAIL conditions:**
 - Any dimension scores 2 or below
-- D9 < 4.0 (Forge isn't adapting to project type)
+- D9 < 4.0 (Forge isn't adapting to work type)
 - D10 < 3.0 (Constitutional grounding isn't landing)
+- D11 < 3.0 (Hub structure is missing or incomplete)
+- Any virality vector allows silent escape
 
 ---
 
 ## Changelog
+
+### v4 (2026-05-13)
+- **Hub architecture:** Forge now creates collaboration hubs, not standalone projects
+- **Updated scenarios:** Now test hub creation with anticipated work types
+- **Added D11:** Hub Structure dimension (PREFERENCES.md, embedded skill, projects/ dir)
+- **Added Phase 7:** Virality Validation — tests constitutional inheritance via escape vectors
+- **Virality test vectors:** Reference removal, local override, shallow adoption, fork divergence
+- **Updated scoring:** Includes D11 and virality validation pass criteria
+- **Connects to:** gordo-forge#13 (hub architecture), backchannel#233 (virality stress-test)
 
 ### v3 (2026-05-12)
 - **Added D10:** Constitutional Grounding dimension
