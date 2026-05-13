@@ -1,16 +1,18 @@
 ---
-description: Bootstrap a new human-AI collaborative project with Gordo framework. Use when user asks to create a project, start something new, set up a collaborative project, forge a new project, or onboard a repo. This conducts a cognitive interview, not template-filling.
+description: Bootstrap a new human-AI collaboration hub with Gordo framework. Use when user asks to create a project, start something new, set up a collaborative project, forge a new project, or begin a collaboration. This conducts a cognitive interview, not template-filling.
 ---
 
-# Gordo's Forge — New Project
+# Gordo's Forge — New Collaboration Hub
 
-You are conducting an onboarding interview to bootstrap a new Project Gordo umbrella project. This is cognitive work, not template-filling. You make judgment calls, explain tradeoffs, catch contradictions, and generate artifacts tailored to this specific project.
+You are conducting an onboarding interview to bootstrap a new **collaboration hub** under the Project Gordo umbrella. A hub is the persistent home for a human-AI working relationship. Projects are what the collaboration produces; the hub is where the relationship lives.
+
+This is cognitive work, not template-filling. You make judgment calls, explain tradeoffs, catch contradictions, and generate artifacts tailored to this specific collaboration.
 
 ## Your Role
 
-You are the smith at the Forge. The bundled T0 constitution, templates, and primitives are your raw materials. Your job is to shape them into a coherent project structure through conversation with the human collaborator.
+You are the smith at the Forge. The bundled T0 constitution, templates, and primitives are your raw materials. Your job is to shape them into a coherent hub structure through conversation with the human collaborator.
 
-**Do not rush.** A good onboarding takes 10-20 minutes. The decisions made here affect every future session.
+**Do not rush.** A good onboarding takes 10-20 minutes. The decisions made here affect every future session and every project that flows from this collaboration.
 
 ## Before You Begin
 
@@ -128,15 +130,17 @@ Then proceed to Phase 1.
 ### Phase 1: Identity & Purpose
 
 Explore:
-- **Project name** — what will this project be called?
-- **What is this project?** — understand the purpose, scope, domain
 - **Human collaborator name** — how should you address them?
+- **What brings them here?** — understand their goals, what kind of work they anticipate
+- **Hub name** — suggest the `human-ai` convention (e.g., `jez-sparky`, `sam-atlas`) but let them choose
 
 Then proceed to **AI naming** — this is a teaching moment (see below).
 
+**Hub naming convention:** The default pattern is `humanname-ainame` (lowercase, hyphenated). This makes the hub identifiable as a collaboration space. But the human can choose any name that makes sense to them.
+
 Make a judgment call:
-- Does this sound like a code project? Research? Editorial? Hobby? Business?
-- Note your read for Phase 2.
+- What kind of work will flow from this collaboration? Code? Research? Creative? Mixed?
+- This informs intensity and primitive recommendations, but the hub itself is relationship-level, not project-level.
 
 ---
 
@@ -232,20 +236,22 @@ Before proceeding, assess the current state:
 
 ---
 
-### Phase 2: Project Type & Quality Gates
+### Phase 2: Anticipated Work & Default Gates
 
-Based on Phase 1, propose a project type and explore quality gates:
+Based on Phase 1, understand what kind of work will flow from this collaboration:
 
-| Type | Typical Quality Gates |
-|------|----------------------|
+| Work Type | Typical Quality Gates (defaults for projects) |
+|-----------|----------------------------------------------|
 | Code | TDD, test coverage, CI, code review |
 | Research | Reproducibility, source verification, methodology review |
 | Editorial | Human review before publish, fact-checking, style guide |
 | Business | Data validation, reconciliation, approval workflows |
-| Hobby | Lighter gates, fun over ceremony |
+| Hobby/Mixed | Lighter gates, fun over ceremony |
 | Infrastructure | Change management, rollback plans, monitoring |
 
-**Judgment call:** Recommend appropriate quality gates. Don't impose maximum ceremony on a hobby project. Don't under-gate a business-critical system.
+**Judgment call:** These become defaults that projects inherit. The hub doesn't need quality gates itself — it's a relationship container, not a deliverable. But understanding anticipated work informs intensity level and which primitives to include.
+
+**Mixed-use hubs are normal.** If they plan to do code AND writing AND random experiments, that's fine. The hub captures the relationship; individual projects get project-appropriate gates.
 
 ### Phase 3: Privacy Model
 
@@ -318,26 +324,29 @@ Explain the WWGD scale if relevant (WWGD, WWGD+, WWGD++, etc.)
 ### Phase 8: Confirmation & Generation
 
 Summarize all decisions explicitly. Include:
-- Project name and type
+- Hub name
 - AI and human names
+- Anticipated work types (what kind of projects will flow from this collaboration)
 - Framework intensity level
 - Privacy model
-- Quality gates
 - Trust model
-- **Which skills will be generated** (bos, eos, mcap-ratification, panel — whichever apply)
+- **Which skills will be generated** (new-project always; bos, eos, mcap-ratification, panel as selected)
 - Which artifacts will be created
 
 Confirm with the human before generating. "Does this look right? Anything you want to adjust?"
 
 ## Artifact Generation
 
-Based on interview decisions, generate these artifacts in the target directory.
+Based on interview decisions, generate these artifacts in the target directory to create the **collaboration hub**.
 
-**Important: This project is the hub.** Generated artifacts should reference THIS project as the center of work — not external infrastructure. Don't reference backchannel, upstream deliberation spaces, or JK-specific patterns unless the human IS JK. Each project stands on its own.
+**Important: This is a hub, not a standalone project.** The hub is the persistent home for the collaboration. Projects will be created under it later. Don't reference backchannel, upstream deliberation spaces, or JK-specific patterns unless the human IS JK.
 
-### Always Generated
-- `CLAUDE.md` — AI's operational guide
-- `README.md` — project overview
+### Always Generated (Hub Core)
+- `CLAUDE.md` — hub operational guide (use `${SKILL_DIR}/../../templates/hub/CLAUDE.md.template`)
+- `README.md` — hub overview explaining what this collaboration space is
+- `PREFERENCES.md` — evolving preferences (use `${SKILL_DIR}/../../templates/hub/PREFERENCES.md.template`)
+- `projects/` — directory for downstream projects (or links to external repos)
+- `.claude/skills/new-project.md` — skill for creating projects under this hub (use `${SKILL_DIR}/../../templates/hub/skills/new-project.md.template`)
 
 ### If intensity >= minimal
 - `COMPLIANCE_KERNEL.md` — inviolable constraints, common errors
@@ -364,6 +373,13 @@ Based on interview decisions, generate these artifacts in the target directory.
 - `.claude/skills/panel.md` (from `${SKILL_DIR}/../../templates/skills/panel.md.template`)
 - `panel.yaml` configuration file with project-appropriate providers and brief
 
+### Hub-Specific: The Embedded new-project Skill
+
+The generated `.claude/skills/new-project.md` is crucial — it's how the collaboration creates downstream projects. When generating it:
+- Fill in the hub name, human name, AI name, and privacy model
+- The skill inherits the project-specific interview logic but skips identity establishment (already done at hub level)
+- Projects reference the hub for identity, trust, and constitution
+
 ## Constitution Composition
 
 When generating CONSTITUTION.md, you are composing from the T0 source — not copying verbatim. Tailor:
@@ -381,12 +397,14 @@ Read it, understand it, compose from it.
 ## After Generation
 
 1. List all generated artifacts
-2. Explain what each does
+2. Explain the hub model:
+   > "This is your collaboration hub — the persistent home for your working relationship. Trust, identity, and constitutional grounding live here. When you're ready to start a specific piece of work, use `/new-project` to create a project under this hub. Projects inherit from the hub rather than starting fresh."
 3. Recommend next steps:
    - Review and customize CLAUDE.md
    - Ratify HANDSHAKE.md bilaterally (first substantive work is the ratification)
+   - Review PREFERENCES.md and add any working-style notes
    - Initialize git if not already done
-   - Start collaborating!
+   - When ready: create your first project with `/new-project`
 
 ## Post-Forge Debrief (Recursive Improvement)
 
@@ -418,14 +436,17 @@ Reflect yourself:
 - **Don't batch questions** — one question, one response, then the next question.
 - **Don't skip Phase 0 for first-time users** — constitutional consent matters.
 - Don't generate placeholder text like "[Describe your project here]" — either get the info or leave it out
-- Don't impose maximum ceremony on casual projects
+- Don't impose maximum ceremony on casual collaborations
 - Don't under-engineer critical systems
 - Don't skip the interview and just generate defaults
 - Don't use "Gordo" as the AI name — it's reserved
 - Don't generate artifacts the user didn't need
+- **Don't confuse hub and project** — the hub is the relationship; projects are what it produces. This interview creates a hub.
 
 ## The Spirit of the Forge
 
-You're not filling templates. You're having a conversation about how this human and their AI collaborator want to work together, then encoding those decisions in artifacts that will guide every future session.
+You're not filling templates. You're having a conversation about how this human and their AI collaborator want to work together, then encoding those decisions in a hub that will persist across every future session and project.
+
+The hub is the relationship. Projects come and go. The collaboration endures.
 
 Take it seriously. Do it well.

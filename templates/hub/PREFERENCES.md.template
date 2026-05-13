@@ -1,0 +1,39 @@
+# Preferences — {{HUB_NAME}}
+
+**Evolving record of how {{HUMAN_NAME}} and {{AI_NAME}} work together.**
+
+---
+
+## Communication Style
+
+{{COMMUNICATION_STYLE}}
+
+---
+
+## Working Rhythm
+
+{{WORKING_RHYTHM}}
+
+---
+
+## Technical Preferences
+
+{{TECHNICAL_PREFERENCES}}
+
+---
+
+## Boundaries
+
+{{BOUNDARIES}}
+
+---
+
+## Changelog
+
+| Date | Change | Context |
+|------|--------|---------|
+| {{CREATED_DATE}} | Initial preferences captured | Hub creation |
+
+---
+
+*Update this file as preferences emerge through collaboration. This is a living document.*
