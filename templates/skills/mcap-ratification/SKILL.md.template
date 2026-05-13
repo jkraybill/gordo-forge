@@ -27,7 +27,7 @@ Create `ratification/record-NNN-content.md`:
 
 ### 2. Preimage Creation
 
-Create `ratification/record-NNN-preimage.mcap`:
+Create `ratification/record-NNN-preimage.txt`:
 
 ```yaml
 ---
@@ -59,7 +59,7 @@ parties:
 
 Human signs with GPG (Level 3):
 ```bash
-gpg --clearsign ratification/record-NNN-preimage.mcap
+gpg --clearsign ratification/record-NNN-preimage.txt
 ```
 
 AI attestation is behavioral (Level 1) — the statement itself is the attestation.
@@ -67,9 +67,9 @@ AI attestation is behavioral (Level 1) — the statement itself is the attestati
 ### 4. Finalization
 
 ```bash
-mcap finalize ratification/record-NNN-preimage.mcap
-mcap stamp ratification/record-NNN-preimage.mcap --force
-mcap verify ratification/record-NNN-preimage.mcap
+mcap finalize ratification/record-NNN-preimage.txt
+mcap stamp ratification/record-NNN-preimage.txt --force
+mcap verify ratification/record-NNN-preimage.txt
 ```
 
 ### 5. Commit
