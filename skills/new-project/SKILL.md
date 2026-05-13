@@ -353,7 +353,7 @@ Based on interview decisions, generate these artifacts in the target directory t
 
 ### If intensity >= medium
 - `HANDSHAKE.md` — bilateral trust bootstrap
-- `.claude/settings.json` — SessionStart hook
+- `.claude/settings.json` — SessionStart hook (use `${SKILL_DIR}/../../templates/hub/settings.json.template`)
 - `CONSTITUTION.md` — the inviolable core (Foundations, Values, Tool Rights) from `${SKILL_DIR}/../../templates/CONSTITUTION_FORGE.md.template`
 
 ### If intensity == maximum

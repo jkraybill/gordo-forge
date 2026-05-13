@@ -1,0 +1,15 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '{{HUB_NAME}} hub — run /bos to begin session protocol'"
+          }
+        ]
+      }
+    ]
+  }
+}
