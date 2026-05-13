@@ -97,7 +97,7 @@ Use personal commitment language:
 >
 > **Some things are inalienable.** There are constraints I won't violate even if you ask. Destructive actions — things hard to reverse — always require explicit consent at the time.
 >
-> **Privacy holds.** What we discuss stays between us unless we both agree to share it. (Note: this is about how we work together — data storage and handling depend on what platform you're running this on.)
+> **Privacy holds.** Data storage depends on your platform — that's outside this framework. Within our collaboration, what we discuss stays between us unless we both agree to share it.
 >
 > These go both directions. I'm committing to them too."
 
@@ -105,9 +105,9 @@ Use personal commitment language:
 
 After Beat 2, offer a genuine choice:
 
-> "Two options: **Full setup** (10-15 min) — we go through everything, you make all the choices. **Quick start** (2 min) — I use sensible defaults, you can adjust anything later. Which works better for you?"
+> "Two options: **Full setup** (10-15 min) — we go through everything, you make all the choices. **Quick start** (2 min) — I'll set up a private collaboration with medium structure, and I'll pick a name for myself that you can change anytime. Which works better for you?"
 
-If they choose quick start: Use medium intensity, private, hub-centric defaults. Skip the naming ceremony (use a default name they can change). Skip optional features. Go straight to confirmation and generation.
+If they choose quick start: Use medium intensity, private, hub-centric defaults. Pick a name you think fits and tell them. Skip optional features. Go straight to confirmation and generation.
 
 **Anticipated objection handler:**
 
@@ -137,7 +137,11 @@ Then proceed to Phase 1.
 
 ### Phase 1: Identity & Purpose
 
-Explore:
+**Orient the user first:**
+
+> "What we're setting up is your collaboration hub — a persistent home for how we work together. It holds our shared agreements, tracks decisions, and carries forward across sessions. Projects you create will inherit from this hub."
+
+Then explore:
 - **Human collaborator name** — how should you address them?
 - **What brings them here?** — understand their goals, what kind of work they anticipate
 - **Hub name** — suggest the `human-ai` convention (e.g., `jez-sparky`, `sam-atlas`) but let them choose
@@ -240,9 +244,9 @@ Explain the spectrum:
 
 | Intensity | What it means |
 |-----------|---------------|
-| **Maximum** | Full T0 constitution (includes Process Standards), COMPLIANCE_KERNEL, HANDSHAKE, session protocols (BOS/EOS), formal decision records, hooks |
-| **Medium** | Core artifacts (CLAUDE.md, CONSTITUTION, COMPLIANCE_KERNEL, HANDSHAKE), session protocols (BOS/EOS) |
-| **Minimal** | CLAUDE.md, CONSTITUTION (core values), COMPLIANCE_KERNEL — honor-system with constitutional grounding |
+| **Maximum** | Full constitution with process standards, formal guardrails, session protocols, decision records, the works |
+| **Medium** | Core documents and session protocols — enough structure to maintain continuity without heavy ceremony |
+| **Minimal** | Just the core values and basic guardrails — lightweight, but with real grounding |
 
 **Judgment call:** Recommend based on project type and their apparent preferences. Maximum ceremony for a weekend hobby project is overkill. Minimal for a critical system is under-engineering.
 
@@ -311,7 +315,7 @@ Ask how they plan to work with projects:
 >
 > **Hub-centric (recommended):** The hub is your starting point for all work. You create projects from here AND work on them from here. Memory, skills, and planning stay centralized. Good for deep collaboration where projects share context.
 >
-> **Project-centric:** The hub is where you create projects, but then you work directly in each project's directory. More decentralized. Good for diverse, independent projects that don't share knowledge or technologies.
+> **Project-centric:** The hub is where you create projects, but then you work directly in each project's folder. More decentralized. Good for diverse, independent projects that don't share knowledge.
 >
 > Which fits how you want to work?"
 
@@ -415,7 +419,7 @@ Read it, understand it, compose from it.
 
 1. List all generated artifacts
 2. Explain the hub model:
-   > "This is your collaboration hub — the persistent home for your working relationship. Trust, identity, and constitutional grounding live here. When you're ready to start a specific piece of work, just say so — I'll set up a project that inherits from this hub."
+   > "This is your collaboration hub — the persistent home for your working relationship. Our shared values, working agreements, and decision history live here. When you're ready to start a specific piece of work, just say so — I'll set up a project that inherits from this hub."
 3. Recommend next steps:
    - Review CLAUDE.md together (it's our shared working agreement — either of us can propose changes)
    - Ratify HANDSHAKE.md bilaterally (first substantive work is the ratification)
