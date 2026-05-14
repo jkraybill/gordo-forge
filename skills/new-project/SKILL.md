@@ -263,9 +263,9 @@ Ask:
 
 If yes: explain this adds a decision log — a simple record where we note "We agreed to X on [date]." When something matters enough to point back to later, we'll both confirm it before it goes on the record. If no: skip it.
 
-**For formal trust negotiation (Pact):**
+**For formal trust negotiation (Gauge):**
 
-Pact is paused — usually skip unless they specifically ask about formal trust negotiation.
+Gauge is paused — usually skip unless they specifically ask about formal trust negotiation.
 
 **For external review:**
 

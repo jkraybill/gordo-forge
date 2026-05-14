@@ -1,5 +1,5 @@
 ---
-description: Add a T1 primitive (Seal, Pact, Roundtable) to an existing Gordo umbrella project. Use when user wants to add ratification (Seal), trust calibration (Pact), or external review (Roundtable) capabilities.
+description: Add a T1 primitive (Seal, Gauge, Roundtable) to an existing Gordo umbrella project. Use when user wants to add ratification (Seal), trust calibration (Gauge), or external review (Roundtable) capabilities.
 ---
 
 # Gordo's Forge — Add Primitive
@@ -33,13 +33,13 @@ If not a PG-umbrella project, suggest running `/gordo-forge:new-project` first.
 2. Do you have GPG keys set up for signing? (Seal Level 3 requires this)
 3. Should we add full ceremony or lightweight?
 
-### Pact (Trust Calibration Protocol)
+### Gauge (Trust Calibration Protocol)
 
 **Status:** Paused, restart planned. Adding now is preparatory.
 
 **What it adds:**
 - Trust calibration framework reference
-- Placeholder for future Pact integration
+- Placeholder for future Gauge integration
 
 **Interview:**
 1. Are you comfortable with preparatory/placeholder integration?

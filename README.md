@@ -39,7 +39,7 @@ Forge writes a coherent project structure:
 
 Plus optional primitives based on your answers:
 - **Seal** (decision records): Verifiable bilateral consent
-- **Pact** (trust calibration): Earned autonomy levels
+- **Gauge** (trust calibration): Earned autonomy levels
 - **Roundtable** (external review): Catches shared blind spots
 
 ---
@@ -60,7 +60,7 @@ Based on your answers, Forge makes judgment calls, explains tradeoffs, and gener
 
 ## Other Commands
 
-- `/gordo-forge:add-primitive`: Add Seal, Pact, or Roundtable to an existing project
+- `/gordo-forge:add-primitive`: Add Seal, Gauge, or Roundtable to an existing project
 - `/gordo-forge:upgrade`: Update your constitution to a newer version
 
 Run these in Claude Code chat. Files write to your current directory.
