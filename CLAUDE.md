@@ -65,7 +65,11 @@ See `COMPLIANCE_KERNEL.md` for inviolables. Highlights:
 
 - `~/project-gordo/` — T0 constitutional root
 - `~/project-gordo-backchannel/` — hub for deliberation + session tracking
-- `~/gordo-framework/` — T2 distribution layer (Forge is a sibling, not child)
+- `~/gordo-ledger/` — T1 semantic memory primitive
+- `~/gordo-seal/` — T1 attestation primitive
+- `~/gordo-roundtable/` — T1 external review primitive
+
+*gordo-framework obsoleted S237 — Forge succeeded its T2 composition role.*
 
 ---
 
