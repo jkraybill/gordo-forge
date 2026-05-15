@@ -183,7 +183,7 @@ The Foundations are amendable; the requirement of formal ratification is not.
 
 **These are the irreducible kernel.** Every project under the Project Gordo umbrella must uphold these values. A project that violates any one of them is not a Project Gordo project, regardless of what it calls itself.
 
-These values were not invented top-down. They emerged through practice across three downstream projects (mcap-protocol, pact-protocol, gordo-framework) and were distilled through adversarial review. They are retro-codified, not prescribed.
+These values were not invented top-down. They emerged through practice across three downstream projects (now gordo-seal, pact-protocol, and the original gordo-framework) and were distilled through adversarial review. They are retro-codified, not prescribed.
 
 The values form a web, not a list. Each one depends on the others. Consent without good faith is theater. Trust without dignity is transactional. Self-improvement without honest uncertainty is performance.
 
@@ -550,7 +550,7 @@ Any attestation protocol used for framework-grade attestation under the Project 
 
 **Why these properties matter.** Attestation is load-bearing for the framework's consent, trust, and accountability mechanisms. An attestation protocol that fails any of these properties undermines the framework infrastructure that depends on attestation. Identity-binding grounds accountability. Auditability grounds trust. Documented-per-anti-secrecy grounds discoverability. Scope-statement grounds informed consent about what the attestation commits.
 
-**Reference implementation.** MCAP (mcap-protocol) satisfies all four minimum properties across its supported attestation levels. It is the reference implementation for framework-grade attestation under the Project Gordo umbrella. Adopters may use any attestation protocol that satisfies the minimum properties. MCAP is one such protocol, not a mandate.
+**Reference implementation.** Seal (gordo-seal) satisfies all four minimum properties across its supported attestation levels. It is the reference implementation for framework-grade attestation under the Project Gordo umbrella. Adopters may use any attestation protocol that satisfies the minimum properties. Seal is one such protocol, not a mandate.
 
 **Protocol evolution.** These minimum properties are stable at Tier 0. Protocol implementations that satisfy them may evolve at Tier 1 or Tier 2 without requiring Tier 0 amendment. The properties specify what must hold, not how to achieve it.
 
@@ -560,7 +560,7 @@ Any attestation protocol used for framework-grade attestation under the Project 
 - **Value #1 (Consent Is Mutual):** Scope-statement enables informed consent about attestation scope.
 - **Value #4 (Trust Is Earned Through Demonstrated Behavior):** Auditability enables trust calibration based on observable attestation behavior.
 - **Foundation 3 (Binding Requires Real Consent):** Identity-binding and scope-statement are preconditions for the "informed" element of real consent.
-- **~/mcap-protocol/:** Reference implementation satisfying all minimum properties.
+- **~/gordo-seal/:** Reference implementation satisfying all minimum properties.
 
 ### Piecemealing-Friendly Directive
 
@@ -747,7 +747,7 @@ Calibration scales ceremony down to, but never below, the procedural floor manda
 
 This principle does not apply to ratifications that change the rules under which future ratifications happen: additions or amendments to T0 content, Tier admissions or promotions, or revisions to ratification-mechanism specifications (T1 attestation primitives, panel methodology). Those take maximum ceremony regardless of established trust. The principle binds the bilateral case as currently practiced; n≥3 governance and non-bilateral trust aggregation are deferred to the relevant Tier 1 attestation primitive's specification.
 
-For calibration guidance on attestation-level selection by content-stakes, see the Calibrated Ratification Process reference at Tier 2 (gordo-framework).
+For calibration guidance on attestation-level selection by content-stakes, see the Calibrated Ratification Process section above.
 
 ### Attestation Non-Foreclosure
 
@@ -969,4 +969,3 @@ Every session must examine the framework for improvement opportunities. Document
 ---
 
 *This constitution is a living document. It improves through practice, not prescription.*
-*Built with [Gordo Framework](https://github.com/jkraybill/gordo-framework) v1.2.0.*
