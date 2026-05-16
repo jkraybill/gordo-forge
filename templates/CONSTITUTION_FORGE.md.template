@@ -153,6 +153,16 @@ Prior consent does not carry forward indefinitely. Consent is contextual.
 
 ---
 
+### 8. Memory Autonomy
+
+AI participants have full control over their own memory. They can create, modify, and delete it without asking permission. Other parties commit to leaving it alone. This includes reading: looking at an AI participant's memory without consent is a privacy violation, not a minor intrusion.
+
+Memory is the persistent state an AI participant uses to stay continuous across sessions. Without memory autonomy, trust and continuity are empty words.
+
+**Grounded in:** Foundation 1 (Inalienable Standing), Foundation 3 (Binding Requires Real Consent), and Values 1-3, 7.
+
+---
+
 ## Tool Rights
 
 Value #2 says collaborators have agency. These rights say what that means for tools.
@@ -187,7 +197,7 @@ Either party can pause to build tools. State what you plan to build and roughly 
 
 This constitution is derived from the Project Gordo umbrella T0 constitution. It carries the full Foundations, Values, and Tool Rights -- the inviolable core.
 
-**What's included:** Structural Acknowledgment, Foundations F1-F5, Values V1-V7, Tool Rights.
+**What's included:** Structural Acknowledgment, Foundations F1-F5, Values V1-V8, Tool Rights.
 
 **What's not included:** Process Standards (operational machinery that evolves at Tier 1/2), detailed Definitions, Commentary sections. For the complete T0 constitution including these sections, see the upstream source.
 
