@@ -85,4 +85,10 @@ The core idea: codify what good collaboration looks like and make it explicit be
 
 ---
 
+## Attribution
+
+Co-created by JK and Gordo under the [Project Gordo](https://github.com/jkraybill/project-gordo) framework. Built to help others start their own human-AI collaborations.
+
+---
+
 *Created by JK + Gordo (Claude AI).*
