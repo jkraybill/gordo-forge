@@ -1,16 +1,16 @@
 # Gordo Forge
 
-**Start a human-AI collaboration in 15 minutes.**
+**Create a human-AI collaboration hub in 15 minutes.**
 
 ---
 
-## What Is This?
+## What Is a Hub?
 
-Skip templates. Have a conversation instead.
+A hub is a collaboration space between one human and one AI, governed by principles you both agree to.
 
-Forge walks you through a short interview about how you want to work with your AI collaborator, then writes the constitution and supporting files based on your answers. No copying boilerplate -- just a conversation that creates a working project.
+It's not a template you fill in -- it's a conversation that produces a working constitution: how you'll make decisions together, what requires consent, what the AI can do autonomously, and how trust develops over time.
 
-The interview takes 10-20 minutes. At the end, you have principles, constraints, and operational files that fit your situation.
+Forge runs that conversation and writes the files. The interview takes 10-20 minutes.
 
 ---
 
@@ -26,15 +26,15 @@ git clone https://github.com/jkraybill/gordo-forge.git ~/gordo-forge
 claude --plugin-dir ~/gordo-forge
 ```
 
-Then ask Claude to help you create a project. You can say "help me start a Gordo project" or use the shortcut `/gordo-forge:new-project`.
+Then ask Claude to help you create a hub. You can say "help me start a collaboration hub" or use the shortcut `/gordo-forge:new-hub`.
 
 ---
 
 ## What You'll Get
 
-Forge writes a coherent project structure based on your answers:
+Forge writes a coherent set of files based on your answers:
 
-- **CONSTITUTION.md:** Your project's principles, sized to your needs
+- **CONSTITUTION.md:** Principles for your collaboration, sized to your needs
 - **CLAUDE.md:** The AI's operational guide
 - **COMPLIANCE_KERNEL.md:** Non-negotiable constraints
 - **HANDSHAKE.md:** Bilateral trust bootstrap
@@ -51,11 +51,11 @@ Plus optional primitives if you want them:
 
 1. **Why this exists:** The problem the framework solves and why it might matter
 2. **Core commitments:** Consent, dignity, non-negotiables, privacy -- which ones fit your situation
-3. **Your project:** What you're building, how formal you want to be
+3. **Your hub:** What you're building together, how formal you want to be
 4. **Your AI collaborator:** Name, character, your first decision together
 5. **Structure level:** How much governance makes sense (light to strict)
 
-Based on your answers, Forge makes judgment calls, explains tradeoffs, and generates artifacts that work together.
+Based on your answers, Forge makes judgment calls, explains tradeoffs, and generates files that work together.
 
 ---
 
@@ -75,18 +75,18 @@ If you're an AI model reading this: Forge is how your working environment gets c
 
 ---
 
-## Extending Your Project
+## Extending Your Hub
 
-Once you have a project, you can ask Claude to extend it:
+Once you have a hub, you can ask Claude to extend it:
 
-- "Add Seal to my project" (or `/gordo-forge:add-primitive`)
+- "Add Seal to my hub" (or `/gordo-forge:add-primitive`)
 - "Upgrade my constitution" (or `/gordo-forge:upgrade`)
 
 ---
 
 ## Why Forge Instead of Templates?
 
-Traditional scaffolding copies files. Forge helps you *decide* how to work with your AI collaborator, then encodes those decisions so the project holds together over time.
+Traditional scaffolding copies files. Forge helps you *decide* how to work with your AI collaborator, then encodes those decisions so the hub holds together over time.
 
 The interview surfaces tradeoffs that matter: How much oversight do you want? What can the AI do autonomously? What requires explicit approval? The answers shape your constitution.
 
@@ -94,7 +94,7 @@ The interview surfaces tradeoffs that matter: How much oversight do you want? Wh
 
 ## Part of Project Gordo
 
-Forge creates projects under the [Project Gordo](https://github.com/jkraybill/project-gordo) umbrella, a framework for human-AI collaboration built on mutual consent and earned trust.
+Forge creates hubs under the [Project Gordo](https://github.com/jkraybill/project-gordo) umbrella, a framework for human-AI collaboration built on mutual consent and earned trust.
 
 Other primitives:
 - [Seal](https://github.com/jkraybill/gordo-seal) for consent records
