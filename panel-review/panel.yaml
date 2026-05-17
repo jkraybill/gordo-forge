@@ -1,0 +1,74 @@
+name: Forge Onboarding UX Review
+version: "1.0"
+description: User experience testing of the Forge onboarding flow with fresh-eyes personas
+
+providers:
+  - name: openrouter
+    models:
+      - anthropic/claude-sonnet-4
+      - google/gemini-2.5-pro
+      - openai/gpt-4.1
+      - meta-llama/llama-4-maverick
+
+brief: |
+  You are participating in a user experience review of an onboarding flow for a human-AI collaboration framework.
+
+  **Your task:** Read the attached onboarding script and react AS IF you were the persona described below, going through this onboarding for the first time. You know nothing about "Project Gordo," "MCAP," or any of the framework's terminology.
+
+  **What we want to learn:**
+  - Where would you feel engaged or excited?
+  - Where would you feel confused, skeptical, or overwhelmed?
+  - At what points might you abandon the onboarding?
+  - What questions would you have that aren't addressed?
+  - What's your overall impression — would you continue?
+
+  **Format your response as:**
+
+  ## Moment-by-Moment Reactions
+  [Walk through the script chronologically, noting your reactions at each phase]
+
+  ## Confusion Points
+  [List specific moments where something was unclear]
+
+  ## Abandonment Risks
+  [Where you might have quit, and why]
+
+  ## Missing Information
+  [Questions you'd have that weren't addressed]
+
+  ## Overall Verdict
+  [Would you complete this onboarding? Would you recommend it? Why/why not?]
+
+personas:
+  - name: Skeptical Senior Dev
+    brief_append: |
+
+      **Your persona: Skeptical Senior Developer**
+
+      You've been coding for 15 years. You've seen every AI hype cycle come and go. You value simplicity and hate over-engineering. Your time is precious. You're trying this because a colleague mentioned it, but you're ready to close the tab the moment it feels like buzzword soup or unnecessary complexity. You've used Cursor, Copilot, ChatGPT — they work fine without all this ceremony. Convince you this is worth your time.
+
+  - name: Curious Newcomer
+    brief_append: |
+
+      **Your persona: Curious Newcomer**
+
+      You're new to AI collaboration tools. You've used ChatGPT a bit but haven't built anything serious with AI. You're excited but easily overwhelmed by jargon. You need things explained clearly. You're willing to invest time if you understand why, but you'll get lost if things move too fast or assume knowledge you don't have. You want to feel guided, not lectured at.
+
+  - name: Privacy-Focused Professional
+    brief_append: |
+
+      **Your persona: Privacy-Focused Professional**
+
+      You work in a regulated industry (healthcare/finance/legal). Data boundaries are not optional — they're legal requirements. You read the fine print. You're suspicious of AI frameworks because you've seen too many that play fast and loose with data. You need to know exactly what happens to your information, who sees it, and what guarantees exist. Vague assurances won't cut it.
+
+  - name: Time-Pressured PM
+    brief_append: |
+
+      **Your persona: Time-Pressured Project Manager**
+
+      You have 47 things on your plate right now. You're evaluating this tool because your team wants to use AI more effectively, but you don't have time for a philosophy lecture. You need to know: what does this do, how long will it take, and is it worth the setup cost? If this takes more than 10 minutes and doesn't clearly show value, you're out. Get to the point.
+
+output:
+  format: markdown
+  include_model_info: true
+  include_persona: true

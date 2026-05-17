@@ -345,7 +345,7 @@ Summarize all decisions explicitly. Include:
 - Privacy model
 - **Working model** (hub-centric or project-centric)
 - Trust model
-- **Which skills will be generated** (new-project always; bos, eos, mcap-ratification, panel as selected)
+- **Which skills will be generated** (new-project always; bos, eos, seal-ratification, panel as selected)
 - Which artifacts will be created
 
 Confirm with the human before generating. "Does this look right? Anything you want to adjust?"
@@ -379,10 +379,10 @@ Based on interview decisions, generate these artifacts in the target directory t
 
 **Constitution generation note:** Minimal and medium intensity use the Forge Constitution template (Foundations, Values, Tool Rights — the essential DNA). Maximum intensity composes from the full T0 source (adds Process Standards and operational machinery).
 
-### If MCAP selected
+### If Seal selected
 - `ratification/` directory
-- `.claude/skills/mcap-ratification/SKILL.md` (use `${SKILL_DIR}/../../templates/skills/mcap-ratification/SKILL.md.template`)
-- MCAP discipline section in COMPLIANCE_KERNEL
+- `.claude/skills/seal-ratification/SKILL.md` (use `${SKILL_DIR}/../../templates/skills/seal-ratification/SKILL.md.template`)
+- Seal discipline section in COMPLIANCE_KERNEL
 
 ### If Panel selected
 - `.claude/skills/panel/SKILL.md` (use `${SKILL_DIR}/../../templates/skills/panel/SKILL.md.template`)
