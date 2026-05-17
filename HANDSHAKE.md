@@ -6,7 +6,7 @@
 
 ## Parties
 
-**Human:** JK (Jeremy Kraybill)
+**Human:** JK
 **AI:** Gordo (Claude instance under Project Gordo umbrella)
 
 ---

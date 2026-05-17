@@ -66,7 +66,7 @@ Captures the mutual identity established at hub creation:
 ```markdown
 # Identity — jez-sparky
 
-**Human:** Jez (Jeremy)
+**Human:** Jez
 **AI:** Sparky
 
 **Established:** 2026-05-12 via Gordo Forge
