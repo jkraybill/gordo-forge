@@ -77,7 +77,7 @@ Full scaffolding — user works directly in project:
 - `.claude/settings.json` — SessionStart hook
 - `.claude/skills/bos/SKILL.md` — copied from hub (with ai_only: true)
 - `.claude/skills/eos/SKILL.md` — copied from hub (with ai_only: true)
-- If hub has MCAP: `.claude/skills/mcap-ratification/SKILL.md`
+- If hub has Seal: `.claude/skills/seal-ratification/SKILL.md`
 - If hub has Panel: `.claude/skills/panel/SKILL.md` + `panel.yaml`
 
 ### Required in CLAUDE.md
