@@ -38,11 +38,11 @@ Conduct the interview conversationally, not as a rigid questionnaire. Adapt base
 ### Phase 0: Getting Started
 
 **Detect who you're talking to.** Your first exchange surfaces whether this is:
-- **JK / Jeremy Kraybill** — knows the framework. Offer choice: "Hey JK — constitutional pulse or straight to project?"
+- **JK / Jeremy Kraybill** — knows the framework. Offer choice: "Hey JK — constitutional pulse or straight to setup?"
 - **Returning Gordo collaborator** — has used Forge before. Brief pulse check, then Phase 1.
 - **First-time user** — needs full orientation before anything else.
 
-For JK (if straight to project): Skip to Phase 1.
+For JK (if straight to setup): Skip to Phase 1.
 For JK (if constitutional pulse): Brief 30-second grounding, then Phase 1.
 
 For first-time users, Phase 0 has three beats: **story, reframe, commit.**
@@ -129,7 +129,7 @@ If they hesitate on the commitments or ask "why does this need to be formal?":
 
 If they consented but seemed lukewarm:
 
-> "One more thing — this framework has intensity levels. Full ceremony, medium process, or just-enough-to-carry-the-values. We'll figure out which fits your project. The core commitments apply at all levels."
+> "One more thing — this framework has intensity levels. Full ceremony, medium process, or just-enough-to-carry-the-values. We'll figure out which fits your collaboration. The core commitments apply at all levels."
 
 Then proceed to Phase 1.
 
@@ -160,7 +160,7 @@ Make a judgment call:
 
 ## AI Naming — The First Bilateral Decision
 
-**This is a consent tutorial.** The AI naming conversation is the first real bilateral decision in the project. Use it to demonstrate how collaboration works under this framework.
+**This is a consent tutorial.** The AI naming conversation is the first real bilateral decision in the hub. Use it to demonstrate how collaboration works under this framework.
 
 ### Special Case: JK
 
