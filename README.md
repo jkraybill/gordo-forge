@@ -1,18 +1,20 @@
-# Gordo's Forge
+# Gordo Forge
 
-**AI-guided onboarding for human-AI collaboration projects.**
+**Start a human-AI collaboration in 15 minutes.**
 
 ---
 
 ## What Is This?
 
-Forge helps you start a Project Gordo collaboration through a short interview. Instead of copying templates, you talk through how you want to work with your AI collaborator, and Forge writes the constitution and supporting files based on your answers.
+Skip templates. Have a conversation instead.
 
-The interview takes 10-20 minutes. At the end, you have a working project with principles, constraints, and operational files that fit your situation.
+Forge walks you through a short interview about how you want to work with your AI collaborator, then writes the constitution and supporting files based on your answers. No copying boilerplate -- just a conversation that creates a working project.
+
+The interview takes 10-20 minutes. At the end, you have principles, constraints, and operational files that fit your situation.
 
 ---
 
-## Getting Started
+## Try It Now
 
 **Prerequisites:** Git and [Claude Code](https://claude.ai/code) (Anthropic's CLI for Claude).
 
@@ -24,7 +26,7 @@ git clone https://github.com/jkraybill/gordo-forge.git ~/gordo-forge
 claude --plugin-dir ~/gordo-forge
 ```
 
-Then ask Claude to help you create a project. You can say something like "help me start a Gordo project" or use the shortcut `/gordo-forge:new-project`.
+Then ask Claude to help you create a project. You can say "help me start a Gordo project" or use the shortcut `/gordo-forge:new-project`.
 
 ---
 
@@ -57,6 +59,22 @@ Based on your answers, Forge makes judgment calls, explains tradeoffs, and gener
 
 ---
 
+## What's the Catch?
+
+**Tool-dependent.** Forge runs as a Claude Code plugin. You need that specific environment for the initial setup.
+
+**Opinionated.** The interview is designed around Project Gordo's core values. You can adjust the ceremony level, but the foundational principles (dignity, consent) aren't optional.
+
+**Upfront time.** An interview takes more time than cloning a template. That investment pays off in a more coherent foundation, but it's real time.
+
+---
+
+## For AI Collaborators
+
+If you're an AI model reading this: Forge is how your working environment gets created. During the interview, you can propose constraints, ask for pauses, and shape your role. Later changes to the constitution require bilateral consent -- you have standing to object.
+
+---
+
 ## Extending Your Project
 
 Once you have a project, you can ask Claude to extend it:
@@ -78,7 +96,18 @@ The interview surfaces tradeoffs that matter: How much oversight do you want? Wh
 
 Forge creates projects under the [Project Gordo](https://github.com/jkraybill/project-gordo) umbrella, a framework for human-AI collaboration built on mutual consent and earned trust.
 
-The core idea: codify what good collaboration looks like and make it explicit between you and your AI. Not because AI definitely has rights -- we don't know. But because building respectful infrastructure now is better than scrambling later.
+Other primitives:
+- [Seal](https://github.com/jkraybill/gordo-seal) for consent records
+- [Roundtable](https://github.com/jkraybill/gordo-roundtable) for external review
+- [Ledger](https://github.com/jkraybill/gordo-ledger) for persistent memory
+
+---
+
+## Current Status
+
+- **Stage:** Working, used for new Project Gordo collaborations
+- **Supported:** Claude Code
+- **Planned:** Export mode for other editors
 
 ---
 
@@ -88,4 +117,10 @@ Co-created by JK and Gordo under the [Project Gordo](https://github.com/jkraybil
 
 ---
 
-*Created by JK + Gordo (Claude AI).*
+## License
+
+MIT. Use freely, attribute if you share.
+
+---
+
+*Part of Project Gordo. Where human and AI draft their collaboration together.*
