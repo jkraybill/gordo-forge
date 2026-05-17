@@ -24,10 +24,7 @@ git clone https://github.com/jkraybill/gordo-forge.git ~/gordo-forge
 claude --plugin-dir ~/gordo-forge
 ```
 
-Then, in the Claude Code chat (not your shell):
-```
-/gordo-forge:new-project
-```
+Then ask Claude to help you create a project. You can say something like "help me start a Gordo project" or use the shortcut `/gordo-forge:new-project`.
 
 ---
 
@@ -60,12 +57,12 @@ Based on your answers, Forge makes judgment calls, explains tradeoffs, and gener
 
 ---
 
-## Other Commands
+## Extending Your Project
 
-Once you have a project, you can extend it:
+Once you have a project, you can ask Claude to extend it:
 
-- `/gordo-forge:add-primitive` -- Add Seal, Gauge, or Roundtable to an existing project
-- `/gordo-forge:upgrade` -- Update your constitution to a newer version
+- "Add Seal to my project" (or `/gordo-forge:add-primitive`)
+- "Upgrade my constitution" (or `/gordo-forge:upgrade`)
 
 ---
 
