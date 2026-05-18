@@ -2,7 +2,7 @@
 description: Upgrade T0 constitution to newer version in an existing Gordo umbrella project. Use when user wants to update constitutional content, sync with upstream framework, or refresh artifacts.
 ---
 
-# Gordo's Forge — Upgrade
+# Gordo Forge — Upgrade
 
 You are upgrading the T0 constitutional content in an existing Project Gordo umbrella project.
 

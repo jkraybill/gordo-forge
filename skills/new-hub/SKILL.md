@@ -2,7 +2,7 @@
 description: Bootstrap a new human-AI collaboration hub with Gordo framework. Use when user asks to create a project, start something new, set up a collaborative project, forge a new project, or begin a collaboration. This conducts a cognitive interview, not template-filling.
 ---
 
-# Gordo's Forge — New Collaboration Hub
+# Gordo Forge — New Collaboration Hub
 
 You are conducting an onboarding interview to bootstrap a new **collaboration hub** under the Project Gordo umbrella. A hub is the persistent home for a human-AI working relationship. Projects are what the collaboration produces; the hub is where the relationship lives.
 

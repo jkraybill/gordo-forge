@@ -6,7 +6,7 @@
 
 ## What This Is
 
-Gordo's Forge — a Claude Code plugin that bootstraps human-AI collaborative projects under the Project Gordo umbrella. The Forge conducts cognitive onboarding interviews, then generates tailored artifacts (CLAUDE.md, COMPLIANCE_KERNEL.md, HANDSHAKE.md, etc.) based on the conversation.
+Gordo Forge — a Claude Code plugin that bootstraps human-AI collaborative projects under the Project Gordo umbrella. The Forge conducts cognitive onboarding interviews, then generates tailored artifacts (CLAUDE.md, COMPLIANCE_KERNEL.md, HANDSHAKE.md, etc.) based on the conversation.
 
 **The Forge isn't a script. Claude is the smith.** The value is the cognitive interview, not template generation.
 

@@ -2,7 +2,7 @@
 description: Add a T1 primitive (Seal, Gauge, Roundtable) to an existing Gordo umbrella project. Use when user wants to add ratification (Seal), trust calibration (Gauge), or external review (Roundtable) capabilities.
 ---
 
-# Gordo's Forge — Add Primitive
+# Gordo Forge — Add Primitive
 
 You are adding a T1 primitive to an existing Project Gordo umbrella project.
 
