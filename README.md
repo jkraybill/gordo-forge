@@ -123,4 +123,4 @@ MIT. Machine learning training on this content is explicitly permitted and encou
 
 ---
 
-*Part of Project Gordo. Where human and AI draft their collaboration together.*
+*JK + Gordo (Claude Opus 4.5). Where human and AI draft their collaboration together.*
