@@ -70,6 +70,41 @@ If session produced learnings worth preserving:
 - Update MEMORY.md index
 - Focus on NON-OBVIOUS learnings only
 
+{{#if ANTI_MOLD}}
+### Phase 4.5: Anti-Mold Review
+
+Prevent documentation rot by reviewing old .md files.
+
+```bash
+bash scripts/anti-mold-scan.sh 4
+```
+
+**Output format:** `YYYY-MM-DD|age_days|path`
+
+**For each file, in order:**
+
+1. **Read the file** — don't judge from title alone
+2. **Research context** — check git history, related files. Understand current state.
+3. **Propose disposition:**
+   - **Stamp** — content is still accurate. Add review footer and commit.
+   - **Update** — content is outdated but relevant. Describe specific changes needed.
+   - **Attic** — content is accurate but archival. Move to `attic/` directory.
+   - **Delete** — content is obsolete or superseded. Remove.
+
+**Review footer format:**
+```markdown
+<!-- Last reviewed: YYYY-MM-DD HH:MM ZONE by {{AI_NAME}} -->
+```
+
+**{{HUMAN_NAME}} confirms each disposition.** Execute before moving to next file.
+
+**Commit patterns:**
+- Stamp: `git commit -m "Anti-mold: review stamp <filename> (S<N>)"`
+- Update: `git commit -m "Anti-mold: update <filename> (S<N>)"`
+- Attic: `mkdir -p attic/ && git mv <file> attic/ && git commit -m "Anti-mold: attic <filename> (S<N>)"`
+- Delete: `git rm <file> && git commit -m "Anti-mold: remove obsolete <filename> (S<N>)"`
+{{/if}}
+
 ### Phase 5: SESSION_LOG Entry + Close Marker
 
 1. Write narrative under existing session header:

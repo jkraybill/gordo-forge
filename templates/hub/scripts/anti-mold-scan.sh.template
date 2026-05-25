@@ -1,0 +1,26 @@
+#!/bin/bash
+# Anti-Mold Scanner — finds oldest modified .md files for review
+# Usage: bash scripts/anti-mold-scan.sh [count]
+#
+# Output format: YYYY-MM-DD|age_days|path
+# Sorted oldest first
+
+set -e
+
+COUNT="${1:-4}"
+HUB_PATH="{{HUB_PATH}}"
+
+# Find .md files, exclude node_modules/.git/attic, sort by mtime
+find "$HUB_PATH" -name "*.md" -type f \
+  ! -path "*/node_modules/*" \
+  ! -path "*/.git/*" \
+  ! -path "*/attic/*" \
+  -printf "%T+|%p\n" 2>/dev/null \
+  | sort \
+  | head -n "$COUNT" \
+  | while IFS='|' read -r timestamp path; do
+    # Extract date and calculate age
+    file_date=$(echo "$timestamp" | cut -d'+' -f1)
+    age_days=$(( ($(date +%s) - $(date -d "$file_date" +%s)) / 86400 ))
+    echo "$file_date|$age_days|$path"
+  done

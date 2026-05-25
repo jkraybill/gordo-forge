@@ -309,6 +309,22 @@ For minimal-intensity projects: may skip if the human explicitly prefers lighter
 - `bos.md` skill — session open: context recovery, continuity check
 - `eos.md` skill — session close: summary, commit, push
 
+### Phase 6.5: Documentation Health (Anti-Mold)
+
+**Only ask if session protocol is ON.** Anti-mold is an EOS phase.
+
+Ask:
+> "Will you be creating documentation, notes, or specs that could get stale over time? Want me to automatically review a few old docs at the end of each session — catch things that are outdated before they rot?"
+
+If yes: explain this adds a brief review step at session close. Each EOS, I'll check a few of the oldest modified docs and propose: keep as-is, update, or archive. Takes 2-5 minutes per session but prevents documentation debt from accumulating.
+
+If no: skip it. Some projects don't accumulate docs that need maintenance.
+
+**What anti-mold adds:**
+- Anti-mold phase in EOS skill
+- `scripts/anti-mold-scan.sh` — finds oldest modified .md files
+- Disposition workflow: stamp (current), update (stale), attic (archival), delete (obsolete)
+
 ### Phase 7: Working Model
 
 Ask how they plan to work with projects:
@@ -396,6 +412,11 @@ Based on interview decisions, generate these artifacts in the target directory t
 ### If Panel selected
 - `.claude/skills/panel/SKILL.md` (use `${SKILL_DIR}/../../templates/skills/panel/SKILL.md.template`)
 - `panel.yaml` configuration file with project-appropriate providers and brief
+
+### If Anti-Mold selected
+- `scripts/anti-mold-scan.sh` (use `${SKILL_DIR}/../../templates/hub/scripts/anti-mold-scan.sh.template`)
+- `attic/` directory for archival content
+- Anti-mold phase in EOS skill (set `ANTI_MOLD=true` when processing EOS template)
 
 ### Hub-Specific: The Embedded new-project Skill
 
