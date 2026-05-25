@@ -379,6 +379,8 @@ Based on interview decisions, generate these artifacts in the target directory t
 - `.claude/settings.json` — SessionStart hook (use `${SKILL_DIR}/../../templates/hub/settings.json.template`)
 - `.claude/skills/bos/SKILL.md` — session open protocol (use `${SKILL_DIR}/../../templates/skills/bos/SKILL.md.template`)
 - `.claude/skills/eos/SKILL.md` — session close protocol (use `${SKILL_DIR}/../../templates/skills/eos/SKILL.md.template`)
+- `.claude/skills/status/SKILL.md` — quick orientation (use `${SKILL_DIR}/../../templates/skills/status/SKILL.md.template`)
+- `.claude/skills/recall/SKILL.md` — memory search (use `${SKILL_DIR}/../../templates/skills/recall/SKILL.md.template`)
 - `SESSION_LOG.md` — session audit trail
 
 ### If intensity == maximum
