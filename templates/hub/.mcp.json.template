@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "gordo-ledger": {
+      "command": "/usr/bin/node",
+      "args": ["/home/jk/gordo-ledger/mcp/dist/index.js"],
+      "env": {
+        "NODE_PATH": "/home/jk/gordo-ledger/mcp/node_modules"
+      }
+    }
+  }
+}

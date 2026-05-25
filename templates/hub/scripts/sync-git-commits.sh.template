@@ -1,0 +1,20 @@
+#!/bin/bash
+# Sync git commits for Ledger indexing
+# Usage: bash scripts/sync-git-commits.sh
+
+set -e
+
+OUTPUT_DIR=".gordo-memory/git-commits"
+LIMIT="${1:-500}"
+
+mkdir -p "$OUTPUT_DIR"
+
+echo "Extracting last $LIMIT commits..."
+git log --format='{"sha":"%H","date":"%aI","author":"%an","subject":"%s","body":"%b"}' -n "$LIMIT" \
+  | while read -r commit; do
+    sha=$(echo "$commit" | jq -r '.sha' | cut -c1-7)
+    echo "$commit" > "$OUTPUT_DIR/commit-$sha.json"
+  done
+
+echo "Synced $(ls -1 "$OUTPUT_DIR" | wc -l) commits to $OUTPUT_DIR"
+echo "Run 'node ~/gordo-ledger/mcp/dist/cli.js index --full' to reindex"

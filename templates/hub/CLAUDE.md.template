@@ -42,11 +42,32 @@ When ready to start a new project, say so — {{AI_NAME}} handles the setup.
 
 ---
 
+## Memory & Research
+
+**Primary research mechanism: gordo-ledger** (semantic RAG via MCP).
+
+Consult Ledger before answering architectural questions:
+- Prior decisions (has this been engaged before?)
+- Cross-project patterns (what worked elsewhere?)
+- Session history (what did we try?)
+
+**MCP tools:** `mcp__gordo-ledger__search`, `mcp__gordo-ledger__get_session`, etc.
+
+**Index freshness:** Sync and reindex periodically:
+```bash
+bash scripts/sync-github-issues.sh
+bash scripts/sync-git-commits.sh
+node ~/gordo-ledger/mcp/dist/cli.js index --full
+```
+
+---
+
 ## Upstream
 
 This hub operates under the Project Gordo umbrella framework.
 
 - `~/project-gordo/` — T0 constitutional root
+- `~/gordo-ledger/` — T1 semantic memory primitive
 
 ---
 

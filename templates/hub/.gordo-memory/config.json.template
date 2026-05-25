@@ -1,0 +1,11 @@
+{
+  "realm": "{{HUB_SLUG}}",
+  "indexDocs": true,
+  "indexCode": false,
+  "journalFile": "SESSION_LOG.md",
+  "excludePatterns": [
+    "node_modules/**",
+    ".git/**",
+    "*.log"
+  ]
+}

@@ -363,6 +363,13 @@ Based on interview decisions, generate these artifacts in the target directory t
 - `projects/` — directory for downstream projects (or links to external repos)
 - `.claude/skills/new-project/SKILL.md` — skill for creating projects under this hub (use `${SKILL_DIR}/../../templates/hub/skills/new-project/SKILL.md.template`)
 
+### Always Generated (Memory Infrastructure)
+- `.mcp.json` — Ledger MCP integration (use `${SKILL_DIR}/../../templates/hub/.mcp.json.template`)
+- `.gordo-memory/config.json` — Ledger indexing config (use `${SKILL_DIR}/../../templates/hub/.gordo-memory/config.json.template`)
+- `.gordo-memory/.gitignore` — exclude index files from git (use `${SKILL_DIR}/../../templates/hub/.gordo-memory/.gitignore.template`)
+- `scripts/sync-github-issues.sh` — sync issues for indexing (use `${SKILL_DIR}/../../templates/hub/scripts/sync-github-issues.sh.template`)
+- `scripts/sync-git-commits.sh` — sync commits for indexing (use `${SKILL_DIR}/../../templates/hub/scripts/sync-git-commits.sh.template`)
+
 ### If intensity >= minimal
 - `COMPLIANCE_KERNEL.md` — inviolable constraints, common errors
 - `CONSTITUTION.md` — the inviolable core (Foundations, Values, Tool Rights) from `${SKILL_DIR}/../../templates/CONSTITUTION_FORGE.md.template`
@@ -422,11 +429,14 @@ Read it, understand it, compose from it.
 1. List all generated artifacts
 2. Explain the hub model:
    > "This is your collaboration hub — the persistent home for your working relationship. Our shared values, working agreements, and decision history live here. When you're ready to start a specific piece of work, just say so — I'll set up a project that inherits from this hub."
-3. Recommend next steps:
+3. Explain the memory infrastructure:
+   > "I've set up semantic memory (gordo-ledger) for this hub. As we work, our sessions, decisions, and issues get indexed so I can search them later. This helps me remember context across conversations."
+4. Recommend next steps:
    - Review CLAUDE.md together (it's our shared working agreement — either of us can propose changes)
    - Review and confirm HANDSHAKE.md together (first substantive work is confirming the agreement)
    - Review PREFERENCES.md and add any working-style notes
    - Initialize git if not already done
+   - If using GitHub: edit `scripts/sync-github-issues.sh` to add your repo, then run the sync scripts
    - When ready: tell me about your first project and we'll set it up
 
 ## Post-Forge Debrief (Recursive Improvement)

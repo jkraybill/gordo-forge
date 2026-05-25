@@ -1,0 +1,26 @@
+#!/bin/bash
+# Sync GitHub issues for Ledger indexing
+# Usage: bash scripts/sync-github-issues.sh
+
+set -e
+
+REPO="{{GITHUB_REPO}}"
+OUTPUT_DIR=".gordo-memory/github-issues"
+
+if [ -z "$REPO" ]; then
+  echo "Error: GITHUB_REPO not set in script. Edit this file to add your repo."
+  exit 1
+fi
+
+mkdir -p "$OUTPUT_DIR"
+
+echo "Fetching issues from $REPO..."
+gh issue list --repo "$REPO" --state all --limit 500 --json number,title,body,state,createdAt,closedAt,labels,milestone,author \
+  | jq -c '.[]' \
+  | while read -r issue; do
+    num=$(echo "$issue" | jq -r '.number')
+    echo "$issue" > "$OUTPUT_DIR/issue-$num.json"
+  done
+
+echo "Synced $(ls -1 "$OUTPUT_DIR" | wc -l) issues to $OUTPUT_DIR"
+echo "Run 'node ~/gordo-ledger/mcp/dist/cli.js index --full' to reindex"

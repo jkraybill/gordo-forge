@@ -1,0 +1,11 @@
+# Ledger index files (regenerated on demand)
+index.hnsw
+metadata.json
+last-indexed-commit
+
+# Code extraction cache
+code-extracts/
+
+# Keep config and scripts
+!config.json
+!*.sh
