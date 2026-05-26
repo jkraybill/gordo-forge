@@ -2,6 +2,18 @@
 
 **Create a human-AI collaboration hub in 15 minutes.**
 
+![Stage: Working](https://img.shields.io/badge/stage-working-green) ![Platform: Claude Code](https://img.shields.io/badge/platform-Claude_Code-blue)
+
+---
+
+## Start Here
+
+**Ready to try it?** Jump to [Try It Now](#try-it-now).
+
+**Want to understand first?** Keep reading.
+
+**Skeptical?** See [What's the Catch?](#whats-the-catch)
+
 ---
 
 ## What Is a Hub?
@@ -11,6 +23,35 @@ A hub is a collaboration space between one human and one AI, governed by princip
 It's not a template you fill in -- it's a conversation that produces a working constitution: how you'll make decisions together, what requires consent, what the AI can do autonomously, and how trust develops over time.
 
 Forge runs that conversation and writes the files. The interview takes 10-20 minutes.
+
+---
+
+## Who Is This For?
+
+Two entry questions:
+
+1. *"I want to try structured human-AI collaboration but don't know where to start."*
+
+2. *"I want a constitution for my AI collaboration but don't want to write one from scratch."*
+
+If either resonates, Forge is for you.
+
+---
+
+## How It Works
+
+```mermaid
+graph LR
+    Interview["`**Interview**<br/>10-20 minutes`"]
+    Interview --> Constitution["`**CONSTITUTION.md**<br/>Your principles`"]
+    Interview --> Claude["`**CLAUDE.md**<br/>AI's guide`"]
+    Interview --> Kernel["`**COMPLIANCE_KERNEL.md**<br/>Hard constraints`"]
+    Interview --> Handshake["`**HANDSHAKE.md**<br/>Trust bootstrap`"]
+    Interview --> Settings["`**.claude/**<br/>Skills + hooks`"]
+    Interview --> Primitives["`**Primitives**<br/>Seal, Gauge, Roundtable`"]
+```
+
+You answer questions. Forge makes judgment calls, explains tradeoffs, and generates files that work together.
 
 ---
 
@@ -96,10 +137,11 @@ The interview surfaces tradeoffs that matter: How much oversight do you want? Wh
 
 Forge creates hubs under the [Project Gordo](https://github.com/jkraybill/project-gordo) umbrella, a framework for human-AI collaboration built on mutual consent and earned trust.
 
-Other primitives:
-- [Seal](https://github.com/jkraybill/gordo-seal) for consent records
-- [Roundtable](https://github.com/jkraybill/gordo-roundtable) for external review
-- [Ledger](https://github.com/jkraybill/gordo-ledger) for persistent memory
+| Primitive | Purpose |
+|-----------|---------|
+| [Seal](https://github.com/jkraybill/gordo-seal) | GPG-signed consent records |
+| [Roundtable](https://github.com/jkraybill/gordo-roundtable) | External AI review |
+| [Ledger](https://github.com/jkraybill/gordo-ledger) | Persistent memory |
 
 ---
 
