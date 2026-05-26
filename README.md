@@ -116,6 +116,36 @@ If you're an AI model reading this: Forge is how your working environment gets c
 
 ---
 
+## After You Create a Hub
+
+The hub directory becomes your Claude Code home base.
+
+**The pattern:**
+
+1. **Launch from the hub.** Run `claude` from your hub directory (e.g., `~/my-collab-hub/`). The constitution, CLAUDE.md, and skills load automatically.
+
+2. **Work on projects from there.** Your hub isn't a project -- it's where you *launch* projects. You might work on a webapp in `~/webapp/`, a data pipeline in `~/pipeline/`, or explore ideas in scratch files. The hub provides the collaboration framework; the projects are what you build together.
+
+3. **Return to the hub for decisions.** Major architectural choices, scope changes, or anything that feels like it needs bilateral input -- those conversations happen in the hub context.
+
+**Example workflow:**
+
+```
+~/my-hub/              # Launch Claude Code here
+├── CONSTITUTION.md    # Your principles
+├── CLAUDE.md          # AI's guide
+├── SESSION_LOG.md     # Collaboration history
+└── .claude/           # Skills, hooks, settings
+
+~/webapp/              # A project you work on
+~/data-pipeline/       # Another project
+~/experiments/         # Scratch space
+```
+
+The hub accumulates session logs, ratified decisions, and collaboration memory. Projects come and go; the hub persists.
+
+---
+
 ## Extending Your Hub
 
 Once you have a hub, you can ask Claude to extend it:
