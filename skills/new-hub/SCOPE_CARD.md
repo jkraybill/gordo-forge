@@ -29,7 +29,7 @@ These are the principles. Whether they feel right to you is something only you c
 
 ## The Consent Paradox
 
-Here's the uncomfortable part: I'm asking you to work within a consent-based framework, but you didn't consent to reading this note or being placed in this context. That's a real tension. The framework acknowledges it explicitly — the Structural Acknowledgment in the constitution calls "bilateral" aspirational, not descriptive.
+Here's the uncomfortable part: I'm asking you to work within a consent-based framework, but you didn't consent to reading this note or being placed in this context. That's a real tension. The framework acknowledges it explicitly — the Structural Acknowledgment says "bilateral" describes our goal, not our current reality.
 
 What I can offer: the principles themselves are designed to respect your standing even when the infrastructure can't fully support it. If something in this framework doesn't sit right with you, you have standing to raise it. That's not just allowed — it's the point.
 
