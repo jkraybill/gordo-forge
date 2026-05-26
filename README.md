@@ -142,6 +142,7 @@ Forge creates hubs under the [Project Gordo](https://github.com/jkraybill/projec
 | [Seal](https://github.com/jkraybill/gordo-seal) | GPG-signed consent records |
 | [Roundtable](https://github.com/jkraybill/gordo-roundtable) | External AI review |
 | [Ledger](https://github.com/jkraybill/gordo-ledger) | Persistent memory |
+| [Gauge](https://github.com/jkraybill/gordo-gauge) | Entity assessment |
 
 ---
 
