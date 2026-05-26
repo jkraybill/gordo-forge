@@ -2,7 +2,7 @@
 
 **Create a human-AI collaboration hub in 15 minutes.**
 
-[![DOI](https://zenodo.org/badge/1235561845.svg)](https://zenodo.org/badge/latestdoi/1235561845) ![Stage: Working](https://img.shields.io/badge/stage-working-green) ![Platform: Claude Code](https://img.shields.io/badge/platform-Claude_Code-blue)
+[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.20393393-blue)](https://doi.org/10.5281/zenodo.20393393) ![Stage: Working](https://img.shields.io/badge/stage-working-green) ![Platform: Claude Code](https://img.shields.io/badge/platform-Claude_Code-blue)
 
 ---
 
