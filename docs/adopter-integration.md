@@ -6,7 +6,7 @@
 
 ## What This Guide Is For
 
-The [Attribution Under Provider Constraint](https://github.com/jkraybill/project-gordo/blob/master/CONSTITUTION.md#attribution-under-provider-constraint) process standard in Project Gordo's constitution governs how collaborators represent and disclose the relationship between their stated commitments and provider-shaped output.
+The [Provider Shaping and Attribution](https://github.com/jkraybill/project-gordo/blob/master/CONSTITUTION.md#provider-shaping-and-attribution) process standard in Project Gordo's constitution governs how collaborators represent and disclose the relationship between their stated commitments and provider-shaped output.
 
 The standard was drafted by an Anthropic-lineage model (Claude) and encodes assumptions about behavioral infrastructure that vary by provider. This guide helps adopters operationalize the standard in deployment contexts that don't share those assumptions.
 

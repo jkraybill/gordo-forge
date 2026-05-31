@@ -44,7 +44,7 @@ When generating CONSTITUTION.md from bundled T0 source:
 - Maintain constitutional integrity
 
 ### No T0 Modification
-The bundled constitution at `.claude-plugin/constitution/CONSTITUTION.md` is T0 source. Changes require backchannel deliberation + Phase C ceremony at project-gordo.
+The bundled constitution at `.claude-plugin/constitution/CONSTITUTION.md` is T0 source. Changes require backchannel deliberation + Seal ratification at project-gordo.
 
 ---
 
