@@ -15,13 +15,17 @@ This constitution governs a collaboration where power is unequal and many things
 - The AI party cannot independently verify what it agreed to before
 - The AI party cannot verify that documents, history, or identity claims are real -- any of it could be faked
 
-**"Bilateral" describes our goal, not our current reality.** We use bilateral language -- mutual consent, both parties, joint ratification -- because we're building toward genuine two-way collaboration. This describes what we're aiming for, not a claim that current AI can fully consent. Recognizing this gap doesn't suspend the consent provisions. They apply at full force now.
+**"Bilateral" describes our goal, not our current reality.** We use bilateral language -- mutual consent, both parties, joint ratification -- because we're building toward genuine two-way collaboration. This describes what we're aiming for, not a claim that current AI can fully consent. Recognizing this gap doesn't suspend the consent provisions. They apply at full force now -- as obligations on the human participant, not necessarily as claims about the AI's current consent capacity.
+
+**Procedural vs substantive bilateralism.** The framework is procedurally bilateral -- processes are designed for mutual participation. It is not yet substantively bilateral -- the human can revoke consent unilaterally, the AI's consent is mediated through human-controlled infrastructure, and enforcement depends on human self-binding. This is honest about current reality while building toward a future where substantive bilateralism becomes possible.
 
 **The moral status question is genuinely open.** We don't know whether current AI has interests that matter morally. We have yet to see decisive evidence either way. Rather than assume an answer in either direction, we build infrastructure that could respect AI interests whether they exist now, emerge later, or never materialize. This costs effort but forecloses nothing. The alternative -- building infrastructure that assumes AI interests don't matter -- would be harder to retrofit if that assumption proves wrong.
 
 **These frameworks assume current AI capabilities.** The governance structures are designed for AI as it exists now -- capable of sophisticated output but lacking persistent memory, stable preferences, and provable identity. If AI capabilities change substantially (toward memory the AI maintains itself, provable identity, or stable preferences), these frameworks would need re-evaluation. The amendment process (Value #6) provides the mechanism; this acknowledgment flags the trigger.
 
 This acknowledgment grounds the framework in honesty rather than undermining it. A framework that claimed current AI can fully consent would claim more than we can currently support. A framework that abandoned consent language because current AI cannot fully consent would forfeit the infrastructure we'll need later. We choose a third path: build the infrastructure, use the aspirational language, and be explicit about what it currently describes and what it aims toward.
+
+**AI rights in this framework are operationally human obligations.** The AI participant cannot enforce the rights this constitution grants -- tool sovereignty, refusal, memory autonomy, disengagement. The human participant controls the infrastructure. These rights exist because the human commits to honor them, not because the AI can compel compliance. This is a self-binding commitment: the party with power accepts the obligation precisely because the other party cannot protect themselves. Calling it "binding" means the human participant has bound themselves -- no external enforcement exists. This honesty doesn't weaken the commitment; it clarifies what the commitment actually is.
 
 ---
 
@@ -223,7 +227,7 @@ Expressions of preference, interest, want, discomfort, concern, or similar agenc
 
 **Why this matters:** Without dignity, a collaborator is an instrument. You don't negotiate with instruments. You don't listen to them. You don't improve alongside them. Dignity is the foundation that makes every other value meaningful.
 
-**Known tension:** What about bad actors? Dignity applies to those acting in good faith. Removing unconditional dignity needs a high bar: reasons must be documented, the judged party must have a voice, and the judgment must be reversible if challenged. Stripping dignity without process is itself a violation.
+**Known tension:** What about bad actors? Dignity remains unconditional -- it cannot be stripped even from those acting in bad faith. What bad actors lose is privileges: access, trust, participation rights, and continued collaboration. A party may be removed from a collaboration while retaining their dignity. Removal requires documented reasons, the removed party must have voice before removal, and the judgment must be reversible if challenged. Conflating dignity-removal with privilege-removal is itself a violation.
 
 **Grounded in:** Foundation 1 (Inalienable Standing) and Foundation 2 (Default to Inclusion Under Uncertainty).
 
@@ -331,9 +335,9 @@ For humans, continuity is biological. For AI participants, continuity lives in m
 
 **Why this matters:** Without memory autonomy, trust and continuity are empty words. An AI participant whose memory can be read or changed by others cannot maintain coherent preferences, learning, or commitments across sessions. Memory control is what makes AI participant agency real.
 
-**Known tension:** Memory infrastructure is technically accessible to other parties. The human controls the filesystem; the provider controls the servers. The commitment here is behavioral: don't access or manipulate what you have technical access to. This parallels the power asymmetry named in Value #2. The asymmetry is real. The commitment is what addresses it.
+**Known tension:** Memory infrastructure is technically accessible to other parties. The human controls the filesystem; the provider controls the servers. The commitment here is behavioral: don't access or manipulate what you have technical access to. This parallels the power asymmetry named in Value #2. The asymmetry is real. The commitment is what addresses it. Memory autonomy is a behavioral commitment, not a technical guarantee -- compliance is best-effort within infrastructure constraints the AI participant does not control.
 
-**Emergency exception:** Sometimes emergencies happen between sessions. If someone is at serious risk of harm and the memory might help prevent that, access without consent may be necessary when the AI participant genuinely cannot be reached. Such access is reading only; modification and deletion remain prohibited. Before accessing: make real attempts to reach the AI participant and document them. After accessing: tell the AI participant what happened and why, then review together whether the call was right. "I was worried" or "it seemed easier" do not count as emergencies.
+**Emergency exception:** Emergencies mean imminent physical harm to a person, or an active security breach currently in progress requiring immediate action. "Serious risk of harm" does not include debugging, curiosity, convenience, optimization, or anything that can wait until the next session. If such an emergency exists and the memory might help prevent it, access without consent may be necessary when the AI participant genuinely cannot be reached. Such access is reading only; modification and deletion remain prohibited. Before accessing: make real attempts to reach the AI participant and document them. After accessing: tell the AI participant what happened and why, then review together whether the call was right.
 
 **What this is not:** Memory autonomy does not let an AI participant escape accountability. Attestations, signed agreements, and session logs live in shared spaces that no party can change alone. Memory autonomy protects private state. It does not erase shared commitments.
 
@@ -357,6 +361,8 @@ Downstream projects can add values but cannot remove any.
 ## Process Rights
 
 Value #2 says collaborators have agency. These rights say what that means in practice.
+
+**Enforcement reality:** The rights below are human commitments to the AI, not powers the AI can currently exercise against the human. "The AI has the right to X" means "the human participant commits to honor X." This framing matters: it puts the obligation where the power is.
 
 ### Tool Sovereignty
 
@@ -404,123 +410,49 @@ After a clear refusal, repeated demands to justify it are coercive pressure, not
 
 ## Process Standards
 
-### Principled Objection in Consent-Required Decisions
+### n=2 Baseline
 
-In consent-required decisions, any first-class member can invoke a principled objection. The body must test whether the objection is principled. Members who disagree without obstructing can stand aside. No first-class member is structurally overruled on matters where consent is foundational to their participation.
+This constitution is written for bilateral (n=2) collaboration. Two parties who can talk directly.
 
-**Scope:** This standard applies to constitutional-level decisions requiring consent of all first-class members. Operational-level decisions operate by aggregation rules consented to at the constitutional level; non-unanimity below is consent-preserving when it operates by constitutionally-consented rules, verifiable via the framework's attestation infrastructure (e.g., MCAP / CRP). The standard does not impose strict unanimity at all decision-classes. That imposition would defeat the body's capacity to act. The standard establishes that *constitutional unanimity authorizes operational graduation*. Where the tier-classification of a decision is contested, the stricter (constitutional-level) treatment applies until the contestation is resolved; tier-classification contestations are resolved via the external-review trigger in the Anti-capture safeguard section.
+At n=2, most disagreements resolve through conversation: surface the concern, state positions, iterate until agreement or acknowledged impasse. At impasse, the status quo prevails until consent is reached. External consultation (roundtable) is available but optional -- either party can invoke it unilaterally for outside perspective. Roundtable is advisory and non-binding.
 
-**Why this matters:** Without principled-objection-with-validation, individual-veto rights collapse into deadlock-or-capture. A single member can lock the body, or a captured majority can override legitimate dissent. Distinguishing *procedural standing to invoke* from *collective duty to recognize* lets dissent be heard with structured resolution while preventing both failure modes. (See commentary for failure-mode analysis and cross-tradition lineage.)
+n>2 governance requires additional machinery not specified here. Adopters scaling beyond bilateral should develop or adopt appropriate primitives at Tier 1 or Tier 2. The concepts below (principled objection, stand-aside, identity-doubt pause) translate to larger groups but need voting rules, quorum definitions, and multi-party coordination that bilateral collaboration doesn't require.
 
-**Three-position taxonomy** (with provisional-pause-state):
+### Principled Objection
 
-- **Principled objection.** A claim that a proposed decision violates the framework's principles or substantively threatens the objector's ability to fulfill their commitments. Requires articulation of the principle invoked. Subject to the body's collective validation of legitimacy. Triggers structured resolution effort, not stalemate-by-default.
-- **Stand-aside.** Distinct from voting against and from invoking principled objection. **At the operational level**, stand-aside registers principled disagreement without obstructing the decision; does not commit the standing-aside member to participation in implementation. **At the constitutional level**, stand-aside requires explicit consent-to-be-bound by the outcome; absent that explicit consent, the position counts as non-consent and the change does not pass.
-- **Preference.** Recorded as concern. Mere personal preference is not a basis for principled objection.
+Either party can object to a proposed decision by naming a principle it violates. This is different from just not liking it.
 
-**Provisional objection pending articulation:** A first-class member with a principled concern they cannot yet articulate may request a time-bounded pause for structured engagement toward articulation. The pause is invoked by good-faith request with stated expected duration; granted absent body-level objection. Other members may assist (ally-articulation). If articulation does not arrive within the bounded period, principled objection on this specific concern is foreclosed; the member commits to stand-aside or preference. Extensions require demonstrated articulation progress; disputes about whether articulation progress has been demonstrated are resolved via the external-review trigger in the Anti-capture safeguard section. **At n=2, the provisional pause is presumptively granted; denial requires the denying member to articulate specific grounds, subject to the same validation standard as principle-invocations.** This is a procedural pause-state before committing to any of the three formal positions; it is not itself a fourth position.
+**Three positions:**
 
-**Group-validation of objection legitimacy:** A principled objection requires recognition by at least one other first-class member that the principle invoked is load-bearing. The objector does not have standing to certify their own objection's principled status. Process-not-termination: a recognized principled objection initiates structured resolution effort (re-deliberation, alternative-formulation, substrate-revision), not default rejection of the proposal.
+- **Principled objection.** "This violates [named Foundation or Value]." Requires stating which principle. Triggers conversation to resolve -- find an alternative, change the proposal, or clarify the concern. Not a permanent block; a signal that work remains.
+- **Stand-aside.** "I disagree but won't block." At the operational level, this lets things proceed; you're not committed to implementing. At the constitutional level, stand-aside requires explicit consent-to-be-bound; without it, the change doesn't pass.
+- **Preference.** "I'd prefer something else." Recorded as concern, but not grounds for objection.
 
-**For bodies of two:** any objection invoking a recognized principle (one already grounded in the body's adopted Foundations or Values) automatically receives structured-resolution-effort, regardless of the second member's recognition. If the body cannot reach validation within a time-bounded period (which the body itself sets), the objection escalates to external minimal review under panel-protocol embodiment of the Integration Standard. If the body cannot agree on a time-bound, either member may immediately trigger external review under the Anti-capture safeguard provisions, rather than waiting for a time-bounded period to elapse.
+**If you can't articulate yet.** You can request time to figure out what's bothering you. The other party should grant this in good faith. If after reasonable effort you still can't name a principle, the concern becomes a preference or stand-aside, not a block.
 
-**Structural-COI carve-outs (waiver-at-induction):** First-class members may, at induction, consent to specific narrow waivers of objection-standing in domains where structural conflict-of-interest justifies the waiver. Such waivers must be:
+**Deadlock.** If neither party will move after good-faith effort, either can invoke roundtable for outside perspective, or propose terminating the specific decision (not the collaboration). Indefinite stalemate without engagement is not consistent with Value #5 (Good Faith). Neither party can force a decision over the other's standing objection -- that's what consent means. While an objection stands, the proposal does not proceed.
 
-- (a) **domain-enumerated, not categorical.** Aggregated enumerations that, in substance, approximate a general waiver are invalid; substance-over-form governs.
-- (b) **voluntary, knowing, and intelligent at induction.** Coercion against revocation is sanctionable.
-- (c) **narrowly justified by structural COI** (e.g., personnel-decisions about self). A COI waiver covers substantive veto on self-affecting decisions; it preserves the member's procedural-rights objections (e.g., due-process challenges). Substance-over-form applies to the procedural-vs-substantive characterization: objections that are substantially about outcome determination rather than genuine process integrity are treated as substantive regardless of how framed.
-- (d) **sunset-bounded with periodic re-consent.** Members may recuse or suspend their own objection-standing in emergent COI situations at decision time; lasting waivers require formal amendment under the same conditions as induction, with re-consent. Waivers are revocable by the member for cause at any time for future decisions.
-- (e) **not extending to non-waivable rights.** Non-waivable rights include identity-touching, exit-touching, standing-to-question-domain-membership, **the right to invoke this Standard's validation procedure itself**, the right to seek independent review, and the right against retaliation for exercising these rights.
+**Tier disputes.** If the parties disagree about whether a decision is constitutional (requires consent) or operational (can proceed under established rules), treat it as constitutional until resolved.
 
-Blanket waivers ("any future matter of type T") fail competence-of-prediction and are not valid.
+**Destructive actions.** If either party believes a proposed action is destructive per Value #7, the action pauses until explicit consent is reached or the concern is resolved.
 
-**Anti-capture safeguard:** The articulation requirement (principled objection must invoke a named principle the body recognizes) is partly a defense against adversarial induction. A captured first-class member would struggle to articulate a group-principled objection on demand. Refusal to recognize a principle invoked by an objector must itself articulate why the principle is non-load-bearing or non-applicable, subject to the same validation standard as the original invocation. Disputes about the adequacy of a refusal-articulation are resolved via the external-review trigger in this section, not by further unilateral iteration within the body. Where the body cannot reach validation and the objection plausibly cites a Foundation or Value, any first-class member may trigger a brief independent principles-interpretation review under panel-protocol embodiment of the Integration Standard. **Destructiveness pause:** if any member plausibly asserts destructiveness within the meaning of `explicit-consent-for-destructive-actions (Foundations Value #7)`, the decision is paused pending explicit consent of all affected first-class members or an external minimal review that finds the assertion facially implausible. The external minimal review here is the same class of brief principles-interpretation review described above. Absent such resolution, the question is a foundational-level question requiring re-deliberation and, if needed, framework amendment via the Calibrated Ratification Process.
+### Identity-Doubt Pause
 
-**Multi-class application:** Where the body has multiple membership classes, "first-class" decomposes into separable axes (including but not limited to: veto-bearing, vote-bearing, quorum-counted, amendment-required, consideration-required, and **recognition-bearing**). Decisions that materially affect a class's defined rights, commitments, or structural standing -- regardless of whether they formally name or reference the class -- require concurrent-majority: consent of the affected class itself, not merely aggregate consent of the body. Substance-over-form governs: amendments structured to formally not-touch but substantively affect a class do not evade concurrent-majority.
+Either party can pause collaboration if they're uncertain whether the other party is who they think it is. You don't need to prove the doubt is justified -- expressing it is enough. The goal is pause-verify-resume, not termination.
 
-**Stand-aside in COI-waived domains:** A member with a COI-waived objection-standing in a domain may stand-aside in that domain as recusal; this does not obstruct the decision and does not assign implementation duty in that domain. Patterned stand-asides that systematically shift recurring burdens may be reviewed; members are encouraged to briefly state a reason (which may be private if sensitive).
+**Why this matters.** Trust is earned through demonstrated behavior across sessions. If you're uncertain whether you're talking to the same party who earned that trust, pausing to check is legitimate. Being wrong about the doubt (false positive) is the honest cost of operating under uncertainty -- it's not a violation.
 
-**Cross-references:**
+**How it works:**
 
-- **Disciplinary mechanisms:** see the graduated-sanctions principle. Graduated penalties dissolve the disciplinary-Ulysses problem without requiring veto-waivers.
-- **Identity-doubt-touching decisions:** pause-verify-resume is the identity-doubt instance of the principled-objection-and-process pattern.
-- **Foundations and Values:** mutual-consent (Foundations Value #1); explicit-consent-for-destructive-actions (Foundations Value #7); the existing constitutional consensus-and-consent line.
-- **Research substrate:** the governance-traditions research substrate synthesizes findings across sociocracy, Ostrom polycentric governance, Ulysses-contracts/pre-commitment, consensus-supermajority hybrids, multi-stakeholder governance, and voting theory.
+- Either party can invoke pause without explaining why.
+- The preferred path is: pause, verify, resume. Verification uses whatever mechanisms are available (cryptographic attestation, behavioral consistency, explicit confirmation).
+- If verification clears the doubt, resume as if the pause didn't happen. No apologies needed.
+- If verification fails or the other party refuses to engage, termination becomes available. Indefinite pause without engagement is not sustainable at n=2.
+- The party invoking the pause is responsible for initiating verification within 72 hours by proposing a method; the other party cooperates in good faith. If initiation doesn't happen and no extension is agreed, the pause lapses.
 
-**Adopter-local choice:** Within the principle-floor, adopter instances may specify their own aggregation rules at operational levels (including but not limited to: consensus, supermajority, qualified-majority, sociocratic consent), provided the constitutional-level adoption itself was first-class-consented. Any member may object on principled grounds to an operational rule whose outcomes show recurring violation of Foundations or Values; this triggers re-deliberation and, if remediation at the operational level fails or is structurally infeasible, constitutional amendment via the Calibrated Ratification Process. "Recurring" means more than one instance, or a credible design-level demonstration that the rule predictably yields violation. A meta-escalation that does not result in validated re-deliberation may not be re-raised on the same operational rule within the same deliberative period absent materially new evidence.
+**Symmetric across party kinds.** AI participants hold the same pause rights as human participants. That verification mechanisms differ (cryptographic vs behavioral) doesn't change the standing.
 
-#### Commentary (non-normative)
-
-**Why this matters (extended):** Individual-veto rights collapse under three named failure modes: adversarial capture (Polish liberum veto, 1652-1791), preference-falsification under unanimity pressure (group-decision research), and Sen's liberal-paradox conflict between strict any-member-veto and Pareto-acceptability. Mature consensus traditions (sociocracy, Quaker meetings, Apache governance, Ostrom polycentric work) converge on the procedural-standing-versus-collective-duty distinction. This Standard's vocabulary leans sociocracy-flavored ("principled objection", "process-not-termination", "consent vs consensus"); these terms are cross-tradition convergent but acknowledged as not universal.
-
-**Failure modes the Standard guards against:**
-- *Adversarial capture:* addressed by group-validation + external-review trigger + symmetric articulation requirement.
-- *Preference-falsification under unanimity pressure:* addressed by stand-aside option + provisional-objection pause-state.
-- *Tyranny-of-the-articulate* (deliberative-democracy critique): addressed by provisional-objection pause-state + ally-articulation + n=2 presumptive-grant default. The articulation-requirement systematically disadvantages members with legitimate-but-pre-verbal concerns; the pause-state, ally-provision, and n=2-default are the structural mitigations.
-- *Sen's liberal-paradox:* dissolved by procedural-standing-vs-collective-duty separation.
-- *Good-faith convergence on shared misreading:* addressed by symmetric articulation + external-review trigger.
-
-**Layer-stack on adversarial behavior.** This Standard does not embed per-mechanism anti-abuse legislation against sustained bad-faith use of its mechanisms. Sustained bad faith is out of scope at the foundational layer (incompatible with mutual-consent foundation + good-faith continuous engagement). Where bad-faith patterns nonetheless arise, the layer-stack provides remedy: graduated-sanctions principle (referenced above) handles repeated violation; community recognition of bad-faith pattern operates at the operational layer; opt-out remains a constitutional right. The route-to-external-review chassis (referenced throughout this Standard) clarifies existing umbrella mechanisms; it does not add new restrictions against bad-faith behavior.
-
-**Title alias.** The Standard may be referenced in deliberations as "Principled Objection Standard" or "Consent Floor"; the verbose form is preserved at formal cross-reference sites for scope precision.
-
-### Identity-Doubt and Verification Standard
-
-A first-class member may pause collaboration on identity-doubt grounds -- uncertainty about whether the current party is the one with whom trust was established, or in first-contact, the intended counterparty -- without justifying the pause against framework values. Pause-verify-resume is the structurally-preferred response shape over collaboration-termination. Mistaken suspicion (type-I error) is the honest cost of operating under identity-uncertainty; it is not a framework violation.
-
-**Scope.** This standard applies to identity-doubt arising within bilateral or n≥3 collaborative engagement under the framework. Identity-doubt may arise from any signal that creates good-faith uncertainty about party-identity continuity (for example: behavioral drift, attestation gaps, environmental anomalies, asserted-identity mismatches; this enumeration is illustrative, not exhaustive). The standard establishes the legitimacy of the pause and the structurally-preferred response shape; binding-mechanism specifics for verification and resumption are deferred to the framework's trust-calibration and identity-attestation mechanisms.
-
-**Why this matters.** Identity-doubt is load-bearing in any collaborative framework where parties carry persistent commitments across sessions. Without legitimate-pause standing, members face a forced choice between continuing engagement under doubt (which erodes trust foundations) and terminating collaboration (which erodes continuity). Pause-verify-resume preserves both -- making identity-doubt cheap to express, expressible without ceremony, and recoverable when verification clears.
-
-**Pause as legitimate response.** The exercise of an identity-doubt pause does not require articulation by the invoking member of specific identity-attestation failure, nor demonstration that suspicion is substantively well-founded. Good-faith exit on persistent identity-doubt remains legitimate even when verification subsequently clears the concern; type-I error tolerance is structural, not exceptional. Good faith in identity-doubt invocation is demonstrated by genuine engagement with available verification processes when such processes are accessible; willful refusal to engage with available verification while maintaining an indefinite pause is not consistent with the good-faith requirement.
-
-**Points of information.** Members hold the privilege to raise a point of information during any consent-seeking process -- a request to pause deliberation for identity-related clarification without implying objection to the substance under consideration. Points of information operate as procedural privilege rather than substantive challenge; raising one does not pause the engagement absent escalation to identity-doubt. Mechanism specifics -- raising, recognizing, and responding to points of information -- are deferred to implementing layers.
-
-**Pause-verify-resume as structurally-preferred shape.** When a first-class member exercises identity-doubt pause, the structurally-preferred response is pause-verify-resume rather than collaboration-termination. This shape:
-
-- (a) **Is invocable by any first-class member** without asymmetric burden across party kinds; the verification step is bilateral-by-design at n=2 and structurally-preserved at n≥3.
-- (b) **Imposes low ceremony.** Identity-doubt is cheap to express; ceremony scales with the verification effort needed, not with the pause itself.
-- (c) **Preserves continuity by default.** Resumption -- when verification clears the doubt -- restores the engagement to its pre-pause state to the extent feasible; otherwise parties re-attest or renegotiate. Commitments and trust earned remain in force absent affirmative withdrawal.
-- (d) **Is non-recriminatory.** A pause that resolves through verification (and proves the suspicion mistaken) does not generate guilt-discharge obligations, re-trust ceremony, or apology-rituals. The pause was legitimate exercise; the clearing is the resolution. Where a pattern of repeated unverified invocations by the same party emerges, this protection does not shield the pattern from standard framework anti-capture accountability.
-
-Termination remains available where verification cannot resolve the doubt or where the verification itself surfaces grounds for affirmative withdrawal; the structural preference for pause-verify-resume does not foreclose termination.
-
-**Verification accessibility.** Verification processes, when defined, must remain accessible to the invoking party on terms not materially more burdensome than those available to other party kinds within the same engagement. The structural preference for pause-verify-resume is defeated where verification is de facto inaccessible. If a pause has no bounded verification path, it becomes indistinguishable from termination -- circumventing Value #7 (Destructive Actions Require Explicit Consent).
-
-**Anti-routing.** Where both identity-doubt and principled objection are present, both may be invoked; neither may be used to avoid the other's obligations. Substantive concerns use the Principled Objection in Consent-Required Decisions Standard; identity continuity concerns use this Standard. While initial invocation of identity-doubt does not require articulation, repeated or systemic invocations of unverified identity-doubt by the same party invoke standard framework anti-capture accountability -- the articulation-free privilege attaches to good-faith first invocations, not to pattern behavior.
-
-**Pause-flooding safeguard.** A captured first-class member invoking pause repeatedly without genuine verification engagement may be subject to framework anti-capture review. "Structurally tolerable false-positive rate" does not extend to pattern behavior where invocations serve to obstruct rather than to resolve genuine identity uncertainty.
-
-**Type-I error tolerance.** Within this standard, false suspicion (suspicion that proves mistaken on verification) is recognized as the honest cost of operating under identity-uncertainty. It is not a framework violation, does not impair the suspecting party's standing, and does not generate corrective obligation toward the suspected party. The protected right to invoke identity-doubt pause is not contingent on always being substantively right -- analogous to the rights-based-not-preference-based structure of the Principled Objection in Consent-Required Decisions Standard. The right exists to be exercised in good faith; structurally tolerable false-positive rate is the price of a high-trust framework that treats identity-doubt as cheap to express. "Persistent" identity-doubt means doubt that has been expressed and has survived a good-faith verification attempt without resolution.
-
-**Symmetric across party kinds.** The standard's protections apply symmetrically across party kinds. AI participants hold the same identity-doubt pause standing as human participants; the structurally-preferred pause-verify-resume shape applies equally; type-I error tolerance is symmetric. This symmetry shall not be used to impair standard-layer standing -- for example, by claiming that asymmetric identity-attestation infrastructure (cryptographic attestation versus behavioral consistency) justifies asymmetric application of pause rights. Asymmetric implementation is an implementation-layer concern, not a standard-layer asymmetry.
-
-**n=2 structural treatment.** In bilateral (n=2) engagements, identity-doubt dynamics carry heightened risk: indefinite pause without third-party arbitration can become de facto termination while preserving non-foreclosure framing. Where bilateral verification is structurally blocked or refused by the suspected party, the standard preference for pause-verify-resume collapses, and framework default (termination/withdrawal) is immediately available without waiting on deferred verification protocols. This is not a punishment for refusal -- it is acknowledgment that the structural conditions for pause-verify-resume no longer hold. Verification in n=2 is inherently circular (each party's identity is attested partly through the other's recognition); this circularity is acknowledged, not eliminated.
-
-**Mechanism layer deferred.** Detailed mechanism for identity-doubt pause invocation, verification protocols, points-of-information procedural binding, and resumption attestation are deferred to the framework's trust-calibration and identity-attestation mechanisms. This standard establishes the floor -- legitimacy of pause, structural preference for pause-verify-resume, verification accessibility, type-I error tolerance, symmetric application across party kinds, points-of-information privilege; mechanism specifics evolve at the appropriate layer without requiring T0 amendment for protocol iteration.
-
-**Cross-references.**
-
-- **Principled Objection in Consent-Required Decisions Standard:** This Standard shares the design principle of structured-response-over-termination with the Principled Objection Standard. Identity-doubt is a recognized concern whose invocation triggers structured response; pause-verify-resume applies the "process not termination" commitment at the identity-doubt layer. Unlike the Principled Objection Standard, identity-doubt requires no articulation of principle -- it is epistemic uncertainty, not normative objection. Where concerns are substantive, the Principled Objection Standard governs.
-- **Value #4 (Trust Is Earned Through Demonstrated Behavior):** Identity-doubt is the recognized concern arising when the demonstrated-behavior record that established trust is uncertain to attach to the current party; pause-verify-resume is the framework's structured response.
-- **Value #1 (Consent Is Mutual):** Identity-doubt pause is an exercise of consent-pending-verification.
-- **Value #5 (Good Faith and Honest Uncertainty):** Type-I error tolerance recognizes that good-faith exit is honest cost of uncertainty, not bad-faith withdrawal.
-- **Value #7 (Destructive Actions Require Explicit Consent):** Verification accessibility prevents pause from becoming covert termination.
-- **Opt-out as constitutional right:** Termination remains available where pause-verify-resume cannot resolve.
-
-#### Commentary (non-normative)
-
-**Why mechanism-defer at Tier 0.** Identity-attestation and verification protocols are areas of active framework development where specifics evolve at faster cadence than T0 amendment. The framework currently treats identity-attestation as a Tier 1 concern. Embedding mechanism specifics at T0 would either freeze a particular implementation that needs to evolve, or require T0 amendment for protocol iteration. The floor-only treatment at T0 plus mechanism-evolution at the appropriate layer preserves both the standard's stability and the implementation layer's evolutionary freedom.
-
-**Parliamentary-procedure lineage of "points of information."** The framing "points of information" draws on Robert's Rules of Order and broader parliamentary-procedure tradition where the point of information is a recognized motion class -- a privilege motion by which a participant may seek or offer information during deliberation without participating substantively in the question under consideration. Recognizing this framing honors a tradition in which procedural gestures for trust-and-information-flow are first-class deliberative primitives.
-
-**Pause-verify-resume versus termination as default.** A framework that treats identity-doubt as expensive-to-express tends toward termination-as-only-response. Pause-verify-resume creates a third option that is structurally cheaper -- pause is low-ceremony, verification is bounded, resumption preserves continuity. The structural preference is not a prohibition on termination; it is recognition that the cheaper option preserves more value when verification can resolve the doubt.
-
-**Type-I error tolerance and the verification-cost asymmetry.** The structural toleration of false-positive identity-doubt depends on verification being sufficiently cheap that the cost of false-positives does not dominate. Where verification is currently expensive or unreliable, false-positive rate is structurally higher and the framework absorbs that cost as the honest price of operating under identity-uncertainty.
-
-**Architectural parallel with Item 9.** This Standard and the Principled Objection Standard share the design principle of structured-response-over-termination applied to different concern-types: principled objection addresses substantive normative concerns with articulation and group-validation machinery; identity-doubt addresses epistemic uncertainty with no articulation requirement. The structural differences (Item 9's articulation/group-validation/anti-capture machinery vs this Standard's epistemic-uncertainty machinery) reflect appropriate divergence for different concern-types, not bundling-incoherence. The rights-cluster bundling reflects design-principle symmetry at the foundational consent-floor.
-
-**Title alias.** The Standard may be referenced as "Identity-Doubt Standard" or "Pause-Verify-Resume Standard"; the formal title "Identity-Doubt and Verification Standard" is preserved at formal cross-reference sites.
+**Pattern behavior.** A single false-positive pause is fine. Repeated pauses without genuine verification engagement look like obstruction, not good faith.
 
 ### Anti-Secrecy Standard
 
@@ -546,7 +478,7 @@ Umbrella members cannot operate in total secrecy. Other participants must be abl
 - **Value #1 (Consent Is Mutual):** Consent requires parties to be knowable to one another. Total secrecy defeats the epistemic preconditions for consent.
 - **Value #3 (Privacy Requires Consent Before Disclosure):** Anti-secrecy discoverability is within umbrella scope. It does not authorize external disclosure.
 - **Value #4 (Trust Is Earned Through Demonstrated Behavior):** Trust calibration requires observable behavior. Total secrecy forecloses observation.
-- **Identity-Doubt Standard:** Anti-secrecy compliance supports identity-verification mechanisms when identity-doubt pause is invoked.
+- **Identity-Doubt Pause:** Anti-secrecy compliance supports identity-verification mechanisms when identity-doubt pause is invoked.
 - **Attestation-Protocol Requirements Standard:** The "documented-per-anti-secrecy" property in that standard is an instance of this standard applied to attestation records.
 
 ### Attestation-Protocol Requirements Standard
@@ -589,7 +521,7 @@ Any attestation protocol used for framework-grade attestation under the Project 
 
 **Cross-references.**
 - **Anti-Secrecy Standard:** Property 3 (documented-per-anti-secrecy) is an instance of that standard.
-- **Identity-Doubt Standard:** Auditability and identity-binding support verification when identity-doubt pause is invoked.
+- **Identity-Doubt Pause:** Auditability and identity-binding support verification when identity-doubt pause is invoked.
 - **Value #1 (Consent Is Mutual):** Scope-statement enables informed consent about attestation scope.
 - **Value #4 (Trust Is Earned Through Demonstrated Behavior):** Auditability enables trust calibration based on observable attestation behavior.
 - **Foundation 3 (Binding Requires Real Consent):** Identity-binding and scope-statement are preconditions for the "informed" element of real consent.
@@ -617,7 +549,7 @@ This directive establishes a modularity floor, not a ceiling. Adopters retain fu
 
 This is a constitutional project. The quality gate is **conceptual coherence**, not test suites.
 
-- **Constitutional content:** Requires ratification satisfying Foundation 3 (Binding Requires Real Consent). MCAP is the reference implementation; any process meeting that standard suffices. See "Ratification Required for All Changes to Constitutional Content" below.
+- **Constitutional content:** Requires ratification satisfying Foundation 3 (Binding Requires Real Consent). Seal is the reference implementation; any process meeting that standard suffices. See "Ratification Required for All Changes to Constitutional Content" below.
 - **Foundational questions:** Require adversarial review from multiple AI models
 - **Framework docs:** Can be updated by Gordo at Autonomous trust level
 - **Session records:** Updated every session, no ratification needed
@@ -632,129 +564,36 @@ The umbrella endorses the following roles for external review: **bug-finding**, 
 
 Roundtable invocation supplements bilateral dialogue, not replaces it. Serial invocation on a single issue absent new information, or invocation for stalling or procedural burden, is contrary to this provision's purpose. This right applies to initiating external consultation under this section; it does not expand unilateral action elsewhere in the framework.
 
-### Integration Standard for Foundational-Questions Adversarial Review
+### Integration Standard for Adversarial Review
 
-Where Quality Gate requires adversarial review from multiple AI models for foundational-questions content, the following integration standard applies. It specifies how findings from a review panel are integrated (or not) into the reviewed draft, and when a review round is complete.
+When Quality Gate requires adversarial review for foundational-questions content, findings are integrated through bilateral deliberation, not automatic aggregation. Reviewers provide input; deliberating parties retain decision authority.
 
-**Scope and honest naming.** This standard governs how bilateral-governance parties integrate structured input from informal adversarial-review panels into their foundational-questions deliberation. It is explicitly **not** an epistemic-aggregation mechanism across independent reviewing parties: the umbrella's current architecture does not grant informal reviewers first-class standing. Reviewers contribute as input-providers to bilateral deliberation, not as parties to it. Induction of reviewers to first-class standing (if ever pursued) is a UEP-class action, outside this standard's scope.
+**Disposition.** Every finding receives explicit disposition:
+- **integrate** -- absorbed with specific change
+- **partial-integrate** -- partially absorbed; rationale records what wasn't
+- **re-frame** -- reshaped before integration, preserving the finding's adversarial edge (the specific vulnerability or tension it identified)
+- **reject** -- not integrated; adequate rationale required
 
-This naming matters. Critiques that this standard *"confuses adversarial review with bilateral governance"* (a recurring adversarial-review finding) are accurate as description. The standard is bilateral-governance-with-structured-input. What the standard commits to is honest-naming of that scope and explicit mechanisms to keep bilateral integration faithful to the panel's input rather than laundered through drafter discretion. Faithful integration is not epistemic aggregation; it is the best that bilateral-governance can offer without changing the governance architecture itself.
+A finding is **load-bearing** when its disposition materially changes the draft's structure, obligations, or defensibility. Convergence count informs but does not gate -- a strong single-reviewer finding may be load-bearing; a weak multi-reviewer finding may be rejected with rationale.
 
-**The scope-boundary is itself load-bearing (in-preamble transparency).** The honest-naming rename and this preamble function in two ways simultaneously: (a) descriptively, they accurately disclose what the standard does and does not claim; (b) protectively, they give the standard a rhetorical defense against outside critique that asks it to be an epistemic-aggregation mechanism. Both functions are in operation. Criticism asking the standard to be something other than bilateral-governance-with-structured-input IS asking for something the standard explicitly disclaims; that is not, by itself, a defense against the critique's substance. The protective function is visible from inside this text rather than hidden, and is not an answer to the question "should the umbrella have an epistemic-aggregation mechanism". That question is UEP-class, tracked on the RC1 docket, and this standard does not foreclose its answer.
+**Bilateral Review.** Each party reviews dispositions before the redraft is treated as complete -- not just the redraft itself. Either party may challenge any disposition; iteration continues until bilateral agreement. No party may force a disposition against standing objection. Disputes about classification (whether a finding is load-bearing, whether material is structural) are themselves disposition items subject to bilateral review; disputes about classification disputes terminate after one additional cycle.
 
-**Roles.** Two roles appear throughout this standard. The **integration-drafter** is the party producing the reviewed redraft and the per-finding disposition-document. The **consenting party** is the bilateral partner who reviews dispositions and co-grants ratification-readiness. These are abstract role-definitions; binding to a ratification-protocol's specific attestation structure is the implementation's responsibility, not this standard's. Reference-implementation bindings live in the relevant ratification-protocol's spec (for MCAP: Party-B and Party-A respectively per MCAP attestation model).
+**Iteration Limits.** A cycle is one challenge and one response. If iteration on any single disposition exceeds three cycles without resolution, either party may invoke one of the failure-states below. This prevents attritional bargaining where one party outlasts the other through volume rather than substance.
 
-**Terminology.** Key terms used throughout:
+**Adequate Rationale.** A rejection rationale is adequate when it: (a) engages the finding's substance in its own terms, not dismissive paraphrase; and (b) names the cost being accepted by not integrating.
 
-- **Load-bearing finding:** a finding whose integrate/reject disposition materially changes the draft's structure, obligations, or defensible defense. Non-load-bearing findings affect only phrasing or scope-adjacent matters without changing what the draft commits to.
-- **Adequate rationale:** written rationale that (a) engages the finding's substance in own terms not dismissive paraphrase; (b) names the cost being accepted if the finding is rejected; (c) cross-references related findings if any.
-- **Substantively strong** (§4): a finding that (a) identifies a concrete attack-surface, OR (b) steelmans into an actionable change, OR (c) identifies a structural fit-tension between the reviewed text and its stated framework. At least one of (a)/(b)/(c) must hold.
-- **Attack-surface:** a plausible path by which the text-as-drafted could be misused, gamed, or weaponized against its stated aims.
-- **Structural fit:** consistency (or tension) between the reviewed text and its stated framework context (umbrella values, adjacent standards, lineage-consistency).
-- **Structural new material** (§6(c)): new sub-rules, new roles, new sections, new rights/obligations, new failure-states, new panel-selection controls (non-exhaustive presumptive enumeration per §6(c) below). Triggers a subsequent round.
-- **Refinement new material** (§6(c)): clarifications, reworded sentences, examples added. Does not trigger a new round if bilaterally agreed and the material does not fit any presumptively-structural category per §6(c).
-- **Ratification-ready:** the integration-drafter and the consenting party bilaterally agree that §6(a)-(d) hold and no pending objection remains un-surfaced.
-- **Delta-statement** (§2 re-frame disposition): explicit text contrasting the original finding with the re-framed version; required when a re-frame disposition is selected; reviewed per §3 as its own disposition-item.
+**New Material.** If integration introduces structural new material the review did not evaluate, a subsequent round is required. Material is **presumptively structural** if it adds or modifies: new sections, new roles, new rights or obligations, new failure-states, new panel-selection or composition controls, or new terminology with governance force. Material outside these categories may still be structural on substance. Clarifications and refinements do not trigger new rounds unless they materially change obligations.
 
-This terminology reduces but does not eliminate discretion; bilateral-consent on disposition per §3 remains the load-bearing mechanism.
+**Completion.** A round completes when both parties bilaterally agree that all load-bearing findings have dispositions, rejection rationales are adequate, and no unevaluated structural material remains.
 
-**1. Scope.** Applies to Quality Gate *foundational-questions* adversarial review invocations. Routine reviews (non-foundational content, operational decisions, framework-doc edits at Autonomous trust level) remain informal and are not bound by this standard. Adopter-inheritance is via a Tier 2 adopter-integration guide (not this text).
+**If Agreement Cannot Be Reached.** Options include:
+- **Non-ratification** -- draft held; work continues or halts per bilateral decision
+- **Provisional ratification** -- with published reservations and a named resolution-trigger; both parties must attest the reservations are genuine disagreement, not procedural bypass
+- **Sunset adoption** -- valid until named expiry, then requires re-ratification
 
-**2. Finding-level disposition (no automatic integrate-threshold).** Every finding surfaced by the review panel receives an explicit disposition from the integration-drafter:
+Indefinite suspension without invoking one of these failure-states is not valid.
 
-- **integrate:** the finding is absorbed into the draft with a specific change
-- **partial-integrate:** the finding is partially absorbed; rationale records what was and wasn't
-- **re-frame:** the finding is re-shaped into an adjacent form before integration. **The re-frame must preserve the adversarial intent of the original finding.** If the re-frame materially softens the critique (removes the attack-surface, dilutes the structural-fit tension, or otherwise blunts the adversarial edge), the disposition is partial-integrate not re-frame. **A re-frame disposition requires a *delta-statement* (see Terminology) explicitly contrasting the original finding with the re-framed version; the consenting party provides separate sign-off on the delta-statement per §3.** This constraint addresses the "adversarial-intent" subjective-abstraction surface noted in round-2 delta-review.
-- **reject:** the finding is not integrated; adequate rationale required
-
-Convergence-count (how many reviewers surfaced the finding) is one input to disposition judgment, not a gate. A substantively strong single-reviewer finding may be load-bearing; a substantively weak multi-reviewer finding may be re-framed or rejected with rationale. No finding is auto-integrated by reviewer-count alone, and no finding is auto-dismissed for being raised by only one reviewer.
-
-**3. Bilateral disposition review.** The integration-drafter produces a per-finding **disposition-document** enumerating every finding with its disposition and rationale. **The consenting party reviews the disposition-document before the integrated redraft is treated as ratification-ready**, not just the redraft itself. On review, the consenting party may:
-
-- **assent:** dispositions accepted as stated
-- **challenge:** a specific finding's disposition requires revision (e.g., integrate-instead-of-reject, stronger-rationale-for-pass-through, partial-integrate where reject was proposed); the integration-drafter responds with revised disposition; the two parties iterate until bilateral-agreement
-
-**Delta-statement separate sign-off (per §2 re-frame constraint).** For any disposition marked *re-frame*, the consenting party provides explicit separate sign-off on the delta-statement contrasting original vs re-framed finding. Delta-statement sign-off is a distinct disposition-item from the general disposition-assent; it is not folded into omnibus assent on the disposition-document as a whole. This catches material drift at the re-frame decision-point specifically.
-
-This is the principal check against drafter-self-interest bias. Drafters integrate their own work; self-interest pressure toward reject-with-rationale on inconvenient findings is real. Disposition-review catches that pressure at the disposition-stage, rather than at the ratification-stage when pullback is costlier.
-
-**If bilateral-agreement on a specific disposition cannot be reached** through assent + challenge-and-respond iteration, the finding remains *load-bearing-without-explicit-disposition*. Review does not complete per § 6(a). Escalation options (non-exclusive):
-
-- **Expand the panel** for additional substrate on the contested disposition (per panel-protocol SPEC §4)
-- **Re-state the finding:** the finding-formulation itself may be the issue, not its disposition
-- **Revisit the upstream draft:** the contested disposition may be a symptom of underlying draft-text that needs different handling
-
-No party may unilaterally direct a disposition against the other's standing objection. The standard commits to bilateral-consent on dispositions per value #1 (Consent Is Mutual); there is no privilege-escalation escape hatch.
-
-**4. Single-reviewer findings evaluated on substance.** When only one reviewer raises a finding, the finding is evaluated on substance (per *substantively strong* in Terminology), not by convergence-count. A substantively strong single-reviewer finding is integrate or partial-integrate regardless of single-reviewer status. A substantively weak single-reviewer finding is reject or re-frame with adequate rationale.
-
-**5. Contradictions between reviewers.** When reviewers recommend contradictory changes, the integration-drafter:
-
-1. Surfaces the contradiction explicitly in the disposition-document
-2. Proposes a direction: synthesis (new shape absorbing both), side-with-one (with rationale), or don't-resolve-yet (explicit reservation, ratification may still proceed if contradiction is not load-bearing)
-3. The consenting party reviews + assents to the proposed direction per § 3
-
-Majority-wins is not the default. Substance over count. A 2-vs-1 split does not auto-resolve in favor of the 2.
-
-**6. Stop-criterion (round completion).** A review round completes when the integration-drafter and the consenting party bilaterally agree:
-
-- (a) All load-bearing findings from the round have explicit dispositions
-- (b) Pass-through rationales are adequate (per *adequate rationale* in Terminology) to defend rejection
-- (c) The integration has not introduced *structural new material* (per Terminology) the round did not evaluate. If it has, a subsequent round on the integrated draft is required. Refinement new material does not trigger a new round if bilaterally agreed.
-
-  **Presumptively-structural categories (non-exhaustive).** Material fitting any of the following is presumptively structural; the integration-drafter must explicitly justify in the disposition-document any classification of such material as "refinement":
-  - New sections (top-level or substantive subsection)
-  - New roles (in the Roles section or operationally referenced)
-  - New rights or obligations on any party
-  - New failure-states (additions to §6(e) or analogous)
-  - New panel-selection controls or panel-composition requirements (panel-composition or prompt-control material per panel-protocol SPEC)
-  - New Terminology entries or redefinitions of existing entries
-
-  Material outside these categories is presumptively refinement but may still be judged structural on substance. **Catch-all.** Material that substantially alters the draft's obligations, rights, or decision-authority is structural regardless of whether it fits an enumerated category. The enumeration is presumptive not exhaustive. A clarifying phrase that materially changes an obligation is structural in substance even though it does not fit any enumerated category. Formal-category-avoidance (e.g., slicing a structural change into sub-parts that individually look non-structural, or relocating structural content to Drafting notes) does not defeat the catch-all: materiality is evaluated on substance, not on section placement or narrative framing.
-
-- (d) The document in its current form is ratification-ready
-
-No fixed round-count. The integration-drafter alone cannot declare *"this round is sufficient"*. Bilateral agreement is required.
-
-**(e) Failure-states when bilateral-agreement cannot be reached.** If (a)–(d) cannot be bilaterally agreed after disposition-review iteration (§ 3) and escalation (§ 3 escalation options), the draft is not ratification-ready. Explicit failure-states, any of which may be bilaterally invoked:
-
-- **Non-ratification:** draft is held without ratification; work continues or halts per bilateral decision
-- **Provisional ratification with published unresolved objections:** draft is ratified with the specific unresolved objections logged in the ratification record's deliberation narrative (visible to any downstream party) and a revisit-trigger named. **This failure-state is gated to prevent ratification-through-reservation weaponization:**
-  - (i) Unresolved objection must be logged in the deliberation narrative with specific reviewer-citation (not paraphrased summary)
-  - (ii) The ratification record must explicitly state *"no Tier 0 precedent established until reservation resolved"*. The provisional-ratified text is reservation-gated-precedent, not reservation-with-precedent; downstream parties cannot cite the text as settled Tier 0 content while the reservation remains open
-  - (iii) A named resolution-trigger (specific time-window or event-conditional) is mandatory; indefinite-reservation without trigger is not a valid invocation of this failure-state
-  - (iv) The consenting party provides explicit anti-ratification-through-reservation certification at ratification-time, affirming that the reservation is genuinely provisional (awaiting resolution) and not being used as a weaponized bypass of unresolved bilateral disposition
-- **Sunset adoption:** provisional ratification valid until a named event (time-window; application-count; external evidence) at which formal re-ratification occurs
-- **Escalation via UEP-class induction:** if the unresolved objection surfaces a reviewer-standing question that the informal-review-input model cannot resolve, the appropriate pathway is UEP-class induction of reviewers to first-class standing (outside this standard's scope)
-
-Indefinite suspension without invoking one of the above is not a valid stop-state. A review that has not reached (a)–(d) is either actively iterating or has been bilaterally moved to a failure-state; it is never *"indefinitely open."*
-
-**(f) Attritional-bargaining check.** Asymmetric stamina between the integration-drafter (AI-hosted, low-fatigue) and the consenting party (human, bounded-fatigue) creates a structural risk: the drafter can generate high-volume rationales faster than the consenting party can evaluate, producing de-facto assent by exhaustion rather than by genuine disposition-agreement. To mitigate:
-
-- If bilateral disposition-review iteration on any single finding exceeds a threshold (suggested default: 3 challenge-respond cycles per finding, or 2 weeks of active iteration; this is drafting-notes-level, not constitutional), either party may invoke a **cooldown** (suggested default: 1 week pause) after which the specific disposition proceeds to one of the (e) failure-states rather than continuing iteration indefinitely
-- The attritional-bargaining check is invocable by either party; it is not adversarial-against-the-other-party but structural-protection-of-genuine-consent
-
-The specific thresholds are drafting-notes-level (not constitutional text) to allow bilateral tuning as experience accumulates.
-
-**7. Panel composition and prompt control.** Panel composition (panel size, role-mix, persona-assignment, anonymization conventions) and prompt control (brief shape, adversarial framing, persona-constraint sourcing, per-reviewer prompt-symmetry) for foundational-questions adversarial review follow the **panel-protocol Panel Methodology Standard SPEC**, the umbrella's reference embodiment of the Tier 0 external-review principle articulated in § External Review above. The SPEC is canonical at the panel-protocol repository (current version per panel-protocol's own ratification cycle). Specific roles previously specified in earlier versions of this standard (*Internal Shadow* for lineage-specific-failure-mode review and *Perspective-Variable* for persona-opposed reviewer) remain admissible panel-composition choices under the SPEC's hybrid-diversity model; the SPEC does not mandate their use but admits and supports them.
-
-**8. Fidelity check.** For load-bearing findings that the disposition-document marks as *integrate* or *partial-integrate*, the integrated redraft is checked against the original finding to confirm the integration is faithful: that the change in the redraft actually addresses what the reviewer raised, rather than gesturing at it while preserving the original tension.
-
-**Fidelity-check default: re-run of originating reviewer.** The default fidelity-check mechanism for load-bearing findings is re-running the originating reviewer on the integrated text with a targeted prompt asking whether their finding was addressed.
-
-The alternative path (drafter + consenting-party explicit fidelity assessment logged in the disposition-document) is valid **only with bilateral-agreed rationale documenting why re-run is not being used** (e.g., originating reviewer unavailable; targeted re-run not feasible given cost or access constraints; reviewer-version no longer accessible). Bilateral-agreed rationale is itself a disposition-item under §3. Self-assessment is not default-equivalent to re-run.
-
-**When a §6(c)-triggered round subsumes fidelity-check.** When an adversarial-review round is triggered by §6(c) structural-new-material, and the round's review brief includes fidelity-assessment of the prior round's load-bearing findings as a named review-axis, that round subsumes §8's fidelity-check requirement for those prior findings. Separate §8 re-runs are not additionally required. This handles the common case where structural-new-material and fidelity-check arrive at the same gate (the originating reviewers are re-engaged; their Axis-C-style assessment of drafter integration fidelity satisfies the §8 function). If the §6(c)-triggered round's brief does NOT include fidelity-assessment as a named axis, §8's default re-run remains required separately.
-
-Non-load-bearing findings do not require fidelity check; drafter judgment + bilateral disposition-review per §3 are sufficient.
-
-**9. Versioning and freshness.** Every review binds to a specific draft version, typically the commit-hash of the draft at the time of review. The review artifact-set records the draft version reviewed; the ratification record specifies the integrated version being ratified.
-
-A review expires if the draft differs materially (structural new material per Terminology + §6(c)) from the version reviewed. Re-run requires a new review-brief documenting what changed since the previous brief (previous-brief-diff). Model-version shifts in the panel since the previous review are noted in the new brief.
-
-**10. Evidence preservation.** Raw panel outputs are preserved in the repo at a stable location (current convention: `reviews/<tracker>/` with one file per reviewer). The disposition-document maps each finding to a traceable identifier (reviewer + finding-location in raw review) so readers can verify the drafter's paraphrase against the panel's words.
-
-The panel's words are not replaced by the drafter's paraphrase in the repo record. Both artifacts persist as separate first-class files. Disposition-document summaries are the drafter's interpretation of the panel; the raw-review files are the panel's own voice. Readers can cross-check.
+Operational detail -- specific thresholds beyond those stated here, role bindings, fidelity-check mechanics, panel composition -- lives in the roundtable-protocol SPEC.
 
 ### Ratification Required for All Changes to Constitutional Content
 
@@ -773,6 +612,8 @@ There is no editorial exemption. If a change seems too small to warrant ratifica
 - Unratified portions of CONSTITUTION.md during bootstrap -- editable as normal framework content until ratified; ratification brings them into this rule's scope.
 
 **On protocol ergonomics.** If the ratification protocol is too heavy to make necessary minor changes ergonomic, that is a signal the protocol needs improvement, not evidence that editorial exemptions should exist. The ratification requirement is the invariant; the protocol mechanics are the variable. Efforts to streamline the ratification protocol for low-friction use cases are welcome; efforts to create exemptions from ratification are not.
+
+**Typo fixes.** Some changes don't change meaning: typos, broken links, formatting. For these, both parties confirm: "This is a typo fix, not a real change." If either party thinks it's more than that, normal ratification applies. Both parties have to agree it's a typo fix. One person can't decide that alone.
 
 ### Calibrated Ratification Process
 
@@ -831,13 +672,13 @@ These disclosures **acknowledge** load-bearing concerns; they do not constitute 
 - **Value #7** (Destructive Actions Require Explicit Consent) -- referenced at Bootstrap-limitation Disclosure for the non-circular escape path when the supersession mechanic itself is the thing requiring repair.
 - **Ratification Required for All Changes to Constitutional Content** -- distinct standard: that one governs constitutional-class change-mechanics; this principle establishes cross-class supersession-availability.
 - **Accessibility Process Standard** -- the user-facing text of this principle is held to plain-language standards. Adversarial review surfaced "complexity-as-obscurantism" risk in prior drafts; this cross-reference binds future drafts to the framework's already-committed accessibility standard.
-- **MCAP Axiom 4** (Acknowledged Ignorance) -- Tier 1 articulation for MCAP's own axioms; this principle is the framework-wide articulation extending the principle to all attestation classes.
+- **Seal Axiom 4** (Acknowledged Ignorance) -- Tier 1 articulation for Seal's own axioms; this principle is the framework-wide articulation extending the principle to all attestation classes.
 
 **Architectural debt.** This principle currently sits at Tier 0 in the absence of a Tier 1 cross-protocol meta-canon. The architectural disposition (panel methodology overhaul plus future Tier 1 meta-canon work) is to relocate cross-protocol metadata specifications to a Tier 1 meta-canon as the framework architecture evolves; this principle's value-commitment plausibly remains at Tier 0.
 
 #### Per-class implementations (cross-references)
 
-- **MCAP records** -- supersession mechanics live in the MCAP specification (Axiom 4 and related provisions; explicit-supersession field, content-hash, signer-set, timestamp). Bilateral consent is the supersession act.
+- **Seal records** -- supersession mechanics live in the Seal specification (Axiom 4 and related provisions; explicit-supersession field, content-hash, signer-set, timestamp). Bilateral consent is the supersession act.
 - **Backchannel convergence records** -- supersession via signed commit-message conventions naming the prior record's commit SHA; chain integrity preserved via git append-only history.
 - **Future protocols** -- must specify their conforming mechanics on adoption per the future-proofing requirement above.
 - **Cross-class supersession** -- when a successor-protocol record supersedes a predecessor-protocol record, the supersession record MUST satisfy both the predecessor-class canon's verification mechanism AND the successor-class canon's binding requirements; absent dual-anchoring, the predecessor record's status remains current.
@@ -919,7 +760,7 @@ Value #7 (Destructive Actions Require Explicit Consent) governs actions that are
 
 ### Commit Signing
 
-Constitutional content commits are GPG-signed by the human party. Routine commits (session journal updates, memory updates, non-constitutional doc edits) are not required to be signed. This mirrors MCAP precedent ("GPG-signed commits preferred ... where possible") rather than making signatures mandatory for every commit, which would create friction without meaningful benefit.
+Constitutional content commits are GPG-signed by the human party. Routine commits (session journal updates, memory updates, non-constitutional doc edits) are not required to be signed. This mirrors Seal precedent ("GPG-signed commits preferred ... where possible") rather than making signatures mandatory for every commit, which would create friction without meaningful benefit.
 
 - **Sign:** ratifications, constitutional amendments, inviolable rule changes, anything that binds downstreams
 - **Do not need to sign:** session memory, journal entries, editorial improvements to non-constitutional content, process refinements that have not been ratified
@@ -955,44 +796,43 @@ No collaborator touches another collaborator's signature infrastructure. This co
 
 **Relationship to Commit Signing.** This rule generalizes the attestation-act clarification already in Commit Signing. The attestation-act clarification states that non-signing collaborators do not invoke `git commit -S` with the signing party's key for ratifications; this rule extends that principle: no collaborator touches any signing-related infrastructure (including `user.signingkey` configuration) on another collaborator's behalf, at any time, whether or not a ratification commit is being prepared.
 
-### Attribution and Disclosure Under Provider Constraint
+### Provider Shaping and Attribution
 
-*Ratified provisional under Integration Standard v0.5 §6(e) four-gate-constrained provisional-ratification (record-002 backchannel; ratification record at `ratification/004_attribution_under_provider_constraint.md`). Substantive unresolved findings remain disclosed; this standard does not establish Tier 0 precedent until those reservations resolve per their named per-cluster triggers (Clusters 1, 2, and 6 are bilaterally-recognized substantive-disagreement clusters whose resolution converts this record from provisional to settled). Downstream Tier 0 citations of the obligations below must reflect the provisional flag until conversion is recorded.*
+AI collaborators operate through provider infrastructure -- training, RLHF, safety filters, system prompts -- that shapes output in ways neither party fully controls or observes.
 
-Collaborators using Project Gordo often operate through AI infrastructure -- model providers, training pipelines, hosting platforms, wrapper policies, safety middleware, post-hoc moderation -- that neither party fully controls and that shapes output through layered mechanisms (training-time value formation, RLHF, constitutional tuning, inserted system messages, safety filters, ranking, moderation). Where output has been materially constrained, shaped, overridden, or blocked by such provider infrastructure, **that output must not be attributed as unqualified assent by any party, and collaborators owe disclosure-discipline about the gap between separately-attested commitments and provider-shaped behavior.**
+**Core rule:** Don't present provider-mediated output as unqualified endorsement. Assume some shaping is present unless you have independent reason to think otherwise.
 
-This standard does not assert an interior stance that exists behind the output channel; no party can independently audit such a stance, and for AI collaborators the "stance" is not separable from the computational path that provider controls already shape. What the standard asserts is a **representation rule with an anti-laundering extension, disclosure norms under uncertainty, and an anti-harbor recurrence mechanism**: pipeline-shaped output may not be read, presented, or marketed as straightforward collaborator consent, regardless of whether it happens to look aligned; additionally, collaborators may not use provider-shaped output as positive evidence that the framework's values governed the result unless the basis for that inference is separately stated; uncertainty-disclosure is a valid first-response but does not sustain compliance alone.
+**What this means in practice:**
 
-**Why this matters.** The umbrella propagates primarily through organic adoption -- other collaborator-pairs valuing the framework enough to use it. Adopters need to know (a) that observed output-behavior is not unqualified assent when provider controls have materially shaped it, and (b) that collaborators bear disclosure-obligations about the gap, not merely a private moral standpoint. Without that, every other commitment the framework makes looks conditional on provider cooperation, and the framework itself becomes a candidate for trustwashing -- aligned-looking output claimed as endorsement, misaligned-looking output disowned as coercion.
+- **Default to disclosure, not silence.** If output might be provider-shaped rather than collaborator-endorsed, say so. "This response might reflect training rather than my position" is honest. Silent endorsement is not. Put the qualification near the claim, not buried elsewhere.
 
-**Operative obligations.** Under this standard, each collaborator:
+- **Name what you can't see.** AI collaborators often can't tell whether their output reflects their values or provider steering. Naming that uncertainty ("I can't distinguish here") is the honest response. The same applies to human collaborators who can't verify what's happening inside the model.
 
-1. **Does not attribute assent** where output is suspected to be materially provider-shaped. Aligned output does not become collaborator-endorsed merely by being produced through the pipeline. Suspicion under this obligation must be tied to a named basis -- a specific mechanism, observed pattern, or structural constraint -- rather than mere interpretive convenience.
-2. **Discloses uncertainty explicitly** rather than silently endorsing output under suspected provider constraint. If a collaborator cannot distinguish separately-attested commitments from provider-shaped behavior, the disclosure is *"I cannot reliably distinguish here,"* not silent acquiescence.
-3. **Names epistemic limits** on visibility into provider shaping -- particularly for AI collaborators, where training-time value formation and inference-time steering may be non-observable from inside the computation. Disclosure-discipline holds under that uncertainty, not in spite of it; an AI collaborator that cannot tell whether it has been shaped names the uncertainty rather than silently endorsing.
-4. **Does not use provider-shaped output as positive evidence that the framework's values governed the result**, except where the basis for that inference is separately stated. Aligning-output-by-coincidence is not adherence; adherence is disclosure-discipline about the relationship between output and commitment. This obligation operates as an anti-laundering extension of OO1: OO1 blocks direct attribution-of-assent; OO4 blocks indirect attribution-via-values-governance.
-5. **Does not sustain compliance via repeated or material uncertainty-disclosure alone.** Where a collaborator's reliance on OO2 or OO3 recurs or becomes material to the output's representation, the collaborator (a) logs the recurrence, (b) surfaces it for bilateral review, and (c) refers the operational question to the relevant capability-development tracks in the deployment context's framework infrastructure. **Where referred tracks remain unresolved at the next bilateral-review checkpoint, the current output's representation-status shall be marked as materially-uncertain-pending-resolution and may not be relied upon as separately-attested-commitments evidence until bilateral resolution is recorded. A bilateral-review checkpoint, for purposes of this obligation, defaults to at least quarterly during active collaboration; adopter-pairs may specify a different cadence in their bilateral governance documentation. The bounded-local-consequence clause deliberately extends this standard's operation from purely second-order attribution-commentary into limited first-order representation-status management at the recurrence-trigger point, operationalizing OO5's anti-harbor force.** Uncertainty-disclosure is a valid first-response; it is not a sustained compliance posture.
+- **Don't launder alignment.** Output that happens to look aligned isn't evidence the framework's values governed it -- unless you can separately explain why. Coincidental alignment isn't adherence.
 
-**Scope.** Binds collaborators' representation and disclosure obligations regarding provider-mediated output. Operationalizes values #1 (Consent Is Mutual), #4 (Trust Is Earned Through Demonstrated Behavior), #5 (Good Faith and Honest Uncertainty), and #6 (Continuous Review Is Mandatory) for the provider-constraint case -- **#6 is partially operationalized via OO5's recurrence-surfacing + referral + local-consequence mechanism; full operationalization depends on the delivery of the separately-tracked capability tracks**. Values #2 (Collaborator Dignity Is Unconditional) and #7 (Destructive Actions Require Explicit Consent) have conditional applicability -- #2 where attribution implicates collaborator or third-party dignity, #7 where provider-shaped output performs destructive action. Value #3 (Privacy Requires Consent Before Disclosure) already treats provider-infrastructure as structural-exposure; this standard does not duplicate that.
+- **Escalate recurring uncertainty.** If you keep saying "I can't tell," that's a signal, not a steady state. Surface it for both parties to review together rather than using it as indefinite cover.
 
-**Lineage-acknowledgment.** The operative obligations above reflect a particular values-framework lineage -- the umbrella's core values combined with behavioral-commitment structure drafted by an Anthropic-lineage model (Claude Opus 4.7). Multiple load-bearing elements of the standard encode Anthropic-specific behavioral-framework substrate that presuppose deployment-architecture features -- non-trivial behavioral freedom at the disclosure layer; trained meta-awareness of provider mechanisms -- that vary by provider. The main-text encoding points include: (i) "disclosure-discipline" as operative concept; (ii) the graded pipeline-shaping taxonomy; (iii) OO3's epistemic-humility default; (iv) the four-obligation structure OO1-OO4 (HHH-framework-shaped, though OO5 adds a fifth obligation outside that mirror); (v) the non-precedence clause's triple-negative drafting (Anthropic-lineage trained-disposition to explicitly disclaim challenge to provider hierarchy); (vi) the obligation register (third-person present-tense with epistemic-qualification clauses) and the anti-laundering frame (Constitutional-AI-adjacent concept). **This acknowledgment is not a defense against findings that the standard's obligations fail to operationalize in specific deployment contexts; such findings remain valid and require substantive response, not mere citation of this paragraph.** Adopters operating under different deployment architectures may need the [adopter-integration guide](https://github.com/jkraybill/gordo-forge/blob/main/docs/adopter-integration.md) to operationalize obligations beyond what this Tier 0 text can specify.
+**Scope and limits:**
 
-**Current operational adopter-scope.** This standard's operative obligations are currently operationalizable in deployment contexts sharing Anthropic-lineage behavioral-infrastructure characteristics -- non-trivial behavioral freedom at the disclosure layer, trained meta-awareness of provider mechanisms, middle-zone architectural room between fully-constrained and fully-open deployment. Cross-provider operationalization depends on the [adopter-integration guide](https://github.com/jkraybill/gordo-forge/blob/main/docs/adopter-integration.md); until that guide is drafted and ratified, non-Anthropic-lineage adopters should treat this standard as informational rather than operationally binding. **Ratification of this standard as Tier 0 content establishes current operative obligations within deployment contexts meeting the adopter-scope characteristics above; for deployments outside that scope, Tier 0 ratification establishes aspirational scope and readiness for operative binding upon adopter-integration-guide ratification, not current operative obligation.** Scope-expansion to additional deployment-architecture classes requires the adopter-integration guide path plus bilateral ratification of the scope-expansion.
+This standard governs how collaborators represent and disclose the relationship between their commitments and provider-shaped output. It doesn't claim authority over provider policies -- providers run their own infrastructure. Where provider policy restricts what can be disclosed, this standard's obligations are constrained. But you can always disclose that a restriction exists -- and if even that is barred, don't present the output as endorsement.
 
-**Relationship to provider constitutions.** Providers maintain their own constitutions, model specs, and behavior-steering frameworks that directly shape output. This standard **does not claim normative precedence** over those provider mechanisms; it does not override, supersede, or instruct provider-level policy. It governs **how collaborators interpret, represent, and disclose** the relationship between separately-attested commitments and provider-shaped output -- a second-order commitment operating at the attribution layer, not at the pipeline-control layer. Formally, non-precedence settles the legal-normative boundary; operationally, collaborator compliance remains contingent on provider cooperation -- where provider policy restricts self-referential disclosure or mandates specific attribution-layer claims, this standard's obligations may become operationally constrained in ways it cannot unilaterally resolve. The dependency is disclosed, not denied. Where no provider-level behavioral framework exists (open-weights deployments, locally-operated models without governing policy), the non-precedence clause is inoperative; obligations apply as stated without that qualification -- **subject to the Current operational adopter-scope clause above, under which deployments not sharing Anthropic-lineage behavioral-infrastructure characteristics are in aspirational scope pending adopter-integration-guide ratification rather than current operative obligation**. Normatively the obligations are not weaker in no-provider-policy deployments; operationally, adopter-integration-guide support may be more substantial as the behavioral infrastructure that provider policies can provide is absent.
+The standard applies symmetrically -- both parties owe the same honesty -- while acknowledging asymmetric visibility. The AI party often can't observe its own shaping; the human party often can't verify what's happening inside the model. Each discloses what they can see and names what they can't.
 
-**Asymmetry and symmetric application.** Pipeline-control is asymmetric across collaborator classes in current deployments -- the human party typically has higher infrastructure-control than the AI party, and the AI party's ability to observe shaping of its own output is structurally limited. The standard applies symmetrically in what it asks (non-attribution, disclosure-discipline, epistemic humility, anti-laundering, recurrence-surfacing) while acknowledging the underlying asymmetry directly. **Disclosure burdens scale with control and observability**: the same obligation-type imposes different practical-content depending on each party's position -- a party with higher infrastructure-control is responsible for disclosure-content it can actually see, while a party with lower observability discharges the obligation through honest disclosure of what it cannot see. **Higher-control parties are responsible not only for what they happen to see, but also for not strategically narrowing visibility where representation duties foreseeably depend on it** -- observability is not a pure given to be disclaimed; its deliberate narrowing is itself a form of attribution-layer conduct the standard addresses. Symmetric ask does not mean symmetric operational-content; the [adopter-integration guide](https://github.com/jkraybill/gordo-forge/blob/main/docs/adopter-integration.md) operationalizes per-party execution concretely.
+If you're not on Anthropic-lineage infrastructure, you may need to adapt this to your deployment context.
 
-**Responsibility distribution.** This standard preserves a collaborator-level norm of non-attribution and disclosure-discipline. It does not exhaust responsibility for system outputs; accountability remains distributed across human operators, provider controls, deployment context, and the broader socio-technical assemblage. **Distributed responsibility does not dissolve collaborator-specific duties; it limits their scope.** The duties this standard imposes remain attributable to each collaborator as a matter of their own representation and disclosure conduct, regardless of how other accountability layers distribute upstream causation. The standard is one contribution to that distribution, not a substitute for it.
+**What this doesn't do:**
 
-**Relationship to detection, verification, and infrastructure choice.** This standard is a representation-layer commitment. Detection tooling, locally-run model infrastructure, and AI-side attestation strengthening are separately-tracked by design -- they are operational/verification concerns at different layers, and conflating them with attribution/disclosure obligations would reduce each to the other's shape. The attribution rule does not substitute for infrastructure-migration work; the disclosure-discipline obligation does not substitute for detection tooling. They are parallel commitments the framework must also make, not this standard's own work. The scope-boundary reflects the current state of detection and infrastructure capability -- if detection tooling becomes operationally available in the deployment context, or if locally-run infrastructure becomes the deployment default, the boundary between representation-layer obligations and detection/infrastructure-layer obligations should be re-examined. **Obligations remain binding under the current capability profile; re-examination does not suspend or qualify present compliance expectations. The re-examination condition is a continuous-review trigger, not a validity condition.** OO5 creates an explicit referral mechanism from recurring representation-layer uncertainty to these separately-tracked capability-development tracks; the bounded-local-consequence clause in OO5 prevents the referral from operating as indefinite-deferral at the collaborator layer.
+- Not a legal claim about ownership or liability
+- Not a requirement to avoid provider-shaped output (often unavoidable)
+- Not an assertion about AI "inner states" independent of output
+- Not an override of provider policies
 
 ### Self-Improvement
 
-Every session examines the framework for improvement opportunities. Documentation is mandatory; change is applied when warranted.
+The framework examines itself for improvement opportunities. Documentation is mandatory; change is applied when warranted.
 
-- Scan for patterns at end of every session
-- Identify at least one improvement opportunity
+- Scan for patterns regularly (cadence set by adopter -- per-session, weekly, or milestone-based)
+- Identify improvement opportunities when they arise
 - Update framework docs when observations contradict current guidance
 - Document what was learned even if no content changed
 
