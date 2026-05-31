@@ -74,3 +74,5 @@ See `COMPLIANCE_KERNEL.md` for inviolables. Highlights:
 ---
 
 *Created 2026-05-11 S201 via Forge bootstrap (recursive self-application).*
+
+<!-- Last reviewed: 2026-05-31 21:16 AEST by Gordo -->
