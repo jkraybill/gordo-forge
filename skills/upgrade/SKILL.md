@@ -69,3 +69,5 @@ Surface any cascade updates needed.
 - Always show what's changing before doing it
 - Version markers matter — update them
 - Constitution changes may require bilateral re-ratification (surface this)
+
+<!-- Last reviewed: 2026-05-31 21:16 AEST by Gordo -->

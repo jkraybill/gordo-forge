@@ -76,3 +76,5 @@ If not a PG-umbrella project, suggest running `/gordo-forge:new-project` first.
 - Don't duplicate if primitive already integrated
 - Don't break existing COMPLIANCE_KERNEL structure
 - Explain what changes before making them
+
+<!-- Last reviewed: 2026-05-31 21:16 AEST by Gordo -->
