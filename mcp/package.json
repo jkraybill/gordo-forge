@@ -11,8 +11,10 @@
     "build": "tsc",
     "start": "node dist/cli.js",
     "dev": "tsx src/cli.ts",
-    "test": "node --test dist/**/*.test.js",
-    "prepublishOnly": "npm run build"
+    "test": "npm run build && node --test dist/server.test.js dist/cli.test.js",
+    "test:unit": "npm run build && node --test dist/server.test.js",
+    "test:integration": "npm run build && node --test dist/cli.test.js",
+    "prepublishOnly": "npm run build && npm test"
   },
   "keywords": [
     "mcp",
