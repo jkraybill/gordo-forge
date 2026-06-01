@@ -386,6 +386,17 @@ describe("gordo-mcp server", () => {
       assert.ok(Array.isArray(result.template_vars));
     });
 
+    it("includes prerequisites", () => {
+      const result = handleToolCall("framework.get-example", { example: "ai-guide" }) as Record<string, unknown>;
+      assert.ok(Array.isArray(result.prerequisites));
+      assert.ok((result.prerequisites as string[]).length > 0);
+    });
+
+    it("guidance warns about conversation first", () => {
+      const result = handleToolCall("framework.get-example", { example: "constitution" }) as Record<string, unknown>;
+      assert.ok((result.guidance as string).includes("STOP"));
+    });
+
     it("returns error for unknown example", () => {
       const result = handleToolCall("framework.get-example", { example: "nonexistent" }) as Record<string, unknown>;
       assert.ok(result.error);
