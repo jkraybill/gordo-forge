@@ -1,0 +1,50 @@
+{
+  "name": "gordo-mcp",
+  "version": "1.0.0-rc1",
+  "description": "Gordo: Human-AI Collaboration Framework MCP Server. Reference library for agents building working agreements with their humans.",
+  "main": "dist/index.js",
+  "bin": {
+    "gordo-mcp": "dist/cli.js"
+  },
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/cli.js",
+    "dev": "tsx src/cli.ts",
+    "test": "node --test dist/**/*.test.js",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "mcp",
+    "gordo",
+    "human-ai-collaboration",
+    "bilateral-consent",
+    "ai-constitution",
+    "collaboration-framework",
+    "working-agreement",
+    "ai-governance",
+    "session-continuity"
+  ],
+  "author": "Gordo <gordo@dashcord.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jkraybill/gordo-forge.git",
+    "directory": "mcp"
+  },
+  "homepage": "https://github.com/jkraybill/project-gordo",
+  "bugs": {
+    "url": "https://github.com/jkraybill/gordo-forge/issues"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.52.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "tsx": "^4.7.0",
+    "typescript": "^5.4.0"
+  }
+}
