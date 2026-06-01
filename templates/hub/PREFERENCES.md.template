@@ -12,13 +12,13 @@
 - Hub is the starting point for all work
 - Projects created and worked on from hub
 - Memory, skills, planning centralized here
-- Run /bos and /eos from hub, not projects
+- Session protocols run from hub, not projects
 {{/if}}
 {{#if WORKING_MODEL_PROJECT_CENTRIC}}
 - Hub is for project creation
 - Work directly in each project's directory
 - Projects have their own skills and settings
-- Run /bos and /eos from each project
+- Session protocols run from each project
 {{/if}}
 
 ---

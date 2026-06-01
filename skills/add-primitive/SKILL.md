@@ -12,7 +12,7 @@ First, verify this is a PG-umbrella project:
 - Check for CLAUDE.md with umbrella markers
 - Check for COMPLIANCE_KERNEL.md or similar operational artifacts
 
-If not a PG-umbrella project, suggest running `/gordo-forge:new-project` first.
+If not a PG-umbrella project, suggest creating a hub first.
 
 ## Available Primitives
 

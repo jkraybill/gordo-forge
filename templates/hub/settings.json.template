@@ -6,7 +6,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "echo '{{HUB_NAME}} hub — run /bos to begin session protocol'"
+            "command": "echo '{{HUB_NAME}} hub — say BOS to begin session protocol'"
           }
         ]
       }

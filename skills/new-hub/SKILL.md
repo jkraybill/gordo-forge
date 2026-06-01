@@ -344,7 +344,7 @@ Ask how they plan to work with projects:
 **Store the choice in PREFERENCES.md** under "Working Model".
 
 **Impact on project generation:**
-- **Hub-centric:** Projects get lighter scaffolding (constitutional content inline, but no copied skills — you run /bos from hub)
+- **Hub-centric:** Projects get lighter scaffolding (constitutional content inline, but no copied skills — session protocols run from hub)
 - **Project-centric:** Projects get full scaffolding (constitutional content + copied skills + own .claude/settings.json)
 
 ### Phase 7.5: Project Directory Pattern
