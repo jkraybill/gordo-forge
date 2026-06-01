@@ -67,7 +67,11 @@ git clone https://github.com/jkraybill/gordo-forge.git ~/gordo-forge
 claude --plugin-dir ~/gordo-forge
 ```
 
-Then ask Claude to help you create a hub. You can say "help me start a collaboration hub" or use the shortcut `/gordo-forge:new-hub`.
+Then ask Claude to help you create a hub:
+
+> "Help me start a collaboration hub."
+
+Claude will guide you through the interview.
 
 ---
 
@@ -150,8 +154,10 @@ The hub accumulates session logs, ratified decisions, and collaboration memory. 
 
 Once you have a hub, you can ask Claude to extend it:
 
-- "Add Seal to my hub" (or `/gordo-forge:add-primitive`)
-- "Upgrade my constitution" (or `/gordo-forge:upgrade`)
+- "Add Seal to my hub"
+- "Upgrade my constitution to the latest version"
+
+Claude knows what to do.
 
 ---
 
