@@ -1,5 +1,5 @@
-export declare const SERVER_VERSION = "1.0.0-rc1";
-export declare const FRAMEWORK_VERSION = "1.0.0";
+export declare const SERVER_VERSION = "1.0.0-rc10";
+export declare const FRAMEWORK_VERSION = "1.0.0-rc10";
 export declare const metadata: {
     name: string;
     description: string;

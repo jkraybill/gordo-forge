@@ -6,6 +6,7 @@ export interface Example {
     content: string;
     guidance: string;
     template_vars: string[];
+    prerequisites: string[];
 }
 export declare const examples: Example[];
 export declare function listExamples(): {
@@ -27,16 +28,18 @@ export declare function getExample(id: string): {
     };
     name?: undefined;
     uri?: undefined;
-    content?: undefined;
+    prerequisites?: undefined;
     guidance?: undefined;
+    content?: undefined;
     template_vars?: undefined;
     server_version?: undefined;
     framework_version?: undefined;
 } | {
     name: string;
     uri: string;
-    content: string;
+    prerequisites: string[];
     guidance: string;
+    content: string;
     template_vars: string[];
     server_version: string;
     framework_version: string;

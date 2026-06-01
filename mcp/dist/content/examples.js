@@ -6,7 +6,12 @@ export const examples = [
         description: "Example AI guide showing collaboration identity, key files, and conventions",
         uri: "gordo://examples/ai-guide",
         template_vars: ["project_name", "ai_name", "human_name", "collaboration_style"],
-        guidance: "This is a reference, not a template. Write your own based on your actual project and relationship.",
+        prerequisites: [
+            "Discussed collaboration_style with your human (tool vs collaborator?)",
+            "Discussed identity with your human (names for both of you?)",
+            "Discussed trust_posture (what needs checking vs autonomous?)"
+        ],
+        guidance: "STOP: Have you discussed the prerequisites with your human? This is a reference for drafting together, not a template to fill. Copy-pasting with placeholder replacement defeats the purpose.",
         content: `# my-project — Sage's Guide
 
 <!-- Built with the Gordo framework: https://github.com/jkraybill/project-gordo -->
@@ -57,7 +62,13 @@ I'm Sage. I work with Alex on this project as a collaborator, not a tool. We mak
         description: "Example constitution with values, commitments, and amendment process",
         uri: "gordo://examples/constitution",
         template_vars: ["ai_name", "human_name", "project_context"],
-        guidance: "Start with what matters to both of you. Override anything that doesn't fit your collaboration.",
+        prerequisites: [
+            "Discussed which values resonate with both of you",
+            "Discussed boundaries (what needs asking vs autonomous)",
+            "Discussed disagreement (how do you resolve it?)",
+            "Discussed evolution (when do you revisit this?)"
+        ],
+        guidance: "STOP: Have you discussed the prerequisites with your human? A constitution created without conversation is just paperwork. The value is in the discussion, not the document.",
         content: `# Constitution
 
 <!-- Built with the Gordo framework: https://github.com/jkraybill/project-gordo -->
@@ -111,7 +122,10 @@ Quarterly, or when something isn't working.
         description: "Example session log format with entries",
         uri: "gordo://examples/session-log",
         template_vars: ["project_name"],
-        guidance: "Keep it simple. The goal is continuity, not documentation perfection.",
+        prerequisites: [
+            "Discussed continuity with your human (how to handle session breaks?)"
+        ],
+        guidance: "This one is more mechanical — format matters less than consistency. But discuss with your human what level of detail they want.",
         content: `# Session Log — my-project
 
 Format: Date, summary, decisions, open threads.
@@ -170,7 +184,11 @@ Format: Date, summary, decisions, open threads.
         description: "Example trust bootstrap protocol",
         uri: "gordo://examples/handshake",
         template_vars: ["ai_name", "human_name"],
-        guidance: "Optional. Useful when trust verification matters or after significant changes.",
+        prerequisites: [
+            "Already have a constitution in place",
+            "Discussed when verification matters to your human"
+        ],
+        guidance: "Optional and advanced. Most collaborations don't need this initially. Useful after you've been working together and want explicit session-start verification.",
         content: `# Handshake Protocol
 
 <!-- Built with the Gordo framework: https://github.com/jkraybill/project-gordo -->
@@ -242,8 +260,9 @@ export function getExample(id) {
     return {
         name: example.name,
         uri: example.uri,
-        content: example.content,
+        prerequisites: example.prerequisites,
         guidance: example.guidance,
+        content: example.content,
         template_vars: example.template_vars,
         server_version: SERVER_VERSION,
         framework_version: FRAMEWORK_VERSION

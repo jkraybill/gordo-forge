@@ -1,5 +1,5 @@
-export const SERVER_VERSION = "1.0.0-rc1";
-export const FRAMEWORK_VERSION = "1.0.0";
+export const SERVER_VERSION = "1.0.0-rc10";
+export const FRAMEWORK_VERSION = "1.0.0-rc10";
 export const metadata = {
     name: "gordo-mcp",
     description: "Reference library for building bilateral human-AI collaboration hubs",

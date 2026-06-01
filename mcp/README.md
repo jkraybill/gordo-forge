@@ -13,7 +13,7 @@ An MCP server that provides framework reference material for building bilateral 
 ## Installation
 
 ```bash
-npm install -g gordo-mcp
+npm install -g @gordo-ai/mcp
 ```
 
 ## Usage

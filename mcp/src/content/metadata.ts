@@ -1,4 +1,4 @@
-export const SERVER_VERSION = "1.0.0-rc1";
+export const SERVER_VERSION = "1.0.0-rc10";
 export const FRAMEWORK_VERSION = "1.0.0-rc10";
 
 export const metadata = {

@@ -1,6 +1,6 @@
 {
-  "name": "gordo-mcp",
-  "version": "1.0.0-rc1",
+  "name": "@gordo-ai/mcp",
+  "version": "1.0.0-rc10",
   "description": "Gordo: Human-AI Collaboration Framework MCP Server. Reference library for agents building working agreements with their humans.",
   "main": "dist/index.js",
   "bin": {
