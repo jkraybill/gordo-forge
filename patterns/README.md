@@ -102,17 +102,18 @@ Patterns activate at different collaboration stages:
 
 ## Pattern Affinities & Dependencies
 
-**Hard dependencies:**
-- FEDERATION requires MULTI_HUB (federation is cross-hub by definition)
+See **[DEPENDENCIES.md](DEPENDENCIES.md)** for the full visual map (dependency graph, activation lifecycle, deferral mechanism).
 
-**Soft affinities (work well together):**
-- ANTI_WALL + FULL_CI: Directness feeds honest self-assessment
-- RECURSIVE_IMPROVEMENT + any Ring 2: Health checks can resurface deferred patterns
-- MULTI_HUB + FULL_CI: Cross-hub CI discovery catches duplicates
+**Quick reference:**
+
+| Dependency | Type |
+|------------|------|
+| FEDERATION → MULTI_HUB | Hard (requires) |
+| FULL_CI → MINIMAL_CI | Soft (graduates from) |
+| ANTI_WALL → FULL_CI | Soft (output feeds) |
+| RECURSIVE_IMPROVEMENT → Ring 2 | Soft (health checks enhance) |
 
 **No conflicts:** Any Ring 2 pattern can activate independently of others.
-
-**Deferral mechanism:** Patterns can be deferred to a specific session (e.g., session 10, session 50). At that session's BOS health check, the deferred pattern resurfaces for reconsideration. Record deferrals in INTERVIEW_LOG.yaml with `activation_session: N`.
 
 ---
 
