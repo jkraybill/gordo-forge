@@ -1,0 +1,134 @@
+---
+name: bos
+description: Beginning of Session — rebuild context and verify continuity. Use when starting a session or resuming after interruption.
+allowed-tools:
+  - Bash(git *)
+  - Bash(gh *)
+  - Bash(grep *)
+  - Bash(head *)
+  - Bash(date *)
+  - Bash(node *)
+  - Read
+  - Edit
+version: 2.0.0
+---
+
+# BOS — Beginning of Session
+
+## Pre-injected Context
+
+**Last session:**
+```
+!`grep -m1 "^## Session " {{HUB_PATH}}/SESSION_LOG.md 2>/dev/null || echo "(no sessions yet)"`
+```
+
+**Recent commits:**
+```
+!`git log --oneline -5 2>/dev/null || echo "(not in git repo)"`
+```
+
+**Working tree:**
+```
+!`git status --short 2>/dev/null || echo "(clean)"`
+```
+
+{{#if GITHUB_REPO}}
+**Open issues:**
+```
+!`gh issue list --repo {{GITHUB_REPO}} --state open --limit 200 --json number 2>/dev/null | jq length || echo "?"`
+```
+
+**Current milestone:**
+```
+!`gh issue list --repo {{GITHUB_REPO}} --milestone "{{CURRENT_MILESTONE}}" --state open --limit 200 --json number 2>/dev/null | jq length || echo "?"` open
+```
+{{/if}}
+
+**gordo-ledger:**
+```
+!`node ~/gordo-ledger/mcp/dist/cli.js stats 2>/dev/null | grep "Total indexed" || echo "unavailable"`
+```
+
+---
+
+## Workflow
+
+### Phase 1: Continuity Verification
+
+Extract session number N from pre-injected context. Resolve EOS commit:
+
+```bash
+git log --grep="^S<N> EOS" -1 --format="%H | author %ai | committer %ci"
+```
+
+Verify:
+- SHA reachable: `git merge-base --is-ancestor <SHA> HEAD`
+- Authordate matches SESSION_LOG Closed stamp
+- No unexpected authors: `git log <SHA>..HEAD --format="%an" | sort -u`
+
+**On failure:** Escalate to HANDSHAKE re-verification.
+
+### Phase 2: Summary Table
+
+Report to {{HUMAN_NAME}}:
+
+| Check | Status |
+|-------|--------|
+| Handshake | Verified / HALTED |
+| Prior EOS | `<SHA>` @ <authordate> |
+| Working tree | Clean / Dirty |
+{{#if GITHUB_REPO}}
+| Open issues | N total; M in current milestone |
+{{/if}}
+| gordo-ledger | N docs indexed |
+
+**S<N> pattern:** Brief summary of prior session from SESSION_LOG.
+
+### Phase 3: Open Marker
+
+1. Calculate session number: `N=$(($(grep -m1 "^## Session " SESSION_LOG.md | grep -oE "[0-9]+") + 1))`
+2. Capture timestamp: `ts=$(date '+%Y-%m-%d %H:%M:%S %Z') && ts_g=$(date '+%Y-%m-%d %H:%M:%S %z')`
+3. Insert header after `---` separator in SESSION_LOG.md:
+   ```markdown
+   ## Session N (YYYY-MM-DD)
+
+   **Opened:** YYYY-MM-DD HH:MM:SS TZ (attested by this commit's authordate)
+   ```
+4. Commit: `git commit --date="$ts_g" -m "S<N> open marker: $ts"`
+5. Push: `git push origin <branch>`
+
+Report: "Session N open. Marker at `<SHA>`."
+
+### Phase 4: Self-Improvement Check
+
+Check for pending self-improvement items:
+
+```bash
+{{#if GITHUB_REPO}}
+gh issue list --repo {{GITHUB_REPO}} --label "self-improvement" --state open --limit 20 --json number,title
+{{else}}
+grep -l "TODO\|FIXME\|self-improvement" *.md 2>/dev/null | head -5
+{{/if}}
+```
+
+**If items exist, surface briefly:**
+
+> **Self-improvement (N items):**
+> - **#NNN** <title>
+>
+> Address now, defer, or continue?
+
+**If queue empty:** Silent skip.
+
+**Filing self-improvement items:** When you notice friction during work — a missing feature, an awkward workflow, a documentation gap — file a self-improvement issue. These accumulate into the improvement backlog and surface at each session start.
+
+---
+
+## Pitfalls
+
+- Single `date` invocation for zero drift
+- Calculate session number from latest header, not line count
+
+---
+
+*v2.1.0: Added Phase 4 Self-Improvement check. Based on backchannel BOS v4.3.0 patterns.*

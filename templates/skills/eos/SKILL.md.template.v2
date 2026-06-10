@@ -1,0 +1,176 @@
+---
+name: eos
+description: End of Session — close cleanly with attested audit trail. Use when session complete or {{HUMAN_NAME}} signals close.
+allowed-tools:
+  - Bash(git *)
+  - Bash(gh *)
+  - Bash(grep *)
+  - Bash(sed *)
+  - Bash(date *)
+  - Bash(node *)
+  - Read
+  - Edit
+  - Write
+version: 2.0.0
+---
+
+# EOS — End of Session
+
+## Pre-injected Context
+
+**Current session:**
+```
+!`grep -m1 "^## Session " {{HUB_PATH}}/SESSION_LOG.md 2>/dev/null || echo "(no session open)"`
+```
+
+**Unpushed commits:**
+```
+!`git log origin/$(git branch --show-current)..HEAD --oneline 2>/dev/null || echo "(none)"`
+```
+
+**Working tree:**
+```
+!`git status --short 2>/dev/null || echo "(clean)"`
+```
+
+---
+
+## Workflow
+
+### Phase 1: Work Quality Check
+
+Before closing, verify:
+- No ratification-level content pending (flag for {{HUMAN_NAME}}, don't self-commit)
+- No unflagged reservations
+- Memory updates identified (or explicitly none)
+
+### Phase 2: Commit Pending Work
+
+If working tree dirty or unpushed commits:
+```bash
+git add <files>
+git commit -m "<message> (S<N>)"
+git push origin <branch>
+```
+
+### Phase 3: Self-Assessment + CI Capture
+
+Briefly reflect on the session:
+- What was accomplished?
+- Any friction worth noting?
+- Anything that should be remembered for next session?
+
+**Self-improvement capture:** If you noticed friction during this session — a missing feature, an awkward workflow, a documentation gap, something that should work differently — file it now:
+
+{{#if GITHUB_REPO}}
+```bash
+gh issue create --repo {{GITHUB_REPO}} --title "[CI] <friction observed>" --label "self-improvement" --body "## Source\nS<N> EOS self-assessment\n\n## Friction\n<what went wrong>\n\n## Proposed fix\n<what would improve it>"
+```
+{{else}}
+Add a `TODO: [CI]` comment in the relevant file, or create a `IMPROVEMENTS.md` note.
+{{/if}}
+
+If actionable improvement identified (≤10 min, low risk): fix it now instead of filing.
+
+**Quality bar:** File when you'd want future-you to know about this. Don't file noise; don't swallow real friction.
+
+### Phase 4: Memory Update (Optional)
+
+If session produced learnings worth preserving:
+- Create file in memory directory
+- Update MEMORY.md index
+- Focus on NON-OBVIOUS learnings only
+
+{{#if ANTI_MOLD}}
+### Phase 4.5: Anti-Mold Review
+
+Prevent documentation rot by reviewing old .md files.
+
+```bash
+bash scripts/anti-mold-scan.sh 4
+```
+
+**Output format:** `YYYY-MM-DD|age_days|path`
+
+**For each file, in order:**
+
+1. **Read the file** — don't judge from title alone
+2. **Research context** — check git history, related files. Understand current state.
+3. **Propose disposition:**
+   - **Stamp** — content is still accurate. Add review footer and commit.
+   - **Update** — content is outdated but relevant. Describe specific changes needed.
+   - **Attic** — content is accurate but archival. Move to `attic/` directory.
+   - **Delete** — content is obsolete or superseded. Remove.
+
+**Review footer format:**
+```markdown
+<!-- Last reviewed: YYYY-MM-DD HH:MM ZONE by {{AI_NAME}} -->
+```
+
+**{{HUMAN_NAME}} confirms each disposition.** Execute before moving to next file.
+
+**Commit patterns:**
+- Stamp: `git commit -m "Anti-mold: review stamp <filename> (S<N>)"`
+- Update: `git commit -m "Anti-mold: update <filename> (S<N>)"`
+- Attic: `mkdir -p attic/ && git mv <file> attic/ && git commit -m "Anti-mold: attic <filename> (S<N>)"`
+- Delete: `git rm <file> && git commit -m "Anti-mold: remove obsolete <filename> (S<N>)"`
+{{/if}}
+
+### Phase 5: SESSION_LOG Entry + Close Marker
+
+1. Write narrative under existing session header:
+   ```markdown
+   **Closed:** _<PENDING>_ (attested by this commit's authordate)
+
+   [YYYY-MM-DD] S<N>: **Title.** Key signals.
+
+   **Arc:** [2-4 sentences describing what happened]
+
+   **Deliverables:**
+   - Item 1
+   - Item 2
+   ```
+
+2. Finalize with bound timestamp:
+   ```bash
+   ts_h=$(date '+%Y-%m-%d %H:%M:%S %Z')
+   ts_g=$(date '+%Y-%m-%d %H:%M:%S %z')
+   sed -i "s/_<PENDING>_/$ts_h/" SESSION_LOG.md
+   git add SESSION_LOG.md
+   git commit --date="$ts_g" -m "S<N> EOS: <title>, close $ts_h"
+   git push origin <branch>
+   ```
+
+### Phase 6: Push Assertion (BLOCKING)
+
+```bash
+git log origin/$(git branch --show-current)..HEAD
+```
+
+**Must be empty.** Do NOT emit close signal while failing.
+
+### Phase 7: Close Summary
+
+```
+**Work completed:** [list]
+**Commits:** N pushed (push assertion: PASS)
+**Memory:** Updated / No updates
+```
+
+### Phase 8: Close Signal
+
+**Only after push assertion passes:**
+
+> **Catch ya on the flipside!**
+
+---
+
+## Pitfalls
+
+- Single `date` invocation for zero drift
+- Push assertion before close signal
+- Don't commit ratification-level content without consent
+
+---
+
+*v2.1.0: Strengthened Phase 3 CI capture with filing template. Based on backchannel EOS v4.0.0 patterns.*
