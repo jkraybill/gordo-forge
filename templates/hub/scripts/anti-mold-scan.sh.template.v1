@@ -4,37 +4,17 @@
 #
 # Output format: YYYY-MM-DD|age_days|path
 # Sorted oldest first
-#
-# Self-tuning (if enabled):
-#   Count persisted in .anti-mold-count
-#   Adjusts based on staleness after each review
 
 set -e
 
-HUB_PATH="${HUB_PATH:-$(pwd)}"
-COUNT_FILE="$HUB_PATH/.anti-mold-count"
-DEFAULT_COUNT=4
-MIN_COUNT=2
-MAX_COUNT=20
-
-# Get count from argument, file, or default
-if [[ -n "$1" ]]; then
-  COUNT="$1"
-elif [[ -f "$COUNT_FILE" ]]; then
-  COUNT=$(cat "$COUNT_FILE")
-else
-  COUNT="$DEFAULT_COUNT"
-fi
-
-# Clamp to valid range
-COUNT=$((COUNT < MIN_COUNT ? MIN_COUNT : (COUNT > MAX_COUNT ? MAX_COUNT : COUNT)))
+COUNT="${1:-4}"
+HUB_PATH="{{HUB_PATH}}"
 
 # Find .md files, exclude node_modules/.git/attic, sort by mtime
 find "$HUB_PATH" -name "*.md" -type f \
   ! -path "*/node_modules/*" \
   ! -path "*/.git/*" \
   ! -path "*/attic/*" \
-  ! -path "*/.gordo-memory/*" \
   -printf "%T+|%p\n" 2>/dev/null \
   | sort \
   | head -n "$COUNT" \
