@@ -1,0 +1,118 @@
+# Collaboration Maturity
+
+Where you are in the collaboration journey, and what patterns become relevant at each stage.
+
+This isn't a ladder to climb — it's a map. Not every collaboration needs every pattern. Use what fits.
+
+---
+
+## Maturity Stages
+
+| Stage | Sessions | What's Happening |
+|-------|----------|------------------|
+| **Nascent** | 0-10 | Getting to know each other. Establishing rhythm. |
+| **Developing** | 10-50 | Patterns emerging. Trust calibrating. |
+| **Established** | 50-100 | Working relationship solid. Infrastructure mature. |
+| **Mature** | 100+ | Self-improving. Patterns evolve with collaboration. |
+
+---
+
+## Pattern Activation by Stage
+
+### Nascent (0-10 sessions)
+
+**Active by default:**
+- Session continuity (BOS/EOS, handoff, SESSION_LOG) — minimal expression
+- Minimal CI (single EOS question, optional capture)
+- Anti-mold (2 files per session, basic dispositions)
+
+**Focus:** Build rhythm. Don't over-engineer. Trust the basics.
+
+**Milestone:** Session 10 — first health check. "Are these patterns working?"
+
+---
+
+### Developing (10-50 sessions)
+
+**Available for activation:**
+- Anti-wall infrastructure — if hedging friction emerges
+- Full CI protocol — if captured items need triage
+- Recursive improvement — usually not yet, but available if requested
+
+**Focus:** Notice friction. Capture observations. Let patterns emerge from need.
+
+**Milestone:** Session 20 — first formal health check
+**Milestone:** Session 50 — deeper review, pattern evaluation
+
+---
+
+### Established (50-100 sessions)
+
+**Typically active:**
+- Full expressions of Ring 1 patterns
+- Ring 2 patterns as needed (anti-wall, full-ci)
+- Recursive improvement — now valuable
+
+**Available for activation:**
+- Multi-hub coordination — if second hub appears
+- Federation — if multi-hub is active
+
+**Focus:** Optimize what works. Remove what doesn't. Evolve agreements.
+
+**Milestone:** Session 100 — major review. What's still serving? What's overhead?
+
+---
+
+### Mature (100+ sessions)
+
+**Fully available:**
+- All patterns, all expressions
+- Cross-hub infrastructure if relevant
+- Federation discovery if multi-hub
+
+**Focus:** Self-improvement. The collaboration refines its own operating agreements.
+
+**Milestone:** Every 50 sessions — health check continues
+
+---
+
+## Graduation Criteria
+
+### Minimal-CI → Full-CI
+- 30-50 sessions passed
+- Accumulated items need triage
+- Explicit request
+
+### Ring 1 → Ring 2 activation
+- Interview question surfaced need, OR
+- Friction emerged during collaboration, OR
+- Health check identified gap
+
+### Single-hub → Multi-hub
+- Second hub created
+- Explicit desire for shared identity
+
+---
+
+## Anti-Patterns
+
+**Rushing to Mature.** Session 15 is not session 100. Trust the journey.
+
+**Activating everything.** More patterns ≠ better collaboration. Activate what serves.
+
+**Ignoring milestones.** Health checks exist for a reason. Don't skip them.
+
+**Treating this as a checklist.** It's a map, not a to-do list.
+
+---
+
+## Your Current Stage
+
+**Sessions completed:** ___ (update as you go)
+**Current stage:** ___
+**Patterns active:** ___
+**Next milestone:** Session ___
+
+---
+
+*This file evolves with the collaboration. Update it at health check milestones.*

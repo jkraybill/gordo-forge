@@ -27,9 +27,23 @@ gordo-forge/
 ├── .claude-plugin/
 │   └── plugin.json          # Plugin manifest (ONLY this goes here)
 ├── skills/                   # Skills at ROOT, not inside .claude-plugin/
-│   ├── new-project/SKILL.md  # Bootstrap new projects
+│   ├── new-hub/SKILL.md      # Bootstrap new hubs
 │   ├── add-primitive/SKILL.md # Add T1 primitives
 │   └── upgrade/SKILL.md      # Upgrade T0 constitution
+├── patterns/                 # Operational pattern library (S430)
+│   ├── README.md             # Three-ring architecture overview
+│   ├── INTERVIEW_QUESTIONS.md # Need-based questions reference
+│   ├── ring-1/               # Core patterns (always generated)
+│   │   ├── session-continuity/
+│   │   ├── minimal-ci/
+│   │   └── anti-mold/
+│   ├── ring-2/               # Opt-in patterns (interview gated)
+│   │   ├── anti-wall/
+│   │   ├── full-ci/
+│   │   └── recursive-improvement/
+│   └── ring-3/               # Advanced patterns (multi-hub)
+│       ├── multi-hub/
+│       └── federation/
 ├── constitution/             # Bundled T0 source for composition
 │   └── CONSTITUTION.md
 └── templates/                # Artifact templates
@@ -51,6 +65,22 @@ gordo-forge/
 
 ---
 
+## Pattern Library (S430)
+
+Forge propagates operational patterns to downstream hubs via the three-ring architecture:
+
+| Ring | Name | Default | Description |
+|------|------|---------|-------------|
+| **1** | Core | Always | Session continuity, minimal CI, anti-mold |
+| **2** | Opt-in | Interview gated | Full CI, anti-wall, recursive improvement |
+| **3** | Advanced | Explicit request | Multi-hub coordination, federation |
+
+See `patterns/README.md` for full architecture. See `patterns/INTERVIEW_QUESTIONS.md` for need-based questions that surface which patterns fit.
+
+**Key principle:** Ask about problems, not solutions. "Do you experience hedging?" not "Want anti-wall infrastructure?"
+
+---
+
 ## Key Constraints
 
 See `COMPLIANCE_KERNEL.md` for inviolables. Highlights:
@@ -58,6 +88,7 @@ See `COMPLIANCE_KERNEL.md` for inviolables. Highlights:
 - **"Gordo" is reserved** — only for JK's projects; Forge must enforce unique naming for others
 - **T0 composition, not copying** — when generating CONSTITUTION.md, compose from bundled source, don't copy verbatim
 - **Interview over templates** — never skip the interview and dump defaults
+- **Three-ring pattern activation** — Ring 1 always, Ring 2 interview-gated, Ring 3 explicit request
 
 ---
 
@@ -74,5 +105,6 @@ See `COMPLIANCE_KERNEL.md` for inviolables. Highlights:
 ---
 
 *Created 2026-05-11 S201 via Forge bootstrap (recursive self-application).*
+*Pattern library added S430 2026-06-10 — three-ring architecture per roundtable synthesis.*
 
-<!-- Last reviewed: 2026-05-31 21:16 AEST by Gordo -->
+<!-- Last reviewed: 2026-06-10 22:30 AEST by Gordo -->

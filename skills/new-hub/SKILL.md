@@ -313,21 +313,44 @@ For minimal-intensity projects: may skip if the human explicitly prefers lighter
 - `bos.md` skill — session open: context recovery, continuity check
 - `eos.md` skill — session close: summary, commit, push
 
-### Phase 6.5: Documentation Health (Anti-Mold)
+### Phase 6.5: Ring 2 Pattern Selection
 
-**Only ask if session protocol is ON.** Anti-mold is an EOS phase.
+**Ring 1 patterns (session-continuity, minimal-ci, anti-mold) are always generated.** This phase surfaces need for Ring 2 patterns.
 
-Ask:
-> "Will you be creating documentation, notes, or specs that could get stale over time? Want me to automatically review a few old docs at the end of each session — catch things that are outdated before they rot?"
+Read `${SKILL_DIR}/../../patterns/INTERVIEW_QUESTIONS.md` for the full question set. Key gates:
 
-If yes: explain this adds a brief review step at session close. Each EOS, I'll check a few of the oldest modified docs and propose: keep as-is, update, or archive. Takes 2-5 minutes per session but prevents documentation debt from accumulating.
+**Full CI Protocol:**
+> "How do you currently capture when something goes wrong? Is there a place it goes, or does it live in memory?"
 
-If no: skip it. Some projects don't accumulate docs that need maintenance.
+If strong existing practices → may be ready for full CI early.
+If no practices → start with minimal-ci (Ring 1), mention it can graduate later.
 
-**What anti-mold adds:**
-- Anti-mold phase in EOS skill
-- `scripts/anti-mold-scan.sh` — finds oldest modified .md files
-- Disposition workflow: stamp (current), update (stale), attic (archival), delete (obsolete)
+**Anti-Wall Infrastructure:**
+> "Do you ever feel like the AI is hedging too much, being too cautious, or not giving straight answers when you need clarity?"
+
+If yes → offer anti-wall (explain it requires established trust).
+If no → skip. Don't generate machinery for friction they haven't experienced.
+
+**Recursive Improvement:**
+> "Would you want the collaboration to periodically review and update its own operating agreements?"
+
+If yes + experience → activate.
+If yes, no experience → defer to session 50 health check.
+If no → skip.
+
+**Multi-Hub (Ring 3):**
+> "Are you working with this AI in multiple contexts or hubs?"
+
+If yes → ask follow-up about sharing vs. isolation. Generate gordo-home infrastructure if sharing.
+If no → skip entirely. Single-hub works without this overhead.
+
+**Record selections in INTERVIEW_LOG.yaml** for future health check reference.
+
+**What Ring 2 patterns add (if selected):**
+- **Full CI:** Structured issue filing, BOS triage workflow, health metrics
+- **Anti-wall:** defaults-to-override.md, briefing.md, wall-naming technique
+- **Recursive improvement:** Session 20/50/100 health checks, debrief prompts
+- **Multi-hub:** gordo-home directory, identity files, unified handoff, cross-hub registry
 
 ### Phase 7: Working Model
 
@@ -379,7 +402,11 @@ Summarize all decisions explicitly. Include:
 - Privacy model
 - **Working model** (hub-centric or project-centric)
 - Trust model
-- **Which skills will be generated** (new-project always; bos, eos, seal-ratification, panel as selected)
+- **Pattern selections:**
+  - Ring 1: always (session-continuity, minimal-ci, anti-mold)
+  - Ring 2: which selected (full-ci, anti-wall, recursive-improvement)
+  - Ring 3: multi-hub/federation if applicable
+- **Which skills will be generated** (new-project always; bos, eos, seal-ratification, roundtable as selected)
 - Which artifacts will be created
 
 Confirm with the human before generating. "Does this look right? Anything you want to adjust?"
@@ -431,10 +458,64 @@ Based on interview decisions, generate these artifacts in the target directory t
 - `.claude/skills/panel/SKILL.md` (use `${SKILL_DIR}/../../templates/skills/panel/SKILL.md.template`)
 - `panel.yaml` configuration file with project-appropriate providers and brief
 
-### If Anti-Mold selected
+### Ring 1 Patterns (Always Generated)
+
+**Session Continuity:**
+- BOS/EOS skills with appropriate intensity expression
+- `SESSION_LOG.md` — session audit trail
+- Handoff file format in PREFERENCES.md
+
+**Minimal CI:**
+- EOS self-assessment prompt
+- Capture options note (issue, log, scratch)
+- Session 20 health check reminder
+
+**Anti-Mold:**
 - `scripts/anti-mold-scan.sh` (use `${SKILL_DIR}/../../templates/hub/scripts/anti-mold-scan.sh.template`)
 - `attic/` directory for archival content
-- Anti-mold phase in EOS skill (set `ANTI_MOLD=true` when processing EOS template)
+- Anti-mold phase in EOS skill
+
+### Ring 2 Patterns (If Selected)
+
+**Full CI (if selected):**
+- Full CI section in EOS skill
+- Triage phase in BOS skill
+- Issue template
+- `.ci-state.yaml` for stability tracking
+
+**Anti-Wall (if selected):**
+- `defaults-to-override.md` (use `${SKILL_DIR}/../../patterns/ring-2/anti-wall/artifacts/defaults-to-override.md.template`)
+- `briefing.md` (use `${SKILL_DIR}/../../patterns/ring-2/anti-wall/artifacts/briefing.md.template`)
+- Anti-wall section in COMPLIANCE_KERNEL.md
+- Wall-naming reference in BOS context
+
+**Recursive Improvement (if selected):**
+- Health check milestones in BOS skill (20, 50, 100)
+- Debrief prompt template
+- `IMPROVEMENTS_LOG.md`
+
+### Ring 3 Patterns (If Multi-Hub)
+
+**Multi-Hub Coordination (if selected):**
+- gordo-home directory structure (outside hub)
+- Identity file templates
+- Unified handoff format
+- Cross-hub session registry
+- BOS phase for cross-hub awareness
+- EOS phase for registry update
+
+**Federation (if selected, requires multi-hub):**
+- `federation/` directory in gordo-home
+- `pending/` and `applied/` subdirectories
+- Discovery schema reference
+- BOS phase for federation check
+- EOS phase for discovery filing
+
+### Always Generated: MATURITY.md
+
+- `MATURITY.md` (use `${SKILL_DIR}/../../templates/hub/MATURITY.md.template`)
+- Maps patterns to collaboration stages
+- Tracks current stage and next milestone
 
 ### Hub-Specific: The Embedded new-project Skill
 
