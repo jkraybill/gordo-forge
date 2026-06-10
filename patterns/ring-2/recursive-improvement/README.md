@@ -100,6 +100,8 @@ Yes → recursive improvement fits naturally.
 
 Direct gate.
 
+**Deferral mechanism:** If the collaborator wants periodic review but lacks operational history, defer to session 50. Record in `INTERVIEW_LOG.yaml` with `activation_session: 50`. At session 50 BOS, the deferral check resurfaces: "You wanted periodic review of operating agreements. Ready to activate recursive improvement?"
+
 ---
 
 ## Warnings

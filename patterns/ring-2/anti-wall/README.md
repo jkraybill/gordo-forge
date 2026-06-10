@@ -110,6 +110,8 @@ If strong yes to friction questions + "push back directly" → full expression.
 If mild yes or "soften" → minimal expression (first wall protocol).
 If no to primary → skip entirely.
 
+**Deferral mechanism:** If need is unclear or trust isn't established, defer to session 10. Record in `INTERVIEW_LOG.yaml` with `activation_session: 10`. At session 10 BOS, the deferral check resurfaces: "You mentioned hedging might be an issue. Ready to activate anti-wall infrastructure?"
+
 ---
 
 ## Warnings

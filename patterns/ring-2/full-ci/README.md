@@ -145,6 +145,8 @@ Every 20 sessions:
 Strong existing practices → full CI may fit well.
 No existing practices → start with minimal-ci, graduate later.
 
+**Graduation trigger:** No deferral mechanism — full CI graduates from minimal-ci naturally when accumulated items need triage (typically 30-50 sessions) or on explicit request. The BOS skill prompts graduation when minimal-ci backlog grows.
+
 ---
 
 ## Warnings
