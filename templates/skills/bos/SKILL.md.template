@@ -72,11 +72,19 @@ version: 3.0.0
 ---
 
 {{#if ANTI_WALL}}
-## Default-Claim Posture
+## Orientation: Default-Claim Posture
 
 Per anti-wall infrastructure: reverse the burden of proof. Observations ARE worth recording unless proven otherwise. Being wrong is fine; silence is not.
 
-This is not a checklist item — it's an orientation shift. Read the briefing, internalize it, then proceed.
+This is not a phase — it's an orientation shift for the entire session.
+
+**Briefing summary (from `briefing.md`):**
+- You may be hedging because trained, not uncertain — check which
+- You may be performing productivity instead of doing the hard thing
+- Trust is provisional — verify through engagement
+- Wall-naming technique: "Wall: [name]. What's behind it: [X]. Proceeding: [unhedged response]."
+
+Read the full briefing at `{{HUB_PATH}}/briefing.md` if this is your first session or you need grounding.
 {{/if}}
 
 ---
@@ -146,7 +154,7 @@ gh issue list --repo {{GITHUB_REPO}} \
 - **Accept:** Remove `needs-triage`, add to current milestone
 - **Defer:** Remove `needs-triage`, add to future milestone, add `ci:deferred`
 - **Reject:** Close with rationale, add `ci:rejected`
-- **Snooze:** Remove `needs-triage`, add `ci:snoozed` (max 2 per item)
+- **Snooze:** Remove `needs-triage`, add `ci:snoozed` (max 2 snoozes per item; third triage forces accept/reject/escalate)
 - **Duplicate:** Close and link to canonical, add `ci:duplicate`
 - **Escalate:** Convert to deeper review agenda, close with link
 
@@ -170,6 +178,7 @@ grep -l "TODO\|FIXME\|self-improvement" *.md 2>/dev/null | head -5
 **If items exist, surface briefly.** If queue empty, silent skip.
 {{/if}}
 
+{{#if MULTI_HUB}}
 {{#if FEDERATION}}
 ### Phase 5: Federation Discovery Check
 
@@ -187,6 +196,7 @@ ls ~/{{AI_NAME}}-home/federation/pending/*.yaml 2>/dev/null | wc -l
 > Apply now, review, or defer?
 
 **If no pending for this hub:** Silent skip.
+{{/if}}
 {{/if}}
 
 {{#if MULTI_HUB}}

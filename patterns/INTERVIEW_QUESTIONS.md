@@ -56,11 +56,13 @@ Ring 1 patterns are always generated. These questions calibrate intensity, not a
 > "Is there a difference between being helpful and being agreeable in your experience?"
 
 **Interpretation:**
-- Strong yes to primary → full expression
-- Mild yes → minimal expression (first wall protocol)
+- Strong yes to primary + follow-ups confirm pattern → full expression
+- Mild yes or ambiguous → defer to session 10, reassess then
 - No → skip entirely
 
-**Caution:** Don't offer anti-wall if trust isn't established. The pattern assumes good faith.
+**Deferral mechanism:** If deferred, record in INTERVIEW_LOG.yaml with `activation_session: 10`. At session 10 BOS health check, resurface: "You mentioned some hedging friction. Has that continued? Want to activate anti-wall infrastructure?"
+
+**Note:** Anti-wall assumes good faith and established trust. If answers suggest the user wants agreement over directness, don't activate.
 
 ### Recursive Improvement
 
@@ -75,9 +77,11 @@ Ring 1 patterns are always generated. These questions calibrate intensity, not a
 > "Do you have existing practices for improving how you work?"
 
 **Interpretation:**
-- Yes to primary + experience → activate
-- Yes to primary, no experience → defer to session 50
+- Yes to primary + experience → activate from session 1
+- Yes to primary, no experience → defer to session 50, auto-resurface at health check
 - No → skip
+
+**Deferral mechanism:** Record in INTERVIEW_LOG.yaml with `activation_session: 50`. At session 50 health check (which runs automatically if any Ring 2 pattern is active), resurface: "You wanted periodic review of operating agreements. Ready to activate recursive improvement?"
 
 ---
 
@@ -112,9 +116,11 @@ If yes:
 > "Do you want a formal process for cross-hub improvements, or informal?"
 
 **Interpretation:**
-- Yes to both → full federation
-- Yes to first, no to second → simplified (journal only)
+- Yes to both → full federation (discovery filing + observation journal)
+- Yes to first, no to second → observation journal only (no formal discovery workflow)
 - No → skip
+
+**Note:** "Observation journal only" means cross-hub observations are captured but don't follow the formal pending/applied workflow. Observations surface at BOS but don't require explicit application steps.
 
 ---
 

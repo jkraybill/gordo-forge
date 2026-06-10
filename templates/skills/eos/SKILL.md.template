@@ -65,26 +65,22 @@ git push origin <branch>
 {{#if FULL_CI}}
 ### Phase 3: CI Self-Assessment
 
-Evaluate across multiple dimensions:
+**Primary question:**
+> "Is there a specific, actionable improvement identified this session that's worth tracking?"
 
-> "Based on this session, what is the highest-ROI single achievable improvement?"
+If no → skip. If yes → validate:
 
-**Hard gates (ALL must pass):**
-1. **Concrete:** Specific file, pattern, or friction point identified
-2. **Evidence:** Can cite session artifacts
-3. **Not duplicate:** No existing tracker covers this
+**Validation gates (ALL must pass to file):**
+1. **Concrete:** Specific file, pattern, or friction point — not vague intuition
+2. **Evidence:** Can cite session artifacts (file paths, errors, friction events)
+3. **Not duplicate:** Quick search confirms no open issue covers this (same hub)
 
-**Soft gates (3 of 4 must pass):**
-4. **Scoped:** Within collaboration-effectiveness domain
-5. **Achievable:** No external dependencies for first slice
-6. **Effort ≤ Medium:** Estimated ≤2 hours
-7. **ROI threshold:** Benefit ≥3× effort over next 2-4 sessions
-
-**Skip if:**
+**Skip filing if:**
 - Nothing actionable surfaced
-- Already tracked (link and comment instead)
-- Repo is stable (last 5 EOS cycles skipped)
-- Any hard gate fails
+- Already tracked (link and comment instead of new issue)
+- Repo is stable (no CI filed in last 4 sessions AND no friction in session reflections)
+
+**Effort/scope/ROI assessment:** Defer to BOS triage. Don't evaluate at capture time — that adds overhead without improving signal.
 
 **If filing:**
 ```bash
@@ -204,6 +200,7 @@ EOF
 ```
 {{/if}}
 
+{{#if MULTI_HUB}}
 {{#if FEDERATION}}
 ### Phase 8: Federation Discovery Filing
 
@@ -230,7 +227,10 @@ status: pending
 EOF
 ```
 
+**Before filing:** Check `~/{{AI_NAME}}-home/federation/pending/` for similar discoveries from other hubs filed in last 2 sessions. If semantically similar exists, comment on existing discovery rather than filing duplicate.
+
 **Skip if:** Nothing worth propagating, or discovery is hub-specific.
+{{/if}}
 {{/if}}
 
 ### Phase 9: SESSION_LOG Entry + Close Marker
