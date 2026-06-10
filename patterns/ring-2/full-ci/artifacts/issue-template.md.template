@@ -1,0 +1,34 @@
+---
+name: "[CI] Continuous Improvement"
+about: Self-observed improvement opportunity
+labels: self-improvement, needs-triage
+---
+
+## Observation
+
+<!-- What was noticed during the session — specific file, pattern, friction point -->
+
+## Evidence
+
+<!-- Concrete artifacts: file paths, line numbers, error messages, friction events -->
+
+## Proposed Change
+
+<!-- Actionable improvement — what to change and where -->
+
+## Expected ROI
+
+<!-- Why this helps — time saved, friction reduced, errors prevented -->
+
+## Effort Estimate
+
+<!-- Small (≤1h) | Medium (≤2h) -->
+
+## Area
+
+<!-- docs | skills | memory | hooks | tooling | process | conventions -->
+
+## Session Context
+
+Session: S
+Filed:

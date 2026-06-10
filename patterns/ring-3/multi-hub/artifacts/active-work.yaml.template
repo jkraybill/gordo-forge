@@ -1,0 +1,14 @@
+# Active Work Tracking
+# Current threads with hub tags
+
+# Example:
+# - id: "feature-auth"
+#   title: "Authentication system"
+#   hub: my-hub
+#   status: active  # active | pending | blocked | paused
+#   context:
+#     issues: "#12, #15"
+#     note: "Awaiting API design review"
+#   priority: high  # high | medium | low
+
+items: []

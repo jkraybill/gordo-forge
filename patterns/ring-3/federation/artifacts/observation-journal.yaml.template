@@ -1,0 +1,21 @@
+# Observation Journal — Cross-Hub Pattern Recognition
+# Entries from any hub, surfaced in all hubs
+
+entries: []
+
+# Entry format:
+# - id: "obs-001"
+#   subject: "Brief description"
+#   tier: reflection  # urgent | attention | reflection
+#   status: pending   # pending | acknowledged | acted | dismissed
+#   origin:
+#     hub: hub-name
+#     session: N
+#     date: 2026-MM-DD
+#   content: |
+#     Full observation text.
+#     What was noticed, why it matters.
+#   disposition:
+#     action: null      # What was done (if acted)
+#     by_session: null  # Session that dispositioned
+#     notes: null       # Any notes on disposition

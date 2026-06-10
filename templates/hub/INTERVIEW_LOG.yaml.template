@@ -1,0 +1,63 @@
+# Interview Log — Forge Onboarding Decisions
+# Created during hub bootstrap, referenced at health checks
+
+interview_date: {{DATE}}
+session: 1
+
+# Identity
+hub_name: {{HUB_NAME}}
+human_name: {{HUMAN_NAME}}
+ai_name: {{AI_NAME}}
+
+# Framework
+intensity: {{INTENSITY}}  # minimal | medium | maximum
+privacy: {{PRIVACY}}  # public | private
+working_model: {{WORKING_MODEL}}  # hub-centric | project-centric
+
+# Ring 1 — Always Active
+ring_1:
+  session_continuity:
+    expression: {{CONTINUITY_EXPRESSION}}  # minimal | full
+  minimal_ci:
+    active: true
+  anti_mold:
+    self_tuning: {{ANTI_MOLD_SELF_TUNING}}  # true | false
+
+# Ring 2 — Interview Gated
+ring_2:
+  full_ci:
+    active: {{FULL_CI_ACTIVE}}
+    activation_session: {{FULL_CI_ACTIVATION_SESSION}}  # null if deferred
+    notes: {{FULL_CI_NOTES}}
+  anti_wall:
+    active: {{ANTI_WALL_ACTIVE}}
+    expression: {{ANTI_WALL_EXPRESSION}}  # null | minimal | full
+    notes: {{ANTI_WALL_NOTES}}
+  recursive_improvement:
+    active: {{RECURSIVE_ACTIVE}}
+    activation_session: {{RECURSIVE_ACTIVATION_SESSION}}
+    notes: {{RECURSIVE_NOTES}}
+
+# Ring 3 — Multi-Hub
+ring_3:
+  multi_hub:
+    active: {{MULTI_HUB_ACTIVE}}
+    gordo_home_path: {{GORDO_HOME_PATH}}  # null if not active
+  federation:
+    active: {{FEDERATION_ACTIVE}}
+
+# T1 Primitives
+primitives:
+  seal: {{SEAL_ACTIVE}}
+  roundtable: {{ROUNDTABLE_ACTIVE}}
+  ledger: true  # always active
+
+# Interview Notes
+notes: |
+  {{INTERVIEW_NOTES}}
+
+# Health Check Schedule
+health_checks:
+  next: 20
+  milestones: [20, 50, 100]
+  after_100_interval: 50

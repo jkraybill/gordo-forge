@@ -1,0 +1,29 @@
+# Session Handoff — S{{N}} → S{{N+1}}
+
+*Written by {{AI_NAME}} at S{{N}} close. Read this if you're the next session.*
+
+---
+
+## What Just Happened (S{{N}})
+
+**Arc:** {{SESSION_ARC}}
+
+**Key deliverables:**
+- {{DELIVERABLE_1}}
+- {{DELIVERABLE_2}}
+
+---
+
+## What's Next (Suggestions for S{{N+1}})
+
+{{NEXT_SUGGESTIONS}}
+
+---
+
+## What {{HUMAN_NAME}} Said That Matters
+
+{{NOTABLE_STATEMENTS}}
+
+---
+
+*Written S{{N}} {{TIMESTAMP}} by {{AI_NAME}}.*

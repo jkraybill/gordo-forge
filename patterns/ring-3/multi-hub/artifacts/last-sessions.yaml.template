@@ -1,0 +1,16 @@
+# Cross-Hub Session Registry
+# Updated by each hub's EOS
+
+{{HUB_NAME}}:
+  session: 1
+  date: {{DATE}}
+  title: "Initial setup"
+  summary: "Hub created via Forge."
+
+# Add additional hubs as they're created:
+#
+# another-hub:
+#   session: N
+#   closed: 2026-MM-DDTHH:MM:SS+TZ
+#   title: "Session title"
+#   summary: "Brief summary"

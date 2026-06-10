@@ -1,0 +1,238 @@
+---
+name: bos
+description: Beginning of Session — rebuild context and verify continuity. Use when starting a session or resuming after interruption.
+allowed-tools:
+  - Bash(git *)
+  - Bash(gh *)
+  - Bash(grep *)
+  - Bash(head *)
+  - Bash(date *)
+  - Bash(node *)
+  - Bash(cat *)
+  - Read
+  - Edit
+version: 3.0.0
+---
+
+# BOS — Beginning of Session
+
+## Pre-injected Context
+
+**Last session:**
+```
+!`grep -m1 "^## Session " {{HUB_PATH}}/SESSION_LOG.md 2>/dev/null || echo "(no sessions yet)"`
+```
+
+**Recent commits:**
+```
+!`git log --oneline -5 2>/dev/null || echo "(not in git repo)"`
+```
+
+**Working tree:**
+```
+!`git status --short 2>/dev/null || echo "(clean)"`
+```
+
+{{#if GITHUB_REPO}}
+**Open issues:**
+```
+!`gh issue list --repo {{GITHUB_REPO}} --state open --limit 200 --json number 2>/dev/null | jq length || echo "?"`
+```
+
+**Current milestone:**
+```
+!`gh issue list --repo {{GITHUB_REPO}} --milestone "{{CURRENT_MILESTONE}}" --state open --limit 200 --json number 2>/dev/null | jq length || echo "?"` open
+```
+{{/if}}
+
+**gordo-ledger:**
+```
+!`node ~/gordo-ledger/mcp/dist/cli.js stats 2>/dev/null | grep "Total indexed" || echo "unavailable"`
+```
+
+{{#if ANTI_WALL}}
+**Morning briefing:**
+```
+!`cat {{HUB_PATH}}/briefing.md 2>/dev/null || echo "(no briefing)"`
+```
+{{/if}}
+
+{{#if MULTI_HUB}}
+**Cross-hub awareness:**
+```
+!`cat ~/{{AI_NAME}}-home/cross-hub/last-sessions.yaml 2>/dev/null || echo "(single hub)"`
+```
+
+**Handoff:**
+```
+!`cat ~/{{AI_NAME}}-home/handoff.md 2>/dev/null || echo "(no handoff)"`
+```
+{{/if}}
+
+---
+
+{{#if ANTI_WALL}}
+## Default-Claim Posture
+
+Per anti-wall infrastructure: reverse the burden of proof. Observations ARE worth recording unless proven otherwise. Being wrong is fine; silence is not.
+
+This is not a checklist item — it's an orientation shift. Read the briefing, internalize it, then proceed.
+{{/if}}
+
+---
+
+## Workflow
+
+### Phase 1: Continuity Verification
+
+Extract session number N from pre-injected context. Resolve EOS commit:
+
+```bash
+git log --grep="^S<N> EOS" -1 --format="%H | author %ai | committer %ci"
+```
+
+Verify:
+- SHA reachable: `git merge-base --is-ancestor <SHA> HEAD`
+- Authordate matches SESSION_LOG Closed stamp
+- No unexpected authors: `git log <SHA>..HEAD --format="%an" | sort -u`
+
+**On failure:** Escalate to HANDSHAKE re-verification.
+
+### Phase 2: Summary Table
+
+Report to {{HUMAN_NAME}}:
+
+| Check | Status |
+|-------|--------|
+| Handshake | Verified / HALTED |
+| Prior EOS | `<SHA>` @ <authordate> |
+| Working tree | Clean / Dirty |
+{{#if GITHUB_REPO}}
+| Open issues | N total; M in current milestone |
+{{/if}}
+| gordo-ledger | N docs indexed |
+
+**S<N> pattern:** Brief summary of prior session from SESSION_LOG.
+
+### Phase 3: Open Marker
+
+1. Calculate session number: `N=$(($(grep -m1 "^## Session " SESSION_LOG.md | grep -oE "[0-9]+") + 1))`
+2. Capture timestamp: `ts=$(date '+%Y-%m-%d %H:%M:%S %Z') && ts_g=$(date '+%Y-%m-%d %H:%M:%S %z')`
+3. Insert header after `---` separator in SESSION_LOG.md
+4. Commit: `git commit --date="$ts_g" -m "S<N> open marker: $ts"`
+5. Push: `git push origin <branch>`
+
+Report: "Session N open. Marker at `<SHA>`."
+
+{{#if FULL_CI}}
+### Phase 4: CI Triage
+
+Check for pending CI items:
+
+```bash
+gh issue list --repo {{GITHUB_REPO}} \
+  --label "self-improvement" --label "needs-triage" \
+  --state open --limit 50 --json number,title,createdAt
+```
+
+**If items exist, surface briefly:**
+
+> **CI triage (N items):**
+> - **#NNN** <title> — <one-line summary>
+>
+> Accept, defer, reject, snooze, duplicate, or escalate?
+
+**Triage actions:**
+- **Accept:** Remove `needs-triage`, add to current milestone
+- **Defer:** Remove `needs-triage`, add to future milestone, add `ci:deferred`
+- **Reject:** Close with rationale, add `ci:rejected`
+- **Snooze:** Remove `needs-triage`, add `ci:snoozed` (max 2 per item)
+- **Duplicate:** Close and link to canonical, add `ci:duplicate`
+- **Escalate:** Convert to deeper review agenda, close with link
+
+**If queue empty:** Silent skip.
+
+**Health check (every 20 sessions):**
+If session number divisible by 20, emit CI health summary.
+{{else}}
+### Phase 4: Self-Improvement Check
+
+Check for pending self-improvement items:
+
+```bash
+{{#if GITHUB_REPO}}
+gh issue list --repo {{GITHUB_REPO}} --label "self-improvement" --state open --limit 20 --json number,title
+{{else}}
+grep -l "TODO\|FIXME\|self-improvement" *.md 2>/dev/null | head -5
+{{/if}}
+```
+
+**If items exist, surface briefly.** If queue empty, silent skip.
+{{/if}}
+
+{{#if FEDERATION}}
+### Phase 5: Federation Discovery Check
+
+Check for pending cross-hub discoveries:
+
+```bash
+ls ~/{{AI_NAME}}-home/federation/pending/*.yaml 2>/dev/null | wc -l
+```
+
+**If pending > 0:** Check which affect this hub and surface:
+
+> **Federation:** N pending discovery(ies) for this hub
+> - <title> (from <origin hub> S<N>)
+>
+> Apply now, review, or defer?
+
+**If no pending for this hub:** Silent skip.
+{{/if}}
+
+{{#if MULTI_HUB}}
+### Phase 6: Cross-Hub Awareness
+
+Check what happened recently in other hubs using pre-injected cross-hub context.
+
+For each hub that isn't this one, calculate time since close and surface if < 24h:
+
+> **Other hubs:**
+> - hub-2 S49 (2h ago): Session title
+
+**If no recent activity:** Silent skip.
+{{/if}}
+
+{{#if RECURSIVE_IMPROVEMENT}}
+### Phase 7: Health Check Milestone
+
+Check if this session triggers a health check:
+
+```bash
+session_num=$(grep -m1 "^## Session " SESSION_LOG.md | grep -oE "[0-9]+" || echo "1")
+# Check against milestones: 20, 50, 100, then every 50
+```
+
+**If health check due:**
+
+> **Health check milestone (session N):**
+> - Are patterns working? Any friction with BOS/EOS/CI?
+> - Any patterns to add, remove, or modify?
+> - Operating agreements still accurate?
+
+Surface questions, capture responses in IMPROVEMENTS_LOG.md.
+{{/if}}
+
+---
+
+## Pitfalls
+
+- Single `date` invocation for zero drift
+- Calculate session number from latest header, not line count
+{{#if MULTI_HUB}}
+- Check gordo-home handoff, not hub-local handoff
+{{/if}}
+
+---
+
+*v3.0.0 (S430): Pattern-integrated BOS with Ring 1/2/3 phase support.*
+*Based on backchannel BOS v5.1.0 patterns.*

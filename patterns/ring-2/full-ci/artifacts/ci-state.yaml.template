@@ -1,0 +1,25 @@
+# CI State — Continuous Improvement Tracking
+# Auto-maintained by BOS/EOS skills
+
+stability:
+  consecutive_skips: 0          # EOS assessments with nothing actionable
+  last_skip_session: null       # Session number of last skip
+  is_stable: false              # True if last 5 sessions all skipped
+
+health:
+  last_check_session: 0         # Session of last health check
+  next_check_session: 20        # Session 20, 40, 60, ...
+
+triage:
+  pending_count: 0              # Items awaiting triage
+  snooze_counts: {}             # issue_number: snooze_count (max 2)
+
+metrics:
+  total_filed: 0
+  total_accepted: 0
+  total_deferred: 0
+  total_rejected: 0
+  total_stale: 0
+
+# Updated by EOS after each self-assessment
+# Updated by BOS after each triage cycle

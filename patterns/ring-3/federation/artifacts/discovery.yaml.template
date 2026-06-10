@@ -1,0 +1,20 @@
+# Federation Discovery Template
+# File to: ~/{{AI_NAME}}-home/federation/pending/<slug>.yaml
+
+slug: {{SLUG}}
+title: {{TITLE}}
+origin:
+  hub: {{ORIGIN_HUB}}
+  session: {{SESSION_NUMBER}}
+  date: {{DATE}}
+category: {{CATEGORY}}  # skill-enhancement | bug-fix | pattern | memory
+affects:
+  - {{HUB_1}}
+  - {{HUB_2}}
+description: |
+  {{DESCRIPTION}}
+artifact:
+  type: {{ARTIFACT_TYPE}}  # script | skill-section | memory | hook
+  path: {{ARTIFACT_PATH}}
+  diff_url: null  # optional: link to commit
+status: pending  # pending | applied | superseded
