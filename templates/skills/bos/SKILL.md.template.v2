@@ -99,7 +99,30 @@ Report to {{HUMAN_NAME}}:
 
 Report: "Session N open. Marker at `<SHA>`."
 
-### Phase 4: Self-Improvement Check
+### Phase 4: Deferral Check
+
+Check for deferred pattern activations from initial interview:
+
+```bash
+cat INTERVIEW_LOG.yaml 2>/dev/null | grep -E "activation_session: [0-9]+" || echo "none"
+```
+
+**If deferrals exist and current session >= activation_session:**
+
+Compare current session number against `activation_session` values. For each due deferral:
+
+> **Deferred pattern ready:** <pattern name>
+>
+> At interview, you said "<original response>". Ready to activate <pattern>?
+
+**Actions:**
+- **Activate** — run pattern setup, remove from INTERVIEW_LOG deferrals
+- **Defer again** — set new activation_session (max 2 deferrals per pattern)
+- **Skip** — mark as permanently skipped with rationale
+
+**If no deferrals due:** Silent skip.
+
+### Phase 5: Self-Improvement Check
 
 Check for pending self-improvement items:
 
@@ -131,4 +154,5 @@ grep -l "TODO\|FIXME\|self-improvement" *.md 2>/dev/null | head -5
 
 ---
 
-*v2.1.0: Added Phase 4 Self-Improvement check. Based on backchannel BOS v4.3.0 patterns.*
+*v2.2.0: Added Phase 4 Deferral Check — resurfaces deferred pattern activations from INTERVIEW_LOG.yaml. Fixes silent-drop gap where deferred patterns were never revisited.*
+*v2.1.0: Added Phase 5 Self-Improvement check. Based on backchannel BOS v4.3.0 patterns.*

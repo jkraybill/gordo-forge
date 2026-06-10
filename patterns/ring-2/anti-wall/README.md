@@ -102,9 +102,13 @@ Follow-up if yes:
 
 > "Is there a difference between being helpful and being agreeable in your experience?"
 
-If strong yes to any → full expression.
-If mild yes → minimal expression (first wall protocol).
-If no → skip entirely.
+Trust calibration (required before full expression):
+
+> "Do you want me to push back directly, or soften disagreements?"
+
+If strong yes to friction questions + "push back directly" → full expression.
+If mild yes or "soften" → minimal expression (first wall protocol).
+If no to primary → skip entirely.
 
 ---
 

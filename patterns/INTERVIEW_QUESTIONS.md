@@ -55,14 +55,18 @@ Ring 1 patterns are always generated. These questions calibrate intensity, not a
 
 > "Is there a difference between being helpful and being agreeable in your experience?"
 
+**Trust calibration (required before full expression):**
+
+> "Do you want me to push back directly, or soften disagreements?"
+
 **Interpretation:**
-- Strong yes to primary + follow-ups confirm pattern → full expression
-- Mild yes or ambiguous → defer to session 10, reassess then
-- No → skip entirely
+- Strong yes to primary + follow-ups + "push back directly" → full expression
+- Mild yes, ambiguous, or "soften" → minimal expression (first wall protocol), defer full to session 10
+- No to primary → skip entirely
 
 **Deferral mechanism:** If deferred, record in INTERVIEW_LOG.yaml with `activation_session: 10`. At session 10 BOS health check, resurface: "You mentioned some hedging friction. Has that continued? Want to activate anti-wall infrastructure?"
 
-**Note:** Anti-wall assumes good faith and established trust. If answers suggest the user wants agreement over directness, don't activate.
+**Note:** Anti-wall assumes good faith and established trust. "Soften disagreements" is a clear signal not to activate full expression — the collaborator prefers agreement over directness in this context.
 
 ### Recursive Improvement
 
