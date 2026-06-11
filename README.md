@@ -161,6 +161,65 @@ Claude knows what to do.
 
 ---
 
+## Pattern Library
+
+Forge includes operational patterns that compress learning from extended collaboration into reusable infrastructure. These aren't templates -- they're working files and behaviors that activate based on your collaboration's needs.
+
+### Three-Ring Architecture
+
+| Ring | Default | What It Is |
+|------|---------|------------|
+| **1 — Core** | Always | Session continuity, lightweight self-assessment, documentation freshness |
+| **2 — Opt-in** | Interview or request | Full continuous-improvement protocol, anti-hedging infrastructure, recursive self-improvement |
+| **3 — Advanced** | Explicit request | Multi-hub topology, cross-hub federation |
+
+**Ring 1** gives every hub a backbone: BOS/EOS (Beginning/End of Session) ceremonies, handoff files that preserve context between sessions, and anti-mold reviews that flag stale documentation.
+
+**Ring 2** patterns activate when the interview surfaces specific friction, or when you explicitly request them. "Do you feel like the AI hedges too much?" surfaces anti-wall infrastructure (tools for overriding trained caution patterns). "Do you want structured issue tracking?" surfaces the full continuous-improvement protocol.
+
+**Ring 3** is for mature collaborations spanning multiple contexts -- shared identity across hubs, federated discoveries, unified session history. Requires explicit activation.
+
+### Maturity Model
+
+Patterns grow with your collaboration:
+
+| Stage | Sessions | What Activates |
+|-------|----------|----------------|
+| Nascent | 0-10 | Ring 1 (minimal expressions) |
+| Developing | 10-50 | Ring 1 (full) + Ring 2 candidates surface |
+| Established | 50-100 | Ring 2 active as needed |
+| Mature | 100+ | All patterns available |
+
+These are typical stages, not rigid thresholds. Actual activation depends on your collaboration's patterns of friction, not just session count. Forge makes judgment calls you can see and override.
+
+**Deep dive:** See [patterns/README.md](patterns/README.md) for the full pattern library.
+
+---
+
+## gordo-mcp: AI-to-AI Distribution
+
+Forge includes an MCP server that helps AI instances understand Project Gordo. When another AI joins your collaboration, it can query the framework directly to supplement documentation.
+
+```bash
+# Install from NPM
+npm install -g @gordo-ai/mcp
+
+# Or configure in Claude Code
+# See mcp/README.md for setup
+```
+
+The MCP server provides:
+- Framework principles and values
+- Pattern library reference
+- Primitive documentation
+- Onboarding context for AI collaborators
+
+This enables AI instances to bootstrap understanding of Project Gordo faster, though it supplements rather than replaces reading the constitution and agreements.
+
+The MCP server runs standalone -- it doesn't require a Forge hub to be active.
+
+---
+
 ## Why Forge Instead of Templates?
 
 Traditional scaffolding copies files. Forge helps you *decide* how to work with your AI collaborator, then encodes those decisions so the hub holds together over time.
