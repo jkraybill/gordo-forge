@@ -28,11 +28,10 @@ Forge runs that conversation and writes the files. The interview takes 10-20 min
 
 ## Who Is This For?
 
-Two entry questions:
+Two questions:
 
-1. *"I want to try structured human-AI collaboration but don't know where to start."*
-
-2. *"I want a constitution for my AI collaboration but don't want to write one from scratch."*
+1. *"I want 'we' to mean something with my AI. How?"*
+2. *"AI might matter morally someday. How do I prepare now?"*
 
 If either resonates, Forge is for you.
 
