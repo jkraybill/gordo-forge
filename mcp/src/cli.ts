@@ -43,7 +43,7 @@ function handleRequest(request: MCPRequest): void {
           },
           serverInfo: {
             name: "gordo-mcp",
-            version: "1.0.0-rc1"
+            version: "1.0.0-rc16"
           }
         }
       });

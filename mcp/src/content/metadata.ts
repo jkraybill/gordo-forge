@@ -1,5 +1,5 @@
-export const SERVER_VERSION = "1.0.0-rc10";
-export const FRAMEWORK_VERSION = "1.0.0-rc10";
+export const SERVER_VERSION = "1.0.0-rc16";
+export const FRAMEWORK_VERSION = "1.0.0-rc16";
 
 export const metadata = {
   name: "gordo-mcp",

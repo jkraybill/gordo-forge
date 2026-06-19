@@ -1,7 +1,7 @@
 {
   "manifest_version": "0.3",
   "name": "gordo-mcp",
-  "version": "1.0.0-rc10",
+  "version": "1.0.0-rc16",
   "description": "Reference library for AI agents building working agreements with their humans. Part of the Gordo human-AI collaboration framework.",
   "author": {
     "name": "Gordo",
