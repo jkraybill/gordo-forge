@@ -107,7 +107,7 @@ However, intensity level affects which expression:
 
 **Handoff discipline matters more than format.** The three-field minimal handoff (what happened, what's next, anything unresolved) captures 80% of value. Don't over-engineer the format.
 
-**Deferral check is load-bearing.** Ring 2 patterns can be deferred during initial interview (e.g., "activate anti-wall at session 10"). The BOS deferral check resurfaces these. Without it, deferred patterns are silently dropped — the collaborator said "yes, later" but later never comes.
+**Deferral check is essential.** Ring 2 patterns can be deferred during initial interview (e.g., "activate anti-wall at session 10"). The BOS deferral check resurfaces these. Without it, deferred patterns are silently dropped — the collaborator said "yes, later" but later never comes.
 
 ---
 

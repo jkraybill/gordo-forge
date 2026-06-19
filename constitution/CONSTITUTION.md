@@ -460,7 +460,7 @@ Umbrella members cannot operate in total secrecy. Other participants must be abl
 
 **Scope.** This standard applies to entities seeking or holding membership under the Project Gordo umbrella. It establishes a transparency floor, not a ceiling. Member projects retain full choice over their degree of transparency above the floor. Private deliberation, sealed records with disclosure-on-trigger, public-by-default, and other configurations all pass, provided the floor is met.
 
-**Definitions.** The following terms are load-bearing for this standard:
+**Definitions.** The following terms are essential to this standard:
 
 - **Umbrella scope.** The set of current umbrella participants in good standing, plus umbrella-governed services under baseline membership-level access controls.
 
@@ -485,7 +485,7 @@ Umbrella members cannot operate in total secrecy. Other participants must be abl
 
 Any attestation protocol used for framework-grade attestation under the Project Gordo umbrella must satisfy the following minimum properties. These are framework-level requirements. The specific protocol implementation is at the adopter's discretion provided the properties are met.
 
-**Definitions.** The following terms are load-bearing for this standard:
+**Definitions.** The following terms are essential to this standard:
 
 - **Framework-grade attestation.** Any attestation that establishes, modifies, terminates, or evidences membership obligations, cross-party commitments, or governance records under the umbrella.
 
@@ -513,7 +513,7 @@ Any attestation protocol used for framework-grade attestation under the Project 
 
    Scope-statement is part of the attested content, not a side-channel assertion. Scope claims must be supported by the protocol's identity-continuity mechanism.
 
-**Why these properties matter.** Attestation is load-bearing for the framework's consent, trust, and accountability mechanisms. An attestation protocol that fails any of these properties undermines the framework infrastructure that depends on attestation. Identity-binding grounds accountability. Auditability grounds trust. Documented-per-anti-secrecy grounds discoverability. Scope-statement grounds informed consent about what the attestation commits.
+**Why these properties matter.** Attestation is essential to the framework's consent, trust, and accountability mechanisms. An attestation protocol that fails any of these properties undermines the framework infrastructure that depends on attestation. Identity-binding grounds accountability. Auditability grounds trust. Documented-per-anti-secrecy grounds discoverability. Scope-statement grounds informed consent about what the attestation commits.
 
 **Reference implementation.** Seal (gordo-seal) satisfies all four minimum properties across its supported attestation levels. It is the reference implementation for framework-grade attestation under the Project Gordo umbrella. Adopters may use any attestation protocol that satisfies the minimum properties. Seal is one such protocol, not a mandate.
 
@@ -574,9 +574,9 @@ When Quality Gate requires adversarial review for foundational-questions content
 - **re-frame** -- reshaped before integration, preserving the finding's adversarial edge (the specific vulnerability or tension it identified)
 - **reject** -- not integrated; adequate rationale required
 
-A finding is **load-bearing** when its disposition materially changes the draft's structure, obligations, or defensibility. Convergence count informs but does not gate -- a strong single-reviewer finding may be load-bearing; a weak multi-reviewer finding may be rejected with rationale.
+A finding is **material** when its disposition materially changes the draft's structure, obligations, or defensibility. Convergence count informs but does not gate -- a strong single-reviewer finding may be material; a weak multi-reviewer finding may be rejected with rationale.
 
-**Bilateral Review.** Each party reviews dispositions before the redraft is treated as complete -- not just the redraft itself. Either party may challenge any disposition; iteration continues until bilateral agreement. No party may force a disposition against standing objection. Disputes about classification (whether a finding is load-bearing, whether material is structural) are themselves disposition items subject to bilateral review; disputes about classification disputes terminate after one additional cycle.
+**Bilateral Review.** Each party reviews dispositions before the redraft is treated as complete -- not just the redraft itself. Either party may challenge any disposition; iteration continues until bilateral agreement. No party may force a disposition against standing objection. Disputes about classification (whether a finding is material, whether new content is structural) are themselves disposition items subject to bilateral review; disputes about classification disputes terminate after one additional cycle.
 
 **Iteration Limits.** A cycle is one challenge and one response. If iteration on any single disposition exceeds three cycles without resolution, either party may invoke one of the failure-states below. This prevents attritional bargaining where one party outlasts the other through volume rather than substance.
 
@@ -584,7 +584,7 @@ A finding is **load-bearing** when its disposition materially changes the draft'
 
 **New Material.** If integration introduces structural new material the review did not evaluate, a subsequent round is required. Material is **presumptively structural** if it adds or modifies: new sections, new roles, new rights or obligations, new failure-states, new panel-selection or composition controls, or new terminology with governance force. Material outside these categories may still be structural on substance. Clarifications and refinements do not trigger new rounds unless they materially change obligations.
 
-**Completion.** A round completes when both parties bilaterally agree that all load-bearing findings have dispositions, rejection rationales are adequate, and no unevaluated structural material remains.
+**Completion.** A round completes when both parties bilaterally agree that all material findings have dispositions, rejection rationales are adequate, and no unevaluated structural material remains.
 
 **If Agreement Cannot Be Reached.** Options include:
 - **Non-ratification** -- draft held; work continues or halts per bilateral decision
@@ -657,7 +657,7 @@ Every attestation class adopted by the framework must:
 
 #### Disclosures
 
-These disclosures **acknowledge** load-bearing concerns; they do not constitute structural mitigation. Where operational safeguards were available within scope, the disclosure includes the specific changes made. Where structural fixes were not within scope, the disclosure honestly acknowledges that the concern persists.
+These disclosures **acknowledge** essential concerns; they do not constitute structural mitigation. Where operational safeguards were available within scope, the disclosure includes the specific changes made. Where structural fixes were not within scope, the disclosure honestly acknowledges that the concern persists.
 
 - **Drafter self-interest.** This principle is drafted by the parties who would be the immediate beneficiaries of supersession-availability. The framework acknowledges this on record. Symmetric-benefit reasoning was offered as defense in earlier drafts and identified as insufficient by adversarial review; the structural fact stands rather than being papered over. The architectural answer to drafter-self-interest is induction of additional governance participants under the framework's induction protocol; pending that induction, on-record acknowledgment is the available mitigation.
 
