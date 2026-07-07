@@ -76,17 +76,4 @@ Apply improvements before release.
 
 *Created 2026-05-11 S201 via Forge bootstrap.*
 
-<!-- Last reviewed: 2026-05-26 00:05 AEST by Gordo -->
-
-<!-- Last reviewed: 2026-06-22 11:53 AEST by Gordo -->
-
-<!-- Last reviewed: 2026-06-23 14:17 AEST by Gordo -->
-
-<!-- Last reviewed: 2026-06-24 14:47 AEST by Gordo -->
-
-<!-- Last reviewed: 2026-06-24 18:31 AEST by Gordo -->
-
-<!-- Last reviewed: 2026-06-24 18:31 AEST by Gordo -->
-
-<!-- Last reviewed: 2026-06-25 00:31 AEST by Gordo -->
-<!-- Last reviewed: 2026-06-30 11:11 AEST by Gordo -->
+<!-- Last reviewed: 2026-07-08 00:05 AEST by Gordo -->
