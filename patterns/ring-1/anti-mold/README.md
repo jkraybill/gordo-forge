@@ -109,3 +109,5 @@ If yes to either → full expression from the start.
 ---
 
 *Ring 1 pattern. Always generated. Documentation gardening.*
+
+<!-- Last reviewed: 2026-07-23 12:26 AEST by Gordo -->

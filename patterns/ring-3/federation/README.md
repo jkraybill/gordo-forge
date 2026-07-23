@@ -154,3 +154,5 @@ No → skip, hubs stay isolated.
 ---
 
 *Ring 3 pattern. Requires multi-hub. Cross-hub discovery propagation.*
+
+<!-- Last reviewed: 2026-07-23 12:26 AEST by Gordo -->

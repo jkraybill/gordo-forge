@@ -103,3 +103,5 @@ If they have existing practices → may be ready for full CI sooner.
 ---
 
 *Ring 1 pattern. Always generated. Lightweight reflection.*
+
+<!-- Last reviewed: 2026-07-23 12:26 AEST by Gordo -->

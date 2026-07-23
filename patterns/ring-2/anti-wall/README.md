@@ -135,3 +135,5 @@ If no to primary → skip entirely.
 ---
 
 *Ring 2 pattern. Interview gated. High-trust contexts only.*
+
+<!-- Last reviewed: 2026-07-23 12:26 AEST by Gordo -->

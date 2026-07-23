@@ -168,3 +168,5 @@ No existing practices → start with minimal-ci, graduate later.
 ---
 
 *Ring 2 pattern. Graduates from minimal-ci. Closes the improvement loop.*
+
+<!-- Last reviewed: 2026-07-23 12:26 AEST by Gordo -->

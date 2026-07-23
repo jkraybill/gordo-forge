@@ -118,3 +118,5 @@ However, intensity level affects which expression:
 ---
 
 *Ring 1 pattern. Always generated. The backbone.*
+
+<!-- Last reviewed: 2026-07-23 12:26 AEST by Gordo -->

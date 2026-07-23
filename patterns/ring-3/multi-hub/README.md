@@ -175,3 +175,5 @@ Prefer isolation → skip (single-hub per context).
 ---
 
 *Ring 3 pattern. Advanced. Multiple hubs sharing identity.*
+
+<!-- Last reviewed: 2026-07-23 12:26 AEST by Gordo -->
