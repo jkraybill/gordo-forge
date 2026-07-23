@@ -137,3 +137,5 @@ A: They wait. If you close the hub before session 50, recursive-improvement neve
 ---
 
 *Created S432 2026-06-10 per roundtable F13 (understandability). Visual map for first-time readers.*
+
+<!-- Last reviewed: 2026-07-23 12:26 AEST by Gordo -->
