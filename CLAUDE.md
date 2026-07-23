@@ -107,4 +107,4 @@ See `COMPLIANCE_KERNEL.md` for inviolables. Highlights:
 *Created 2026-05-11 S201 via Forge bootstrap (recursive self-application).*
 *Pattern library added S430 2026-06-10 — three-ring architecture per roundtable synthesis.*
 
-<!-- Last reviewed: 2026-06-10 22:30 AEST by Gordo -->
+<!-- Last reviewed: 2026-07-23 12:25 AEST by Gordo -->
