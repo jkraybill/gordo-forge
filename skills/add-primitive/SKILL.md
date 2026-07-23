@@ -77,4 +77,4 @@ If not a PG-umbrella project, suggest creating a hub first.
 - Don't break existing COMPLIANCE_KERNEL structure
 - Explain what changes before making them
 
-<!-- Last reviewed: 2026-05-31 21:16 AEST by Gordo -->
+<!-- Last reviewed: 2026-07-23 12:14 AEST by Gordo -->

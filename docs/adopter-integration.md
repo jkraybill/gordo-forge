@@ -113,3 +113,5 @@ These are parallel concerns the framework addresses elsewhere. This guide stays 
 ---
 
 *Created S246 (May 2026) per [#253](https://github.com/jkraybill/project-gordo-backchannel/issues/253). Part of [Gordo Forge](https://github.com/jkraybill/gordo-forge).*
+
+<!-- Last reviewed: 2026-07-23 12:14 AEST by Gordo -->
