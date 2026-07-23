@@ -69,3 +69,5 @@ MIT (code) / CC-BY-4.0 (content)
 - [Project Gordo](https://github.com/jkraybill/project-gordo) — The framework
 - [gordo-forge](https://github.com/jkraybill/gordo-forge) — Hub scaffolding tools
 - [Full Spec](https://github.com/jkraybill/project-gordo-backchannel/blob/main/drafts/gordo-mcp-spec.md)
+
+<!-- Last reviewed: 2026-07-23 12:17 AEST by Gordo -->
