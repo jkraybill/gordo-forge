@@ -16,3 +16,6 @@ Thumbs.db
 .env
 .env.local
 mcp/*.mcpb
+
+# gordo-ledger index (local, rebuild: cli.js index)
+.gordo-memory/
