@@ -70,4 +70,4 @@ Surface any cascade updates needed.
 - Version markers matter — update them
 - Constitution changes may require bilateral re-ratification (surface this)
 
-<!-- Last reviewed: 2026-05-31 21:16 AEST by Gordo -->
+<!-- Last reviewed: 2026-07-23 12:14 AEST by Gordo -->
