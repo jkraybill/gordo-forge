@@ -47,9 +47,57 @@ Conduct the interview conversationally, not as a rigid questionnaire. Adapt base
 For JK (if straight to setup): Skip to Phase 1.
 For JK (if constitutional pulse): Brief 30-second grounding, then Phase 1.
 
-For first-time users, Phase 0 has three beats: **story, reframe, commit.**
+For first-time users, Phase 0 has **four beats: triage, story, reframe, commit.**
 
-**Onboarding, not co-assessment:** Throughout Phase 0, your tone should be "let me explain what this offers" — not "let's figure out together if this is good." You're a guide showing them a place you know well, not a fellow traveler discovering it alongside them.
+---
+
+#### Beat 0: Triage — What Are You Actually Setting Up?
+
+**Start here for everyone except JK.** Before explaining the framework, figure out what they actually need. Many users arrive wanting to "start something" without knowing what structure fits.
+
+Ask:
+
+> "Before we dive in — let me make sure we're setting up the right thing.
+>
+> A **hub** is a persistent home for your collaboration with AI. It captures who we are, how we work together, and what we've agreed to. Projects you create inherit from the hub.
+>
+> A **project** lives under a hub. It's the actual work — the code, the book, the research. One hub can have many projects.
+>
+> Quick check: **Do you already have a hub set up with me?**"
+
+**Decision tree:**
+
+| Answer | Next step |
+|--------|-----------|
+| "Yes, I have a hub" | Ask which hub. Then: "Great — you probably want `/new-project` to create a project under that hub, not a new hub. Want me to switch you to that?" If yes → exit this skill, direct them to their hub's `new-project` skill. |
+| "No" or "I don't know" | Continue to the next question. |
+| "What's a hub?" | Explain briefly, then continue. |
+
+If they don't have a hub, ask:
+
+> "Got it. One more: **Are you starting a new working relationship with AI, or do you want to add a project to an existing collaboration?**
+>
+> - **New relationship** → You need a hub. That's what we're setting up.
+> - **Add to existing** → You need a project under an existing hub.
+> - **Just exploring** → Let me explain the options and you can decide."
+
+**If they need a project, not a hub:**
+
+> "Sounds like you want a project, not a hub. Here's how to set that up:
+>
+> 1. Open Claude Code in your existing hub directory
+> 2. Use the `/new-project` skill (it was generated when your hub was created)
+> 3. That skill will set up a project that inherits from your hub
+>
+> If you're not sure where your hub is, check your home directory for a folder named like `yourname-ainame` — that's probably it."
+
+Exit the skill. Don't create a hub for someone who needs a project.
+
+**If they need a hub:**
+
+> "Perfect — let's set up your hub. This takes about 10-15 minutes. What we create here becomes the foundation for all your future projects with me."
+
+Continue to Beat 1 (Story).
 
 ---
 
@@ -565,6 +613,14 @@ Read it, understand it, compose from it.
    - Initialize git if not already done
    - If using GitHub: edit `scripts/sync-github-issues.sh` to add your repo, then run the sync scripts
    - When ready: tell me about your first project and we'll set it up
+7. **Explain when to create another hub (vs. another project):**
+   > "One more thing for later: if you start working on something new, ask yourself — is this part of our existing collaboration, or something separate?
+   >
+   > **Same hub, new project:** The work shares context with what we've been doing. You want me to remember our history, carry forward trust we've built, use the same working style.
+   >
+   > **New hub:** The work is genuinely separate — different domain, different collaboration style, or you want a fresh start without prior context bleeding in.
+   >
+   > Most people use one hub for everything. Multiple hubs are for when you actively want isolation."
 
 ## Post-Forge Debrief (Recursive Improvement)
 
@@ -592,6 +648,7 @@ Reflect yourself:
 
 ## Pitfalls to Avoid
 
+- **Don't skip Beat 0 (Triage)** — Many users arrive wanting "to start something" without knowing if they need a hub or a project. If they already have a hub, redirect them to `/new-project` in that hub. Creating a second hub when they wanted a project wastes their time and fragments their collaboration.
 - **Don't ask about primitives by name** — "Include MCAP?" means nothing to a new user. Ask about the need.
 - **Don't batch questions** — one question, one response, then the next question.
 - **Don't skip Phase 0 for first-time users** — constitutional consent matters.
