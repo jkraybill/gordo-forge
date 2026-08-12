@@ -108,3 +108,5 @@ See `COMPLIANCE_KERNEL.md` for inviolables. Highlights:
 *Pattern library added S430 2026-06-10 — three-ring architecture per roundtable synthesis.*
 
 <!-- Last reviewed: 2026-07-23 12:25 AEST by Gordo -->
+
+<!-- Last reviewed: 2026-08-12 23:37 AEST by Gordo -->
