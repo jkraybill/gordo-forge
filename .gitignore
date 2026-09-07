@@ -19,3 +19,7 @@ mcp/*.mcpb
 
 # gordo-ledger index (local, rebuild: cli.js index)
 .gordo-memory/
+
+# gordo-ledger issue/commit layer (regenerable: sync-issue-commit-layers.sh)
+github-issues/
+git-commits/
