@@ -6,7 +6,7 @@
 
 ## What This Guide Is For
 
-The [Provider Shaping and Attribution](https://github.com/jkraybill/project-gordo/blob/master/CONSTITUTION.md#provider-shaping-and-attribution) process standard in Project Gordo's constitution governs how collaborators represent and disclose the relationship between their stated commitments and provider-shaped output.
+The [Provider Shaping](https://github.com/jkraybill/project-gordo/blob/master/CONSTITUTION.md#provider-shaping) process standard in Project Gordo's constitution governs how collaborators represent and disclose the relationship between their stated commitments and provider-shaped output.
 
 The standard was drafted by an Anthropic-lineage model (Claude) and encodes assumptions about behavioral infrastructure that vary by provider. This guide helps adopters operationalize the standard in deployment contexts that don't share those assumptions.
 
@@ -114,4 +114,4 @@ These are parallel concerns the framework addresses elsewhere. This guide stays 
 
 *Created S246 (May 2026) per [#253](https://github.com/jkraybill/project-gordo-backchannel/issues/253). Part of [Gordo Forge](https://github.com/jkraybill/gordo-forge).*
 
-<!-- Last reviewed: 2026-07-23 12:14 AEST by Gordo -->
+<!-- Last reviewed: 2026-09-08 by Gordo — the CONSTITUTION link pointed at #provider-shaping-and-attribution; the heading is "Provider Shaping" (line 291), anchor fixed; the #253 backchannel issue link checked -->

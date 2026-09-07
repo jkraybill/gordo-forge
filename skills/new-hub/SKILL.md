@@ -667,3 +667,5 @@ You're not filling templates. You're having a conversation about how this human 
 The hub is the relationship. Projects come and go. The collaboration endures.
 
 Take it seriously. Do it well.
+
+<!-- Unreviewed: 2026-09-08, 35 KB not read in full at backchannel S468 EOS; last content change 2026-07-23 (v1.0.0 pilot feedback) is recent; no review stamp yet -->
