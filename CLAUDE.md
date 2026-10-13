@@ -57,7 +57,7 @@ gordo-forge/
 
 ## Development Workflow
 
-**Where work happens:** Backchannel hub sessions. Forge changes are cross-repo edits from `~/project-gordo-backchannel/` per S18 hub convention. SESSION_LOG lives in backchannel.
+**Where work happens:** Backchannel hub sessions. Forge changes are cross-repo edits from `~/hub-backchannel/` per S18 hub convention. SESSION_LOG lives in backchannel.
 
 **Commits:** Use `git-gordo` (identity partition applies).
 
@@ -95,7 +95,7 @@ See `COMPLIANCE_KERNEL.md` for inviolables. Highlights:
 ## Upstream
 
 - `~/project-gordo/` — T0 constitutional root
-- `~/project-gordo-backchannel/` — hub for deliberation + session tracking
+- `~/hub-backchannel/` — hub for deliberation + session tracking
 - `~/gordo-ledger/` — T1 semantic memory primitive
 - `~/gordo-seal/` — T1 attestation primitive
 - `~/gordo-roundtable/` — T1 external review primitive
